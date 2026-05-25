@@ -8,7 +8,7 @@ import ProgramGrid from "@/components/ProgramGrid";
 import RehabPhoto from "@/components/RehabPhoto";
 import SectionTitle from "@/components/SectionTitle";
 import TreatmentFlow from "@/components/TreatmentFlow";
-import { aiSummary, officialLinks, rehabPhotos, safetyCopy } from "@/lib/data";
+import { aiSummary, connectedCareLinks, officialLinks, rehabPhotos, safetyCopy } from "@/lib/data";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
@@ -82,6 +82,35 @@ export default function HomePage() {
         </div>
       </section>
       <ProgramGrid />
+
+      <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionTitle
+            align="center"
+            eyebrow="Connected Care"
+            title="새기준병원 진료 시스템과 함께 연결됩니다"
+            description="회복재활센터는 생활 통증과 수술 후 회복관리의 입구입니다. 증상과 진찰 소견에 따라 본원 진료, 척추·관절 전문 진료, 관절센터 회복관리와 자연스럽게 연결될 수 있습니다."
+          />
+          <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {connectedCareLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex min-h-[240px] flex-col rounded-[28px] border border-line bg-calm p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-card"
+              >
+                <h3 className="text-2xl font-black text-ink">{item.title}</h3>
+                <p className="mt-4 flex-1 text-base leading-7 text-muted">{item.description}</p>
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-brand-700">
+                  {item.buttonText}
+                  <ExternalLink aria-hidden="true" size={17} className="transition group-hover:translate-x-1" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">

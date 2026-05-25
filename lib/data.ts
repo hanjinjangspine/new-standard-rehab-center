@@ -299,6 +299,33 @@ export const officialLinks = [
   { label: "온라인 상담", href: "https://new-standard.co.kr/bbs/board.php?bo_table=counsel" }
 ];
 
+export const connectedCareLinks = [
+  {
+    title: "새기준병원 본원",
+    description: "전문의 진료, 영상검사, 척추·관절 진료가 함께 이루어지는 본원 홈페이지입니다.",
+    href: "https://new-standard.co.kr",
+    buttonText: "본원 홈페이지"
+  },
+  {
+    title: "관절센터",
+    description: "무릎·어깨·족부·발목 등 관절 통증과 회복관리를 안내하는 새기준병원 관절센터입니다.",
+    href: "https://joint.new-standard.co.kr",
+    buttonText: "관절센터 보기"
+  },
+  {
+    title: "관절 회복관리",
+    description: "관절 치료 후 회복관리, 운동 범위, 보행 회복과 관련된 정보를 확인할 수 있습니다.",
+    href: "https://joint.new-standard.co.kr/recovery",
+    buttonText: "회복관리 보기"
+  },
+  {
+    title: "오시는 길",
+    description: "새기준병원 위치, 대표전화, 진료시간을 확인할 수 있습니다.",
+    href: "https://new-standard.co.kr/sub/r10/s1040.php",
+    buttonText: "오시는 길"
+  }
+];
+
 export const rehabPhotos = {
   hero: "/images/rehab/hero-rehab-center.jpg",
   center: "/images/rehab/rehab-room-01.jpg",

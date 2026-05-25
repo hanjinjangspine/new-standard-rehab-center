@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { hospitalInfo, navItems } from "@/lib/data";
+import { connectedCareLinks, hospitalInfo, navItems } from "@/lib/data";
 
 export default function Footer() {
   return (
@@ -18,12 +18,30 @@ export default function Footer() {
             본 페이지는 질환과 치료 방향에 대한 일반 안내입니다. 실제 치료 여부와 방법은 의료진 진찰 및 검사 결과에 따라 달라질 수 있습니다.
           </p>
         </div>
-        <div className="grid gap-3 sm:grid-cols-2">
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="whitespace-nowrap rounded-xl border border-white/10 px-4 py-3 text-sm font-bold text-white transition hover:bg-white/10">
-              {item.label}
-            </Link>
-          ))}
+        <div className="grid gap-6">
+          <div className="grid gap-3 sm:grid-cols-2">
+            {navItems.map((item) => (
+              <Link key={item.href} href={item.href} className="whitespace-nowrap rounded-xl border border-white/10 px-4 py-3 text-sm font-bold text-white transition hover:bg-white/10">
+                {item.label}
+              </Link>
+            ))}
+          </div>
+          <div>
+            <p className="text-sm font-extrabold text-brand-100">관련 진료센터</p>
+            <div className="mt-3 grid gap-3 sm:grid-cols-2">
+              {connectedCareLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whitespace-nowrap rounded-xl border border-white/10 px-4 py-3 text-sm font-bold text-white transition hover:bg-white/10"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </footer>
