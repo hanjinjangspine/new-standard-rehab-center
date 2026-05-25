@@ -8,7 +8,7 @@ export default function MobileBottomCTA() {
       <Link href={hospitalInfo.consultationPhoneHref} className="flex flex-col items-center justify-center gap-1 py-2 text-xs font-extrabold text-brand-700">
         <Phone aria-hidden="true" size={18} />전화
       </Link>
-      <Link href={hospitalInfo.naverReservationHref} className="flex flex-col items-center justify-center gap-1 border-x border-line py-2 text-xs font-extrabold text-brand-700">
+      <Link href={hospitalInfo.naverReservationHref} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-1 border-x border-line py-2 text-xs font-extrabold text-brand-700">
         <CalendarCheck aria-hidden="true" size={18} />예약
       </Link>
       <Link href="/contact" className="flex flex-col items-center justify-center gap-1 py-2 text-xs font-extrabold text-brand-700">

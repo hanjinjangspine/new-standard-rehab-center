@@ -19,15 +19,15 @@ export const siteConfig = {
   phone: "031-328-0333",
   phoneHref: "tel:031-328-0333",
   officialWebsiteUrl: "https://new-standard.co.kr",
-  spineCenterUrl: "https://new-standard.co.kr/sub/r20/s2010.php",
+  spineCenterUrl: "https://new-standard.co.kr/sub/r30/spine-center.php",
   jointCenterUrl: "https://joint.new-standard.co.kr",
   naverReservationUrl:
     "https://m.booking.naver.com/booking/13/bizes/1578687?theme=place&service-target=map-pc&lang=ko&area=pll",
   youtubeUrl: "https://www.youtube.com/@NewStandardHtv",
   naverMapUrl:
-    "https://map.naver.com/p/search/새기준병원%20경기도%20용인시%20처인구%20중부대로%201539",
+    "https://map.naver.com/p/search/%EC%83%88%EA%B8%B0%EC%A4%80%EB%B3%91%EC%9B%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%9A%A9%EC%9D%B8%EC%8B%9C%20%EC%B2%98%EC%9D%B8%EA%B5%AC%20%EC%A4%91%EB%B6%80%EB%8C%80%EB%A1%9C%201539",
   googleMapUrl:
-    "https://www.google.com/maps/search/?api=1&query=경기도%20용인시%20처인구%20중부대로%201539%20새기준병원",
+    "https://www.google.com/maps/search/?api=1&query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%9A%A9%EC%9D%B8%EC%8B%9C%20%EC%B2%98%EC%9D%B8%EA%B5%AC%20%EC%A4%91%EB%B6%80%EB%8C%80%EB%A1%9C%201539%20%EC%83%88%EA%B8%B0%EC%A4%80%EB%B3%91%EC%9B%90",
   logoPath: "/brand/newstandard-logo-horizontal.png",
   logoAlt: "새기준병원 공식 로고",
   noIndex: !isIndexable,

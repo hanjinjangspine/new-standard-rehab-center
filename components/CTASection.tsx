@@ -15,7 +15,7 @@ export default function CTASection({ title, description }: { title: string; desc
             <Link href={hospitalInfo.consultationPhoneHref} className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-base font-extrabold text-brand-800 transition hover:bg-brand-50">
               <Phone aria-hidden="true" size={18} /> 전화 상담
             </Link>
-            <Link href={hospitalInfo.naverReservationHref} className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-4 text-base font-extrabold text-white transition hover:bg-white/10">
+            <Link href={hospitalInfo.naverReservationHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-4 text-base font-extrabold text-white transition hover:bg-white/10">
               <CalendarCheck aria-hidden="true" size={18} /> 네이버 예약 <ArrowRight aria-hidden="true" size={18} />
             </Link>
           </div>

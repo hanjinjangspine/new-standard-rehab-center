@@ -57,20 +57,13 @@ const mainTopics = [
   "물리치료",
   "도수치료",
   "운동재활",
+  "생활 통증",
   "급성 염좌",
-  "발목 염좌",
-  "허리 삐끗함",
-  "목·어깨 급성 통증",
-  "산후 허리 통증",
-  "육아 손목 통증",
-  "직장인 목·어깨 통증",
-  "거북목",
+  "수술 후 회복관리",
+  "척추 수술 후 회복",
+  "관절 수술 후 회복",
   "보행 재활",
   "균형 운동",
-  "낙상 예방",
-  "척추수술 후 재활",
-  "관절수술 후 재활",
-  "Postoperative Recovery",
   "Physical Therapy",
   "Manual Therapy",
   "Exercise Rehabilitation"
@@ -88,7 +81,7 @@ export function siteJsonLd() {
         "@type": "MedicalClinic",
         "@id": clinicId,
         name: hospitalInfo.centerName,
-        alternateName: [hospitalInfo.formerName, "새기준병원 물리치료·운동재활센터"],
+        alternateName: [hospitalInfo.formerName, hospitalInfo.englishName],
         url: SITE_URL,
         logo: logoUrl,
         image: new URL("/og/og-recovery-center.svg", SITE_URL).toString(),
@@ -99,7 +92,7 @@ export function siteJsonLd() {
         address: {
           "@type": "PostalAddress",
           streetAddress: "중부대로 1539",
-          addressLocality: "처인구, 용인시",
+          addressLocality: "용인시 처인구",
           addressRegion: "경기도",
           addressCountry: "KR"
         },
@@ -131,7 +124,7 @@ export function siteJsonLd() {
         address: {
           "@type": "PostalAddress",
           streetAddress: "중부대로 1539",
-          addressLocality: "처인구, 용인시",
+          addressLocality: "용인시 처인구",
           addressRegion: "경기도",
           addressCountry: "KR"
         }

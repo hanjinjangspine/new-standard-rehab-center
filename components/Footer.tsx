@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="rounded-xl border border-white/10 px-4 py-3 text-sm font-bold text-white transition hover:bg-white/10">
+            <Link key={item.href} href={item.href} className="whitespace-nowrap rounded-xl border border-white/10 px-4 py-3 text-sm font-bold text-white transition hover:bg-white/10">
               {item.label}
             </Link>
           ))}

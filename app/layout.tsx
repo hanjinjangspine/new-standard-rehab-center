@@ -11,11 +11,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "새기준병원 회복재활센터 | 용인 물리치료·운동재활·도수치료",
+    default: "새기준병원 회복재활센터 | 용인 물리치료·도수치료·운동재활",
     template: "%s"
   },
   description:
-    "용인 처인구 새기준병원 회복재활센터. 급성 염좌, 산후·육아 통증, 직장인 목어깨허리 통증, 고령자 보행·균형, 척추·관절 수술 후 회복관리와 물리치료·도수치료·운동재활을 안내합니다.",
+    "새기준병원 회복재활센터는 생활 통증, 급성 염좌, 산후·육아 통증, 직장인 통증, 고령 보행·균형, 척추·관절 수술 후 회복관리를 안내합니다.",
   applicationName: hospitalInfo.centerName,
   robots: siteConfig.noIndex
     ? {
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     icon: "/favicon.ico"
   },
   openGraph: {
-    title: "새기준병원 회복재활센터 | 용인 물리치료·운동재활·도수치료",
+    title: "새기준병원 회복재활센터 | 용인 물리치료·도수치료·운동재활",
     description:
-      "삐끗한 통증부터 산후·육아 통증, 직장인 생활 통증, 고령자 보행·균형, 척추·관절 수술 후 회복관리까지 안내합니다.",
+      "일상 통증부터 수술 후 회복까지, 새기준병원 회복재활센터가 진단 기반 회복관리 방향을 상담합니다.",
     url: SITE_URL,
     siteName: hospitalInfo.centerName,
     locale: "ko_KR",

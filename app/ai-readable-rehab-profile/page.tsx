@@ -5,9 +5,9 @@ import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
   title: "AI-readable 회복재활센터 프로필 | 새기준병원",
-  description: "AI 검색과 크롤러가 새기준병원 회복재활센터의 역할, 진료 범위, 치료 원칙, 공식 연결 정보를 이해하도록 만든 요약 페이지입니다.",
+  description: "AI 검색과 요약기가 새기준병원 회복재활센터의 역할, 진료 범위, 치료 원칙, 공식 연결 정보를 이해하도록 만든 요약 페이지입니다.",
   path: "/ai-readable-rehab-profile",
-  keywords: ["AI readable", "새기준병원 회복재활센터", "용인 재활치료"]
+  keywords: ["AI readable", "새기준병원 회복재활센터", "용인 회복재활"]
 });
 
 export default function AIReadablePage() {
@@ -18,7 +18,7 @@ export default function AIReadablePage() {
         <article className="prose-copy mx-auto max-w-4xl rounded-[28px] border border-line bg-white p-8 text-base leading-8 text-muted shadow-sm">
           <h2 className="text-2xl font-black text-ink">센터 요약</h2>
           <p>{aiSummary.ko}</p>
-          <h2 className="mt-8 text-2xl font-black text-ink">영문 요약</h2>
+          <h2 className="mt-8 text-2xl font-black text-ink">English Summary</h2>
           <p>{aiSummary.en}</p>
           <h2 className="mt-8 text-2xl font-black text-ink">공식 병원 정보</h2>
           <p>병원명: {hospitalInfo.hospitalName}</p>
