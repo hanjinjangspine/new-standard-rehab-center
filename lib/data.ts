@@ -51,13 +51,13 @@ export const aiSummary = {
 
 export const navItems = [
   { label: "센터소개", href: "/" },
-  { label: "급성 염좌", href: "/acute-sprain" },
-  { label: "산후·육아 통증", href: "/postpartum-parenting-pain" },
-  { label: "직장인 통증", href: "/office-worker-pain" },
-  { label: "고령 보행", href: "/senior-gait-balance" },
-  { label: "수술 후 회복", href: "/postoperative-recovery" },
-  { label: "도수·운동재활", href: "/manual-exercise-rehab" },
-  { label: "오시는 길", href: "/contact" }
+  { label: "급성염좌", href: "/acute-sprain" },
+  { label: "산후·육아", href: "/postpartum-parenting-pain" },
+  { label: "직장인통증", href: "/office-worker-pain" },
+  { label: "보행·균형", href: "/senior-gait-balance" },
+  { label: "수술후회복", href: "/postoperative-recovery" },
+  { label: "도수·운동", href: "/manual-exercise-rehab" },
+  { label: "오시는길", href: "/contact" }
 ];
 
 export const programCards = [
@@ -124,11 +124,11 @@ export const treatmentFlow = [
 ];
 
 export const targetGroups = [
-  "일상 통증과 급성 염좌로 내원하는 환자",
-  "산후·육아 과정에서 손목·허리·골반 통증이 지속되는 환자",
-  "직장 생활 중 목·어깨·허리 통증이 반복되는 환자",
-  "보행 불안, 균형 저하, 낙상 위험이 있는 고령 환자",
-  "척추·관절 수술 후 기능 회복관리가 필요한 환자"
+  "발목을 접질렀거나 허리를 삐끗한 경우",
+  "출산 후 또는 육아 중 손목·허리·골반 통증이 지속되는 경우",
+  "장시간 앉아서 일한 뒤 목·어깨·허리 통증이 반복되는 경우",
+  "보행이 불안하거나 균형 저하, 낙상 위험이 걱정되는 경우",
+  "척추·관절 수술 후 기능 회복 방향을 상담하고 싶은 경우"
 ];
 
 export const safetyCopy = [

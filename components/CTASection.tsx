@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CalendarCheck, Phone } from "lucide-react";
+import { ArrowRight, CalendarCheck, MapPin } from "lucide-react";
 import { hospitalInfo } from "@/lib/data";
 
 export default function CTASection({ title, description }: { title: string; description: string }) {
@@ -12,11 +12,14 @@ export default function CTASection({ title, description }: { title: string; desc
             <p className="mt-5 max-w-3xl text-lg leading-8 text-brand-50">{description}</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-            <Link href={hospitalInfo.consultationPhoneHref} className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-base font-extrabold text-brand-800 transition hover:bg-brand-50">
-              <Phone aria-hidden="true" size={18} /> 전화 상담
+            <Link href={hospitalInfo.naverReservationHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-base font-extrabold text-brand-800 transition hover:bg-brand-50">
+              진료 상담 <ArrowRight aria-hidden="true" size={18} />
             </Link>
-            <Link href={hospitalInfo.naverReservationHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-4 text-base font-extrabold text-white transition hover:bg-white/10">
-              <CalendarCheck aria-hidden="true" size={18} /> 네이버 예약 <ArrowRight aria-hidden="true" size={18} />
+            <Link href="/manual-exercise-rehab" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-4 text-base font-extrabold text-white transition hover:bg-white/10">
+              <CalendarCheck aria-hidden="true" size={18} /> 치료실 안내
+            </Link>
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-4 text-base font-extrabold text-white transition hover:bg-white/10">
+              <MapPin aria-hidden="true" size={18} /> 오시는 길
             </Link>
           </div>
         </div>

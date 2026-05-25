@@ -49,7 +49,7 @@ export default function HomePage() {
           <SectionTitle
             eyebrow="Recovery Rehab Center"
             title="생활 통증과 수술 후 회복을 한 흐름으로 봅니다"
-            description="회복재활센터는 단순히 치료를 나열하는 공간이 아니라, 환자가 어떤 단계의 평가와 회복관리가 필요한지 확인하는 병원 기반 진입 창구입니다."
+            description="회복재활센터는 단순히 도수치료를 안내하는 공간이 아니라, 통증의 원인과 기능 저하를 확인하고 필요한 치료 단계를 상담하는 병원형 회복관리 센터입니다."
           />
           <div className="grid gap-4 sm:grid-cols-3">
             {centerPrinciples.map((item) => (
