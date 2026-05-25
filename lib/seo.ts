@@ -1,0 +1,182 @@
+import type { Metadata } from "next";
+import { aiSummary, defaultKeywords, faqItems, hospitalInfo, SITE_URL } from "@/lib/data";
+import { siteConfig } from "@/lib/site";
+
+type MetadataInput = {
+  title: string;
+  description: string;
+  path?: string;
+  keywords?: string[];
+};
+
+export function createMetadata({ title, description, path = "/", keywords = [] }: MetadataInput): Metadata {
+  const url = new URL(path, SITE_URL).toString();
+
+  return {
+    title,
+    description,
+    keywords: [...defaultKeywords, ...keywords],
+    robots: siteConfig.noIndex
+      ? {
+          index: false,
+          follow: false,
+          nocache: true,
+          googleBot: {
+            index: false,
+            follow: false,
+            noimageindex: true
+          }
+        }
+      : {
+          index: true,
+          follow: true
+        },
+    alternates: {
+      canonical: url
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: hospitalInfo.centerName,
+      locale: "ko_KR",
+      type: "website",
+      images: [
+        {
+          url: new URL("/og/og-recovery-center.svg", SITE_URL).toString(),
+          width: 1200,
+          height: 630,
+          alt: "새기준병원 회복재활센터 대표 이미지"
+        }
+      ]
+    }
+  };
+}
+
+const mainTopics = [
+  "물리치료",
+  "도수치료",
+  "운동재활",
+  "급성 염좌",
+  "발목 염좌",
+  "허리 삐끗함",
+  "목·어깨 급성 통증",
+  "산후 허리 통증",
+  "육아 손목 통증",
+  "직장인 목·어깨 통증",
+  "거북목",
+  "보행 재활",
+  "균형 운동",
+  "낙상 예방",
+  "척추수술 후 재활",
+  "관절수술 후 재활",
+  "Postoperative Recovery",
+  "Physical Therapy",
+  "Manual Therapy",
+  "Exercise Rehabilitation"
+];
+
+export function siteJsonLd() {
+  const clinicId = `${SITE_URL}#recovery-rehabilitation-center`;
+  const hospitalId = `${SITE_URL}#new-standard-hospital`;
+  const logoUrl = new URL(hospitalInfo.logoPath, SITE_URL).toString();
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalClinic",
+        "@id": clinicId,
+        name: hospitalInfo.centerName,
+        alternateName: [hospitalInfo.formerName, "새기준병원 물리치료·운동재활센터"],
+        url: SITE_URL,
+        logo: logoUrl,
+        image: new URL("/og/og-recovery-center.svg", SITE_URL).toString(),
+        parentOrganization: {
+          "@id": hospitalId
+        },
+        medicalSpecialty: ["PhysicalTherapy", "Rehabilitation", "Orthopedic"],
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "중부대로 1539",
+          addressLocality: "처인구, 용인시",
+          addressRegion: "경기도",
+          addressCountry: "KR"
+        },
+        areaServed: ["용인시", "처인구", "경기도"],
+        telephone: hospitalInfo.phone,
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: hospitalInfo.phone,
+          contactType: "hospital main phone",
+          areaServed: "KR",
+          availableLanguage: ["ko"]
+        },
+        potentialAction: {
+          "@type": "ReserveAction",
+          target: hospitalInfo.naverReservationUrl,
+          name: "Naver Booking"
+        },
+        description: aiSummary.ko,
+        knowsAbout: mainTopics
+      },
+      {
+        "@type": "Hospital",
+        "@id": hospitalId,
+        name: hospitalInfo.hospitalName,
+        url: hospitalInfo.officialWebsiteUrl,
+        logo: logoUrl,
+        sameAs: [hospitalInfo.officialWebsiteUrl, hospitalInfo.youtubeUrl],
+        telephone: hospitalInfo.phone,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "중부대로 1539",
+          addressLocality: "처인구, 용인시",
+          addressRegion: "경기도",
+          addressCountry: "KR"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}#website`,
+        url: SITE_URL,
+        name: hospitalInfo.centerName,
+        inLanguage: "ko-KR",
+        publisher: {
+          "@id": hospitalId
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${SITE_URL}#faq`,
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer
+          }
+        }))
+      }
+    ]
+  };
+}
+
+export function webPageJsonLd({ title, description, path }: { title: string; description: string; path: string }) {
+  const url = new URL(path, SITE_URL).toString();
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: title,
+    description,
+    inLanguage: "ko-KR",
+    about: {
+      "@id": `${SITE_URL}#recovery-rehabilitation-center`
+    },
+    isPartOf: {
+      "@id": `${SITE_URL}#website`
+    }
+  };
+}

@@ -1,0 +1,12 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F4F8F7"/>
+  <circle cx="1040" cy="80" r="240" fill="#D8EEE7"/>
+  <circle cx="120" cy="560" r="220" fill="#FFF3D8"/>
+  <rect x="86" y="86" width="1028" height="458" rx="42" fill="white" stroke="#D8EEE7" stroke-width="3"/>
+  <text x="126" y="165" fill="#2B7366" font-family="Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="4">NEW STANDARD HOSPITAL</text>
+  <text x="126" y="255" fill="#10212B" font-family="Arial, sans-serif" font-size="62" font-weight="900">새기준병원 회복재활센터</text>
+  <text x="126" y="330" fill="#10212B" font-family="Arial, sans-serif" font-size="38" font-weight="800">삐끗한 통증부터 수술 후 회복관리까지</text>
+  <text x="126" y="395" fill="#637381" font-family="Arial, sans-serif" font-size="28" font-weight="600">물리치료 · 도수치료 · 운동재활 · 보행/균형 회복</text>
+  <rect x="126" y="448" width="360" height="54" rx="27" fill="#2B7366"/>
+  <text x="158" y="484" fill="white" font-family="Arial, sans-serif" font-size="23" font-weight="800">031-328-0333</text>
+</svg>
