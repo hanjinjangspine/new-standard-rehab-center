@@ -8,17 +8,15 @@ export default function HeroSection() {
     <section className="relative overflow-hidden bg-gradient-to-br from-brand-900 via-brand-800 to-brand-600 px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-24">
       <div className="absolute right-[-7rem] top-[-7rem] h-80 w-80 rounded-full bg-brand-500/30 blur-3xl" aria-hidden="true" />
       <div className="absolute bottom-[-9rem] left-[-5rem] h-96 w-96 rounded-full bg-accent-300/25 blur-3xl" aria-hidden="true" />
-      <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
+      <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(360px,0.9fr)] lg:items-center xl:gap-14">
         <div className="min-w-0">
           <p className="inline-flex rounded-full bg-white/12 px-4 py-2 text-sm font-extrabold text-brand-50 ring-1 ring-white/18">
             {hospitalInfo.centerName}
           </p>
-          <h1 className="mt-6 max-w-[54rem] break-keep text-[2.35rem] font-black leading-[1.08] tracking-[-0.02em] sm:text-[3rem] lg:text-[3rem] xl:text-[3.25rem]">
-            <span className="block whitespace-nowrap">일상 통증부터</span>
-            <span className="block whitespace-nowrap">수술 후 회복관리까지</span>
-            <span className="hidden whitespace-nowrap lg:block">진단에 기반해 회복 방향을 상담합니다</span>
-            <span className="block whitespace-nowrap lg:hidden">진단에 기반해</span>
-            <span className="block whitespace-nowrap lg:hidden">회복 방향을 상담합니다</span>
+          <h1 className="mt-6 max-w-[42rem] break-keep whitespace-normal text-4xl font-black leading-[1.08] tracking-[-0.01em] sm:text-5xl lg:text-[3.25rem] xl:text-6xl">
+            <span className="block">일상 통증부터</span>
+            <span className="block">수술 후 회복관리까지</span>
+            <span className="block">진단 기반 회복관리</span>
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-brand-50 sm:text-xl">
             급성 염좌, 산후·육아 통증, 직장인 목·어깨·허리 통증, 고령자 보행 문제, 척추·관절 수술 후 회복관리까지 진찰 소견과 검사 결과를 함께 확인해 물리치료·도수치료·운동재활 방향을 상담합니다.
