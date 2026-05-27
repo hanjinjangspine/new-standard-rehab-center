@@ -51,6 +51,13 @@ export const metadata: Metadata = {
         alt: "새기준병원 회복재활센터 대표 이미지"
       }
     ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "새기준병원 회복재활센터 | 용인 물리치료·도수치료·운동재활",
+    description:
+      "급성 염좌, 산후·육아 통증, 직장인 통증, 고령자 보행 문제, 척추·관절 수술 후 회복관리까지 진찰 소견과 검사 결과를 함께 확인해 상담합니다.",
+    images: ["/og/og-recovery-center.svg"]
   }
 };
 

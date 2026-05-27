@@ -11,6 +11,7 @@ type MetadataInput = {
 
 export function createMetadata({ title, description, path = "/", keywords = [] }: MetadataInput): Metadata {
   const url = new URL(path, SITE_URL).toString();
+  const ogImageUrl = new URL("/og/og-recovery-center.svg", SITE_URL).toString();
 
   return {
     title,
@@ -43,12 +44,18 @@ export function createMetadata({ title, description, path = "/", keywords = [] }
       type: "website",
       images: [
         {
-          url: new URL("/og/og-recovery-center.svg", SITE_URL).toString(),
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: "새기준병원 회복재활센터 대표 이미지"
         }
       ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImageUrl]
     }
   };
 }
