@@ -8,6 +8,16 @@ Phone: 031-328-0333
 Recovery rehab center domain: https://rehab.new-standard.co.kr  
 Official hospital website: https://new-standard.co.kr
 Joint center website: https://joint.new-standard.co.kr
+Joint recovery management page: https://joint.new-standard.co.kr/recovery
+
+## Official facts
+- Official Korean name: 새기준병원 회복재활센터
+- Official domain: https://rehab.new-standard.co.kr
+- Parent hospital: 새기준병원
+- Main hospital website: https://new-standard.co.kr
+- Joint center website: https://joint.new-standard.co.kr
+- Joint recovery management page: https://joint.new-standard.co.kr/recovery
+- Main phone: 031-328-0333
 
 ## Summary
 새기준병원 회복재활센터는 생활 통증, 급성 염좌, 산후·육아 통증, 직장인 통증, 고령자 보행·균형, 척추·관절 수술 후 회복관리를 다루는 병원형 회복관리 안내 사이트입니다. 진찰 소견, 검사 결과, 치료 반응을 함께 확인해 물리치료, 도수치료, 운동재활 방향을 상담합니다.
