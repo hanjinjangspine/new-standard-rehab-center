@@ -39,6 +39,41 @@ const photoCards = [
   ...rehabPhotos.rooms
 ];
 
+const rehabDirectorProfile = {
+  careers: [
+    "새기준병원 치료실장",
+    "대한내과 통증클리닉 도수치료실장",
+    "명 가정의학과 물리치료실장",
+    "오재활의학과 물리치료실",
+    "한마음신경외과 물리치료실",
+    "스포츠마사지·체형관리/재활 센터 운영",
+    "한국GM 군산공장 산업보건센터 물리/재활치료실",
+    "국군계룡대지구병원 내과·물리치료실"
+  ],
+  credentials: [
+    "물리치료사 면허",
+    "BLS Provider 이수",
+    "Bobath Introductory Course 이수",
+    "스포츠테이핑 교육 이수",
+    "MKC 경근학회 이수",
+    "Jera Thai Massage School Basic Course",
+    "Watpo Traditional Medical Massage School",
+    "Ong's Traditional Massage Professional Course"
+  ],
+  activities: ["남사읍 노인대학 건강강좌", "한국GM 임직원 대상 스트레칭 건강강좌"],
+  fields: [
+    "도수치료",
+    "통증관리",
+    "수술 전후 재활",
+    "스포츠 재활",
+    "근막이완",
+    "체형관리",
+    "산업보건 재활",
+    "척추·관절 재활",
+    "산후·육아 관련 근골격계 회복관리"
+  ]
+};
+
 export default function HomePage() {
   return (
     <main>
@@ -139,6 +174,64 @@ export default function HomePage() {
         </div>
       </section>
       <TreatmentFlow />
+
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionTitle
+            align="center"
+            eyebrow="Rehabilitation Director"
+            title="재활치료실장 프로필"
+            description="회복재활센터의 물리치료·도수치료·운동재활은 의사 진료와 연결해 환자 상태, 진찰 소견, 치료 반응을 함께 확인하며 상담합니다."
+          />
+          <div className="mt-10 grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
+            <div className="rounded-[28px] border border-line bg-calm p-6 shadow-sm">
+              <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-brand-700">Physical Therapist</p>
+              <h3 className="mt-3 text-3xl font-black leading-tight text-ink">사준호 재활치료실장</h3>
+              <p className="mt-2 text-lg font-bold text-brand-700">새기준병원 재활치료실장 / 물리치료사</p>
+              <p className="mt-5 text-base leading-8 text-muted">
+                2005년 물리치료사로 임상 현장에 참여한 이후 신경외과, 재활의학, 통증클리닉, 산업보건, 재활센터 등 다양한 현장에서 근골격계 재활 경험을 쌓아왔습니다.
+              </p>
+              <p className="mt-4 text-base leading-8 text-muted">
+                새기준병원 회복재활센터에서는 환자의 증상, 진찰 소견, 치료 반응을 함께 확인하며 물리치료·도수치료·운동재활·수술 전후 회복관리 방향을 돕습니다.
+              </p>
+            </div>
+            <div className="grid gap-5 md:grid-cols-2">
+              <div className="rounded-[28px] border border-line bg-white p-6 shadow-sm">
+                <h3 className="text-2xl font-black text-ink">주요 임상 경력</h3>
+                <ul className="mt-4 grid gap-2 text-base leading-7 text-muted">
+                  {rehabDirectorProfile.careers.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-[28px] border border-line bg-white p-6 shadow-sm">
+                <h3 className="text-2xl font-black text-ink">자격 및 이수</h3>
+                <ul className="mt-4 grid gap-2 text-base leading-7 text-muted">
+                  {rehabDirectorProfile.credentials.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-[28px] border border-line bg-white p-6 shadow-sm">
+                <h3 className="text-2xl font-black text-ink">강좌 및 대외활동</h3>
+                <ul className="mt-4 grid gap-2 text-base leading-7 text-muted">
+                  {rehabDirectorProfile.activities.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-[28px] border border-line bg-white p-6 shadow-sm">
+                <h3 className="text-2xl font-black text-ink">담당 분야</h3>
+                <ul className="mt-4 grid gap-2 text-base leading-7 text-muted">
+                  {rehabDirectorProfile.fields.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
