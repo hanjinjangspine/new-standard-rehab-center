@@ -74,6 +74,17 @@ const rehabDirectorProfile = {
   ]
 };
 
+const officialRehabLinks = [
+  {
+    href: "https://new-standard.co.kr/sub/r50/s5010.php",
+    label: "본원 물리치료·운동재활센터 안내"
+  },
+  {
+    href: "https://new-standard.co.kr/sub/r50/s5020.php",
+    label: "본원 체외충격파 치료 안내"
+  }
+];
+
 export default function HomePage() {
   return (
     <main>
@@ -275,10 +286,19 @@ export default function HomePage() {
               <p className="mt-5 text-lg leading-8 text-brand-50">
                 회복재활센터는 생활 통증 환자의 첫 진입 창구이면서, 필요 시 척추센터·관절센터 진료와 수술 후 회복관리로 연결되는 병원 전체 환자 흐름의 허브입니다.
               </p>
+              <p className="mt-4 text-base leading-7 text-brand-100">
+                새기준병원 본원에서는 물리치료·운동재활센터와 체외충격파 치료 안내를 함께 확인하실 수 있습니다. 생활 통증, 급성 염좌, 수술 후 회복관리, 운동재활 방향은 진찰 소견과 검사 결과를 함께 확인해 상담합니다.
+              </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {officialLinks.map((item) => (
                 <Link key={item.href} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined} className="group flex min-h-20 items-center justify-between rounded-2xl border border-white/12 bg-white/8 p-5 text-base font-extrabold text-white transition hover:bg-white/14">
+                  {item.label}
+                  <ExternalLink aria-hidden="true" size={18} className="transition group-hover:translate-x-1" />
+                </Link>
+              ))}
+              {officialRehabLinks.map((item) => (
+                <Link key={item.href} href={item.href} target="_blank" rel="noopener noreferrer" className="group flex min-h-20 items-center justify-between rounded-2xl border border-white/12 bg-white/8 p-5 text-base font-extrabold text-white transition hover:bg-white/14">
                   {item.label}
                   <ExternalLink aria-hidden="true" size={18} className="transition group-hover:translate-x-1" />
                 </Link>
