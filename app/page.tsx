@@ -85,6 +85,51 @@ const officialRehabLinks = [
   }
 ];
 
+const patientNeedCards = [
+  {
+    title: "수술 후 회복 지연",
+    description: "수술 후 통증·저림·보행 불안이 남아 있다면 기존 영상자료와 현재 기능 상태를 함께 확인합니다."
+  },
+  {
+    title: "척추관협착증·허리디스크 보행 제한",
+    description: "걷는 거리, 다리저림 위치, 쉬면 완화되는지 여부, 기존 치료 반응을 확인해 상담합니다."
+  },
+  {
+    title: "고령자 보행·균형",
+    description: "부모님의 보행 불안, 근력 저하, 낙상 위험, 보호자 동행 필요성을 함께 살펴봅니다."
+  },
+  {
+    title: "산후·육아 통증",
+    description: "아기 안기, 수유 자세, 반복되는 손목·허리·골반·목어깨 부담을 생활 동작과 함께 확인합니다."
+  },
+  {
+    title: "직장인 생활 통증",
+    description: "오래 앉는 자세, 목어깨 결림, 허리 통증, 손목 통증처럼 반복되는 생활 통증을 상담합니다."
+  },
+  {
+    title: "급성 염좌·삐끗함",
+    description: "발목 염좌, 허리 삐끗함, 급성 목어깨 통증은 손상 정도와 움직임 제한을 확인합니다."
+  }
+];
+
+const policyGuideCards = [
+  {
+    title: "도수치료 관리기준 안내",
+    description:
+      "도수치료 관련 관리기준 변화가 예정되어 있어 진찰 소견, 기능 상태, 기존 치료 반응을 함께 확인하는 과정이 중요해질 수 있습니다. 가입 보험의 보장 여부와 금액은 상품과 보험사 기준에 따라 달라질 수 있습니다."
+  },
+  {
+    title: "체외충격파 치료 안내",
+    description:
+      "체외충격파 치료는 도수치료 관리기준과 다른 치료군입니다. 통증 부위와 손상 양상, 기존 치료 반응을 확인해 필요한 경우 본원 체외충격파 안내와 함께 상담합니다."
+  },
+  {
+    title: "IVNT·IVMT 보조 상담",
+    description:
+      "수술 전후 회복 과정에서 전신 컨디션 저하, 식사 저하, 피로감이 동반되는 경우 진료 후 필요한 범위에서 보조적으로 상담할 수 있습니다. 수액치료는 질환 진단이나 회복재활을 대체하지 않습니다."
+  }
+];
+
 export default function HomePage() {
   return (
     <main>
@@ -128,6 +173,44 @@ export default function HomePage() {
         </div>
       </section>
       <ProgramGrid />
+
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionTitle
+            align="center"
+            eyebrow="Patient Needs"
+            title="생활 통증부터 수술 후 회복관리까지 함께 확인합니다"
+            description="회복재활센터는 특정 치료를 먼저 정해두기보다 환자 상태, 진찰 소견, 검사 결과, 기존 치료 반응을 함께 확인해 필요한 치료 단계를 상담합니다."
+          />
+          <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {patientNeedCards.map((item) => (
+              <div key={item.title} className="rounded-[28px] border border-line bg-white p-6 shadow-sm">
+                <h3 className="text-2xl font-black leading-tight text-ink">{item.title}</h3>
+                <p className="mt-4 text-base leading-8 text-muted">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-calm px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionTitle
+            align="center"
+            eyebrow="Policy & Treatment Guide"
+            title="도수치료·체외충격파·수액 상담은 역할을 구분해 안내합니다"
+            description="치료군을 혼동하지 않고, 비용이나 보험 보장 여부를 병원이 단정하지 않으며, 진료 후 필요한 범위에서 상담할 수 있도록 정리합니다."
+          />
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {policyGuideCards.map((item) => (
+              <div key={item.title} className="rounded-[28px] border border-line bg-white p-6 shadow-sm">
+                <h3 className="text-2xl font-black leading-tight text-ink">{item.title}</h3>
+                <p className="mt-4 text-base leading-8 text-muted">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">

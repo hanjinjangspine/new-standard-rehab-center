@@ -20,6 +20,28 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
           <InfoCard title="회복관리 방향" items={page.care} />
         </div>
       </section>
+      {page.detailSections ? (
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-3">
+            {page.detailSections.map((item) => (
+              <div key={item.title} className="rounded-[28px] border border-line bg-calm p-6 shadow-sm">
+                <h2 className="text-2xl font-black leading-tight text-ink">{item.title}</h2>
+                <p className="mt-4 text-base leading-8 text-muted">{item.description}</p>
+                {item.items ? (
+                  <div className="mt-5 grid gap-3">
+                    {item.items.map((subItem) => (
+                      <p key={subItem} className="flex gap-3 text-base leading-7 text-ink">
+                        <CheckCircle2 aria-hidden="true" size={20} className="mt-1 shrink-0 text-brand-700" />
+                        {subItem}
+                      </p>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
       <section className="bg-calm px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
