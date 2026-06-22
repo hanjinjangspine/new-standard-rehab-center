@@ -4,14 +4,7 @@ import { programPages } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticRoutes = [
-    "/",
-    "/contact",
-    "/ai-readable-rehab-profile",
-    "/operative-concepts",
-    "/operative-concepts/ube-far-lateral-l5s1",
-    "/biportal-endoscopic-spine-surgery"
-  ];
+  const staticRoutes = ["/", "/contact", "/ai-readable-rehab-profile"];
   const programRoutes = Object.values(programPages).map((page) => page.path);
 
   return [...staticRoutes, ...programRoutes].map((route) => ({
