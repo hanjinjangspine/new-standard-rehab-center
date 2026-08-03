@@ -1,17 +1,17 @@
 import Link from "next/link";
-import { ArrowRight, CalendarCheck, MapPin, ShieldCheck } from "lucide-react";
+import { ArrowRight, CalendarCheck, MapPin } from "lucide-react";
 import RehabPhoto from "@/components/RehabPhoto";
-import { hospitalInfo, rehabPhotos, targetGroups } from "@/lib/data";
+import { hospitalInfo, rehabPhotos } from "@/lib/data";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden border-b border-[#D9E2E7] bg-[#F8FAFB] px-4 py-12 text-[#10283D] sm:px-6 sm:py-14 lg:px-8 lg:py-24">
-      <div className="relative mx-auto grid max-w-7xl gap-7 lg:grid-cols-[minmax(0,1fr)_minmax(360px,0.9fr)] lg:items-center lg:gap-10 xl:gap-14">
-        <div className="min-w-0">
+    <section className="relative overflow-hidden border-b border-[#D9E2E7] bg-[#F8FAFB] px-4 py-10 text-[#10283D] sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+      <div className="relative mx-auto grid max-w-[1180px] gap-7 md:gap-9 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-center lg:gap-12">
+        <div className="order-1 min-w-0 md:order-2 lg:order-1">
           <p className="inline-flex rounded-xl border border-[#D9E2E7] bg-white px-4 py-2 text-sm font-extrabold text-[#2B7366] shadow-sm md:px-5 md:py-2.5 md:text-base">
             {hospitalInfo.centerName}
           </p>
-          <h1 className="mt-6 max-w-[42rem] break-keep whitespace-normal text-4xl font-black leading-[1.08] tracking-[-0.01em] sm:text-5xl lg:text-[3.25rem] xl:text-6xl">
+          <h1 className="mt-6 max-w-[42rem] break-keep whitespace-normal text-4xl font-black leading-[1.08] tracking-[-0.01em] sm:text-5xl lg:text-[3rem] xl:text-[3.35rem]">
             <span className="block">일상 통증부터</span>
             <span className="block">수술 후 회복관리까지</span>
             <span className="block">진단 기반 회복관리</span>
@@ -31,35 +31,14 @@ export default function HeroSection() {
             </Link>
           </div>
         </div>
-        <div className="grid gap-4">
+        <div className="order-2 md:order-1 lg:order-2">
           <RehabPhoto
             src={rehabPhotos.hero}
             alt="새기준병원 회복재활센터 내부"
-            label="진단 기반 회복관리 공간"
-            className="h-[280px] w-full sm:h-[320px] lg:h-auto lg:aspect-[5/4]"
+            className="aspect-[3/2] w-full"
+            imageClassName="object-contain"
             priority
           />
-          <div className="rounded-2xl border border-[#D9E2E7] bg-white p-5 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#EAF6F3] text-[#2B7366]">
-                <ShieldCheck aria-hidden="true" size={23} />
-              </div>
-              <div>
-                <p className="text-sm font-extrabold text-[#2B7366]">이런 증상이 있을 때 상담해보세요</p>
-                <p className="text-base font-black text-[#10283D]">증상과 검사 결과를 함께 확인합니다</p>
-              </div>
-            </div>
-            <div className="mt-4 grid gap-2">
-              {targetGroups.map((item) => (
-                <div key={item} className="rounded-xl bg-[#F8FAFB] px-4 py-3 text-sm font-bold text-[#15212B]">
-                  {item}
-                </div>
-              ))}
-            </div>
-            <p className="mt-4 rounded-xl bg-[#F1FBF9] px-4 py-3 text-xs font-bold leading-6 text-[#2B7366]">
-              치료 방법은 증상, 진찰 소견, 검사 결과, 치료 반응에 따라 달라질 수 있습니다.
-            </p>
-          </div>
         </div>
       </div>
     </section>

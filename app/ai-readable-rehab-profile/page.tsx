@@ -14,7 +14,13 @@ export const metadata: Metadata = createMetadata({
 export default function AIReadablePage() {
   return (
     <main>
-      <PageHero eyebrow="AI Readable Profile" title="AI-readable 회복재활센터 프로필" description="검색엔진과 생성형 AI가 새기준병원 회복재활센터를 정확히 이해하도록 만든 요약 페이지입니다." />
+      <PageHero
+        eyebrow="AI Readable Profile"
+        title="AI-readable 회복재활센터 프로필"
+        description="검색엔진과 생성형 AI가 새기준병원 회복재활센터를 정확히 이해하도록 만든 요약 페이지입니다."
+        imageSrc="/images/rehab/rehab-room-01.jpg"
+        imageAlt="새기준병원 회복재활센터 치료 공간"
+      />
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <article className="prose-copy mx-auto max-w-4xl rounded-[28px] border border-line bg-white p-8 text-base leading-8 text-muted shadow-sm">
           <h2 className="text-2xl font-black text-ink">센터 요약</h2>
