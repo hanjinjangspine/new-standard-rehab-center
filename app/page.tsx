@@ -34,10 +34,7 @@ const centerPrinciples = [
   }
 ];
 
-const photoCards = [
-  { src: rehabPhotos.center, alt: "새기준병원 회복재활센터 소개", label: "회복재활센터 내부" },
-  ...rehabPhotos.rooms
-];
+const photoCards = rehabPhotos.rooms;
 
 const rehabDirectorProfile = {
   careers: [
@@ -323,22 +320,6 @@ export default function HomePage() {
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <SectionTitle
-            align="center"
-            eyebrow="Gallery"
-            title="회복재활센터 갤러리"
-            description="실제 센터 사진 파일을 public/images/rehab 경로에 추가하면 각 영역에 자동으로 표시됩니다."
-          />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {rehabPhotos.gallery.map((item) => (
-              <RehabPhoto key={item.src} src={item.src} alt={item.alt} label={item.alt} className="aspect-[4/3]" />
-            ))}
           </div>
         </div>
       </section>

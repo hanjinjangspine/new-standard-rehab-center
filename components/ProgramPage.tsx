@@ -12,7 +12,13 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
   return (
     <main>
       <SEOJsonLd data={webPageJsonLd({ title: page.title, description: page.description, path: page.path })} />
-      <PageHero eyebrow={page.eyebrow} title={h1} description={page.heroLead} />
+      <PageHero
+        eyebrow={page.eyebrow}
+        title={h1}
+        description={page.heroLead}
+        imageSrc={page.heroImage}
+        imageAlt={page.heroImageAlt}
+      />
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3">
           <InfoCard title="이런 증상이 있을 때" items={page.symptoms} />

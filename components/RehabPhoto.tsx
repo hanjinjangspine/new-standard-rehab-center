@@ -8,12 +8,14 @@ export default function RehabPhoto({
   src,
   alt,
   className = "",
+  imageClassName = "object-contain md:object-cover",
   label,
   priority = false
 }: {
   src: string;
   alt: string;
   className?: string;
+  imageClassName?: string;
   label?: string;
   priority?: boolean;
 }) {
@@ -37,11 +39,11 @@ export default function RehabPhoto({
         fill
         priority={priority}
         sizes="(min-width: 1024px) 50vw, 100vw"
-        className="object-cover"
+        className={imageClassName}
         onError={() => setLoaded(false)}
       />
       {label ? (
-        <div className="absolute inset-x-4 bottom-4 rounded-2xl bg-white/90 px-4 py-3 text-sm font-extrabold text-brand-800 shadow-sm backdrop-blur">
+        <div className="absolute inset-x-4 bottom-4 hidden rounded-2xl bg-white/90 px-4 py-3 text-sm font-extrabold text-brand-800 shadow-sm backdrop-blur md:block">
           {label}
         </div>
       ) : null}

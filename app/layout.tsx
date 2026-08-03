@@ -75,7 +75,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ko">
-      <body className="pb-14 md:pb-0">
+      <body className="pb-[calc(3.5rem+env(safe-area-inset-bottom))] md:pb-0">
         <SEOJsonLd data={siteJsonLd()} />
         <Header />
         {children}

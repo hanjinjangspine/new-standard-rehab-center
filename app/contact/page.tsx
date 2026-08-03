@@ -18,7 +18,13 @@ export default function ContactPage() {
   return (
     <main>
       <SEOJsonLd data={webPageJsonLd({ title: "오시는 길·진료 상담", description: metadata.description as string, path: "/contact" })} />
-      <PageHero eyebrow="Contact" title="오시는 길·진료 상담" description="진료 일정은 병원 상황에 따라 변동될 수 있습니다. 내원 전 대표전화로 확인해 주세요." />
+      <PageHero
+        eyebrow="Contact"
+        title="오시는 길·진료 상담"
+        description="진료 일정은 병원 상황에 따라 변동될 수 있습니다. 내원 전 대표전화로 확인해 주세요."
+        imageSrc="/images/rehab/rehab-room-02.jpg"
+        imageAlt="새기준병원 회복재활센터 도수치료실과 물리치료실 입구"
+      />
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3">
           <ContactCard icon={<Phone size={26} />} title="대표전화" text={hospitalInfo.phone} href={hospitalInfo.consultationPhoneHref} linkText="전화 걸기" />
