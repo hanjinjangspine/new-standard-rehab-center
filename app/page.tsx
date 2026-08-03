@@ -148,8 +148,14 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-        <div className="mx-auto mt-10 grid max-w-7xl gap-5 lg:grid-cols-[1.15fr_0.85fr]">
-          <RehabPhoto src={rehabPhotos.center} alt="새기준병원 회복재활센터 공간" label="센터 소개 사진" className="aspect-[16/9]" />
+        <div className="mx-auto mt-10 grid max-w-7xl gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          <RehabPhoto
+            src={rehabPhotos.center}
+            alt="새기준병원 회복재활센터 공간"
+            label="센터 소개 사진"
+            className="mx-auto aspect-[3/2] max-h-[448px] w-full max-w-2xl"
+            sizes="(min-width: 1280px) 672px, (min-width: 1024px) 55vw, (min-width: 640px) 672px, calc(100vw - 2rem)"
+          />
           <div className="rounded-[28px] border border-line bg-calm p-6">
             <h3 className="text-2xl font-black text-ink">새기준병원 회복재활센터</h3>
             <p className="mt-4 text-base leading-8 text-muted">
@@ -248,7 +254,14 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {photoCards.map((item) => (
-              <RehabPhoto key={item.src} src={item.src} alt={item.alt} label={item.label} className="aspect-[4/3]" />
+              <RehabPhoto
+                key={item.src}
+                src={item.src}
+                alt={item.alt}
+                label={item.label}
+                className="aspect-[3/2] max-h-[280px] w-full"
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, calc(100vw - 2rem)"
+              />
             ))}
           </div>
         </div>

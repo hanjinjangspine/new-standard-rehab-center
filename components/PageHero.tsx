@@ -40,8 +40,9 @@ export default function PageHero({
           <RehabPhoto
             src={imageSrc}
             alt={imageAlt}
-            className="aspect-[3/2] w-full"
+            className="mx-auto aspect-[3/2] max-h-[520px] w-full max-w-[920px]"
             imageClassName="object-contain"
+            sizes="(min-width: 1024px) 50vw, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
             priority
           />
         </div>
