@@ -35,8 +35,9 @@ export default function HeroSection() {
           <RehabPhoto
             src={rehabPhotos.hero}
             alt="새기준병원 회복재활센터 내부"
-            className="aspect-[3/2] w-full"
+            className="mx-auto aspect-[3/2] max-h-[520px] w-full max-w-[920px]"
             imageClassName="object-contain"
+            sizes="(min-width: 1024px) 50vw, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
             priority
           />
         </div>

@@ -8,7 +8,8 @@ export default function RehabPhoto({
   src,
   alt,
   className = "",
-  imageClassName = "object-contain md:object-cover",
+  imageClassName = "object-contain",
+  sizes = "(min-width: 1024px) 50vw, 100vw",
   label,
   priority = false
 }: {
@@ -16,6 +17,7 @@ export default function RehabPhoto({
   alt: string;
   className?: string;
   imageClassName?: string;
+  sizes?: string;
   label?: string;
   priority?: boolean;
 }) {
@@ -38,7 +40,7 @@ export default function RehabPhoto({
         alt={alt}
         fill
         priority={priority}
-        sizes="(min-width: 1024px) 50vw, 100vw"
+        sizes={sizes}
         className={imageClassName}
         onError={() => setLoaded(false)}
       />
