@@ -190,6 +190,16 @@ export function webPageJsonLd({ title, description, path }: { title: string; des
     name: title,
     description,
     inLanguage: "ko-KR",
+    dateModified: "2026-08-10",
+    author: {
+      "@id": `${SITE_URL}#new-standard-hospital`
+    },
+    publisher: {
+      "@id": `${SITE_URL}#new-standard-hospital`
+    },
+    reviewedBy: {
+      "@id": `${SITE_URL}#new-standard-hospital`
+    },
     about: {
       "@id": `${SITE_URL}#recovery-rehabilitation-center`
     },
