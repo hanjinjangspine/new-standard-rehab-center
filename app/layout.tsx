@@ -6,6 +6,7 @@ import SEOJsonLd from "@/components/SEOJsonLd";
 import { hospitalInfo, SITE_URL } from "@/lib/data";
 import { siteJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
+import SiteAnalytics from "@/components/SiteAnalytics";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ko">
       <body className="pb-[calc(3.5rem+env(safe-area-inset-bottom))] md:pb-0">
+        <SiteAnalytics />
         <SEOJsonLd data={siteJsonLd()} />
         <Header />
         {children}
