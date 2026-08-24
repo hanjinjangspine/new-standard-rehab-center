@@ -11,13 +11,12 @@ export default function HeroSection() {
           <p className="inline-flex rounded-xl border border-[#D9E2E7] bg-white px-4 py-2 text-sm font-extrabold text-[#2B7366] shadow-sm md:px-5 md:py-2.5 md:text-base">
             {hospitalInfo.centerName}
           </p>
-          <h1 className="mt-6 max-w-[42rem] break-keep whitespace-normal text-4xl font-black leading-[1.08] tracking-[-0.01em] sm:text-5xl lg:text-[3rem] xl:text-[3.35rem]">
+          <h1 className="mt-6 max-w-[42rem] break-keep whitespace-normal text-[2.15rem] font-black leading-[1.12] tracking-[-0.01em] sm:text-5xl lg:text-[3rem] xl:text-[3.35rem]">
             <span className="block">일상 통증부터</span>
-            <span className="block">수술 후 회복관리까지</span>
-            <span className="block">진단 기반 회복관리</span>
+            <span className="block">수술 후 회복까지</span>
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-7 text-[#5B6770] sm:text-lg sm:leading-8 lg:mt-6 lg:text-xl">
-            급성 염좌, 산후·육아 통증, 직장인 목·어깨·허리 통증, 고령자 보행 문제, 척추·관절 수술 후 회복관리까지 진찰 소견과 검사 결과를 함께 확인해 물리치료·도수치료·운동재활 방향을 상담합니다.
+            어디가 불편한지, 움직임이 어떻게 달라졌는지 살펴봅니다. 진찰과 검사 결과를 함께 확인해 물리치료·도수치료·운동재활 방향을 상담합니다.
           </p>
           <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:gap-3 lg:mt-8">
             <Link href={hospitalInfo.naverReservationHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#2B7366] px-5 py-3 text-sm font-extrabold text-white shadow-sm transition hover:bg-[#245F55] sm:px-6 sm:py-4 sm:text-base">
