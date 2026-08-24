@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MobileBottomCTA from "@/components/MobileBottomCTA";
+import PhotoOwnershipNotice from "@/components/PhotoOwnershipNotice";
 import SEOJsonLd from "@/components/SEOJsonLd";
 import { hospitalInfo, SITE_URL } from "@/lib/data";
 import { siteJsonLd } from "@/lib/seo";
@@ -79,6 +80,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="pb-[calc(3.5rem+env(safe-area-inset-bottom))] md:pb-0">
         <SiteAnalytics />
         <SEOJsonLd data={siteJsonLd()} />
+        <PhotoOwnershipNotice />
         <Header />
         {children}
         <Footer />
