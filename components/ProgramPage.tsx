@@ -7,7 +7,7 @@ import { webPageJsonLd } from "@/lib/seo";
 
 export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
   const page = programPages[slug];
-  const h1 = page.title.replace(" | 새기준병원 회복재활센터", "");
+  const h1 = page.h1 ?? page.title.replace(" | 새기준병원 회복재활센터", "");
 
   return (
     <main>
@@ -18,6 +18,7 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
         description={page.heroLead}
         imageSrc={page.heroImage}
         imageAlt={page.heroImageAlt}
+        ctaLabel={page.ctaLabel}
       />
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3">

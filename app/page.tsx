@@ -6,17 +6,18 @@ import FAQSection from "@/components/FAQSection";
 import HeroSection from "@/components/HeroSection";
 import ProgramGrid from "@/components/ProgramGrid";
 import RehabPhoto from "@/components/RehabPhoto";
+import SEOJsonLd from "@/components/SEOJsonLd";
 import SectionTitle from "@/components/SectionTitle";
 import TreatmentFlow from "@/components/TreatmentFlow";
 import { aiSummary, connectedCareLinks, officialLinks, rehabPhotos, safetyCopy } from "@/lib/data";
-import { createMetadata } from "@/lib/seo";
+import { createMetadata, faqJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
-  title: "새기준병원 회복재활센터 | 생활 통증·수술 후 회복관리",
+  title: "용인 재활치료 | 척추·관절 수술 후 기능 회복 | 새기준병원",
   description:
-    "새기준병원 회복재활센터는 생활 통증, 물리치료, 도수치료, 운동재활, 척추·관절 수술 후 기능 회복관리를 진찰 소견과 검사 결과를 함께 확인해 상담합니다.",
+    "용인 새기준병원 회복재활센터는 통증뿐 아니라 보행·근력·관절가동범위·일상기능을 평가해 척추·관절 질환과 수술 후 기능 회복을 상담합니다.",
   path: "/",
-  keywords: ["용인 회복재활", "생활 통증", "수술 후 회복관리", "도수치료", "운동재활"]
+  keywords: ["용인 재활치료", "용인 회복재활", "용인 수술후재활"]
 });
 
 const centerPrinciples = [
@@ -130,6 +131,7 @@ const policyGuideCards = [
 export default function HomePage() {
   return (
     <main>
+      <SEOJsonLd data={faqJsonLd()} />
       <HeroSection />
 
       <section className="px-4 py-16 sm:px-6 lg:px-8">
@@ -421,7 +423,7 @@ export default function HomePage() {
       </section>
 
       <FAQSection />
-      <CTASection title="통증이 반복된다면 현재 상태와 회복 단계를 먼저 확인해 보세요" description="급성 통증, 산후·육아 통증, 직장인 생활 통증, 보행 문제, 수술 후 회복은 원인과 단계가 다를 수 있습니다. 진찰과 검사 결과를 함께 확인해 회복관리 방향을 상담합니다." />
+      <CTASection title="현재 기능 상태를 평가하고 다음 회복 단계를 확인해 보세요" description="통증 강도뿐 아니라 보행, 근력, 관절가동범위, 일상 동작과 기존 치료 반응을 함께 확인해 척추·관절 질환과 수술 후 회복 방향을 상담합니다." />
     </main>
   );
 }

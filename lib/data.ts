@@ -23,7 +23,7 @@ export const hospitalInfo = {
   googleMapUrl: siteConfig.googleMapUrl,
   logoPath: siteConfig.logoPath,
   logoAlt: siteConfig.logoAlt,
-  hours: "평일 진료 / 토요일 오전 진료 / 일정은 방문 전 확인",
+  hours: "평일 08:30-17:30 / 토요일 08:30-12:30 / 일요일 09:00-13:00",
   hoursNote: "진료 일정은 의료진 사정 및 병원 상황에 따라 변동될 수 있습니다.",
   hoursConfirmation: "내원 전 대표전화 031-328-0333으로 확인해 주세요.",
   baseUrl: siteConfig.baseUrl,
@@ -151,6 +151,8 @@ export type ProgramSlug =
 
 type ProgramPageData = {
   title: string;
+  h1?: string;
+  ctaLabel?: string;
   eyebrow: string;
   path: string;
   description: string;
@@ -235,11 +237,13 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
     ]
   },
   "postoperative-recovery": {
-    title: "척추·관절 수술 후 회복관리 | 새기준병원 회복재활센터",
+    title: "용인 수술 후 재활 | 척추·무릎 기능 회복 | 새기준병원",
+    h1: "척추·무릎 수술 후, 현재 기능 단계에 맞춰 회복합니다",
+    ctaLabel: "수술 후 재활 계획 상담하기",
     eyebrow: "Postoperative Recovery",
     path: "/postoperative-recovery",
-    description: "척추·관절 수술 후 통증·저림·보행·운동범위·근력 회복 단계를 의료진과 함께 확인합니다.",
-    keywords: ["수술 후 회복", "척추 수술 후 재활", "관절 수술 후 재활"],
+    description: "용인 새기준병원은 척추·무릎 수술 후 통증·저림·부종·보행·관절가동범위·근력과 일상 복귀 단계를 함께 확인해 재활 계획을 상담합니다.",
+    keywords: ["용인 수술후재활", "용인 척추수술후재활", "용인 무릎수술후재활"],
     heroLead: "수술 후에도 통증이나 저림, 보행 불안이 남아 불안할 수 있습니다. 회복 과정은 수술 범위와 환자 상태에 따라 달라질 수 있어 기존 자료와 현재 기능 상태를 함께 확인합니다.",
     heroImage: "/images/rehab/hero-rehab-center.jpg",
     heroImageAlt: "수술 후 하지 기능 회복을 확인하는 새기준병원 회복재활센터",
@@ -261,19 +265,37 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
         title: "회복 과정 확인",
         description: "회복 과정은 모든 환자에게 동일하지 않습니다. 수술 범위, 통증 반응, 보행과 근력 상태를 확인해 물리치료, 운동재활, 자가운동 교육 방향을 상담합니다.",
         items: ["보행·근력·균형", "관절 운동범위", "일상 동작 복귀 단계"]
+      },
+      {
+        title: "척추 수술 후 확인",
+        description: "허리디스크·척추관협착증 수술 후에는 통증과 저림의 위치, 근력 변화, 걷는 거리와 자세 변화, 수술 부위 의료진 지침을 함께 확인합니다.",
+        items: ["다리 저림·근력 변화", "보행거리와 균형", "수술 단계에 맞는 운동 범위"]
+      },
+      {
+        title: "무릎 수술 후 확인",
+        description: "인공관절·연골판·인대 수술 후에는 부종과 통증, 무릎 굽힘·펴짐, 체중 부하, 보행 안정성과 허벅지 근력을 단계적으로 확인합니다.",
+        items: ["부종과 관절가동범위", "체중 부하와 보행", "허벅지 근력과 계단 기능"]
+      },
+      {
+        title: "어깨 수술 후 확인",
+        description: "회전근개 등 어깨 수술 후에는 수술 부위 보호 지침을 우선하고, 허용된 범위에서 운동범위와 근력, 일상 동작 회복을 확인합니다.",
+        items: ["수술 부위 보호 지침", "어깨 운동범위", "근력과 일상 동작 복귀"]
       }
     ],
     related: [
-      { label: "척추센터", href: "https://new-standard.co.kr/sub/r30/spine-center.php" },
-      { label: "관절센터", href: "https://joint.new-standard.co.kr" }
+      { label: "척추수술 판단·2차 의견", href: "https://new-standard.co.kr/sub/r40/spine-surgery-second-opinion.php" },
+      { label: "무릎 통증·수술 판단", href: "https://joint.new-standard.co.kr/knee" },
+      { label: "무릎 인공관절 판단 기준", href: "https://joint.new-standard.co.kr/patient-guides/knee-osteoarthritis-replacement" }
     ]
   },
   "manual-exercise-rehab": {
-    title: "도수치료·운동재활 안내 | 새기준병원 회복재활센터",
+    title: "용인 도수치료 | 통증·기능 상태에 따른 운동재활 | 새기준병원",
+    h1: "도수치료, 통증 원인과 기능 상태를 먼저 확인합니다",
+    ctaLabel: "통증과 기능 상태 평가받기",
     eyebrow: "Manual Therapy & Exercise Rehabilitation",
     path: "/manual-exercise-rehab",
-    description: "도수치료, 물리치료, 운동재활은 진찰 소견과 기능 상태, 기존 치료 반응을 확인해 필요한 범위에서 상담합니다.",
-    keywords: ["도수치료", "운동재활", "물리치료"],
+    description: "용인 새기준병원은 통증 원인과 진찰 소견, 관절가동범위·근력·보행·기존 치료 반응을 확인해 도수치료와 운동재활의 필요한 범위를 상담합니다.",
+    keywords: ["용인 도수치료", "용인 운동치료", "용인 운동재활"],
     heroLead: "도수치료와 운동재활은 단독 상품처럼 모든 환자에게 동일하게 적용되는 과정이 아닙니다. 진찰 소견, 기능 상태, 기존 치료 반응을 확인한 뒤 필요한 치료 단계를 상담합니다.",
     heroImage: "/images/rehab/manual-therapy-01.jpg",
     heroImageAlt: "환자의 움직임을 확인하며 도수치료를 진행하는 새기준병원 치료실",
@@ -299,7 +321,9 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
     ],
     related: [
       { label: "치료 전 확인", href: "/treatment-before-check" },
-      { label: "오시는 길", href: "/contact" }
+      { label: "수술 후 회복재활", href: "/postoperative-recovery" },
+      { label: "척추센터", href: "https://new-standard.co.kr/sub/r30/spine-center.php" },
+      { label: "관절센터", href: "https://joint.new-standard.co.kr" }
     ]
   },
   "treatment-before-check": {
