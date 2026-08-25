@@ -9,6 +9,7 @@ type PageHeroProps = {
   description: string;
   imageSrc?: string;
   imageAlt?: string;
+  ctaLabel?: string;
 };
 
 export default function PageHero({
@@ -16,7 +17,8 @@ export default function PageHero({
   title,
   description,
   imageSrc = "/images/rehab/hero-rehab-center.jpg",
-  imageAlt = "새기준병원 회복재활센터 치료 공간"
+  imageAlt = "새기준병원 회복재활센터 치료 공간",
+  ctaLabel = "현재 기능 상태 평가받기"
 }: PageHeroProps) {
   return (
     <section className="overflow-hidden border-b border-line bg-gradient-to-br from-brand-50 via-white to-accent-100 px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
@@ -29,7 +31,7 @@ export default function PageHero({
           <p className="mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">{description}</p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Link href={hospitalInfo.naverReservationHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-6 py-3.5 text-base font-extrabold text-white shadow-card transition hover:bg-brand-800">
-              진료 상담 <ArrowRight aria-hidden="true" size={18} />
+              {ctaLabel} <ArrowRight aria-hidden="true" size={18} />
             </Link>
             <Link href="/contact" className="inline-flex items-center justify-center rounded-full border border-brand-200 bg-white px-6 py-3.5 text-base font-extrabold text-brand-700 transition hover:bg-brand-50">
               오시는 길

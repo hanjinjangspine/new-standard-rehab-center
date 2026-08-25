@@ -13,11 +13,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "새기준병원 회복재활센터 | 용인 물리치료·도수치료·운동재활",
+    default: "용인 재활치료 | 척추·관절 수술 후 기능 회복 | 새기준병원",
     template: "%s"
   },
   description:
-    "새기준병원 회복재활센터는 급성 염좌, 산후·육아 통증, 직장인 통증, 고령자 보행 문제, 척추·관절 수술 후 회복관리를 진찰 소견과 검사 결과를 함께 확인해 상담합니다.",
+    "용인 새기준병원 회복재활센터는 통증뿐 아니라 보행·근력·관절가동범위·일상기능을 평가해 척추·관절 질환과 수술 후 기능 회복을 상담합니다.",
   applicationName: hospitalInfo.centerName,
   robots: siteConfig.noIndex
     ? {
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }]
   },
   openGraph: {
-    title: "새기준병원 회복재활센터 | 용인 물리치료·도수치료·운동재활",
+    title: "용인 재활치료 | 척추·관절 수술 후 기능 회복 | 새기준병원",
     description:
-      "급성 염좌, 산후·육아 통증, 직장인 통증, 고령자 보행 문제, 척추·관절 수술 후 회복관리까지 진찰 소견과 검사 결과를 함께 확인해 상담합니다.",
+      "통증뿐 아니라 보행·근력·관절가동범위·일상기능을 평가해 척추·관절 질환과 수술 후 기능 회복을 상담합니다.",
     url: SITE_URL,
     siteName: hospitalInfo.centerName,
     locale: "ko_KR",
@@ -61,9 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "새기준병원 회복재활센터 | 용인 물리치료·도수치료·운동재활",
+    title: "용인 재활치료 | 척추·관절 수술 후 기능 회복 | 새기준병원",
     description:
-      "급성 염좌, 산후·육아 통증, 직장인 통증, 고령자 보행 문제, 척추·관절 수술 후 회복관리까지 진찰 소견과 검사 결과를 함께 확인해 상담합니다.",
+      "통증뿐 아니라 보행·근력·관절가동범위·일상기능을 평가해 척추·관절 질환과 수술 후 기능 회복을 상담합니다.",
     images: ["/og/og-recovery-center.svg"]
   }
 };

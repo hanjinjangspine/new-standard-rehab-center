@@ -5,7 +5,7 @@ import { hospitalInfo } from "@/lib/data";
 export default function CTASection({ title, description }: { title: string; description: string }) {
   const buttons = [
     {
-      label: "진료 상담",
+      label: "현재 기능 상태 평가받기",
       href: hospitalInfo.naverReservationHref,
       external: true,
       icon: ArrowRight,

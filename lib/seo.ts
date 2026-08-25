@@ -16,7 +16,7 @@ export function createMetadata({ title, description, path = "/", keywords = [] }
   return {
     title,
     description,
-    keywords: [...defaultKeywords, ...keywords],
+    keywords: keywords.length > 0 ? keywords : defaultKeywords,
     robots: siteConfig.noIndex
       ? {
           index: false,
@@ -80,6 +80,26 @@ export function siteJsonLd() {
   const clinicId = `${SITE_URL}#recovery-rehabilitation-center`;
   const hospitalId = `${SITE_URL}#new-standard-hospital`;
   const logoUrl = new URL(hospitalInfo.logoPath, SITE_URL).toString();
+  const openingHoursSpecification = [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:30",
+      closes: "17:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "08:30",
+      closes: "12:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "09:00",
+      closes: "13:00"
+    }
+  ];
 
   return {
     "@context": "https://schema.org",
@@ -105,6 +125,7 @@ export function siteJsonLd() {
         },
         areaServed: ["용인시", "처인구", "경기도"],
         telephone: hospitalInfo.phone,
+        openingHoursSpecification,
         contactPoint: {
           "@type": "ContactPoint",
           telephone: hospitalInfo.phone,
@@ -128,6 +149,7 @@ export function siteJsonLd() {
         logo: logoUrl,
         sameAs: [hospitalInfo.officialWebsiteUrl, hospitalInfo.youtubeUrl],
         telephone: hospitalInfo.phone,
+        openingHoursSpecification,
         address: {
           "@type": "PostalAddress",
           streetAddress: "중부대로 1539",
@@ -163,20 +185,24 @@ export function siteJsonLd() {
             item: new URL("/", SITE_URL).toString()
           }
         ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": `${SITE_URL}#faq`,
-        mainEntity: faqItems.map((item) => ({
-          "@type": "Question",
-          name: item.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: item.answer
-          }
-        }))
       }
     ]
+  };
+}
+
+export function faqJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${SITE_URL}#faq`,
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
   };
 }
 
@@ -190,7 +216,7 @@ export function webPageJsonLd({ title, description, path }: { title: string; des
     name: title,
     description,
     inLanguage: "ko-KR",
-    dateModified: "2026-08-10",
+    dateModified: "2026-08-25",
     author: {
       "@id": `${SITE_URL}#new-standard-hospital`
     },
