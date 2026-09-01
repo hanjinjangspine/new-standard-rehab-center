@@ -2,8 +2,38 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import SEOJsonLd from "@/components/SEOJsonLd";
+import SubtleImageCard from "@/components/SubtleImageCard";
 import { ProgramSlug, programPages, safetyCopy } from "@/lib/data";
 import { webPageJsonLd } from "@/lib/seo";
+
+const infoCardBackgrounds = [
+  "/images/generated/cards-20260902/symptom-observation.webp",
+  "/images/generated/cards-20260902/functional-assessment.webp",
+  "/images/generated/cards-20260902/recovery-exercise.webp"
+];
+
+const detailBackgrounds: Partial<Record<ProgramSlug, string[]>> = {
+  "postoperative-recovery": [
+    "/images/generated/cards-20260902/postoperative-consultation.webp",
+    "/images/generated/cards-20260902/medical-records.webp",
+    "/images/generated/cards-20260902/recovery-exercise.webp",
+    "/images/generated/cards-20260902/spine-recovery.webp",
+    "/images/generated/cards-20260902/knee-recovery.webp",
+    "/images/generated/cards-20260902/shoulder-recovery.webp"
+  ],
+  "manual-exercise-rehab": [
+    "/images/generated/cards-20260902/functional-assessment.webp",
+    "/images/generated/cards-20260902/medical-records.webp",
+    "/images/generated/cards-20260902/recovery-exercise.webp"
+  ]
+};
+
+const relatedBackgrounds = [
+  "/images/generated/cards-20260902/spine-recovery.webp",
+  "/images/generated/cards-20260902/knee-recovery.webp",
+  "/images/generated/cards-20260902/recovery-exercise.webp",
+  "/images/generated/cards-20260902/functional-assessment.webp"
+];
 
 export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
   const page = programPages[slug];
@@ -20,18 +50,23 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
         imageAlt={page.heroImageAlt}
         ctaLabel={page.ctaLabel}
       />
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <section className="program-card-section px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3">
-          <InfoCard title="이런 증상이 있을 때" items={page.symptoms} />
-          <InfoCard title="진료에서 확인하는 것" items={page.checks} />
-          <InfoCard title="회복관리 방향" items={page.care} />
+          <InfoCard title="이런 증상이 있을 때" items={page.symptoms} image={infoCardBackgrounds[0]} />
+          <InfoCard title="진료에서 확인하는 것" items={page.checks} image={infoCardBackgrounds[1]} />
+          <InfoCard title="회복관리 방향" items={page.care} image={infoCardBackgrounds[2]} />
         </div>
       </section>
       {page.detailSections ? (
-        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+        <section className="program-detail-section px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-3">
-            {page.detailSections.map((item) => (
-              <div key={item.title} className="rounded-[28px] border border-line bg-calm p-6 shadow-sm">
+            {page.detailSections.map((item, index) => (
+              <SubtleImageCard
+                key={item.title}
+                image={detailBackgrounds[slug]?.[index] ?? infoCardBackgrounds[index % infoCardBackgrounds.length]}
+                intensity="present"
+                className="rounded-[28px] border border-line p-6 shadow-sm"
+              >
                 <h2 className="text-2xl font-black leading-tight text-ink">{item.title}</h2>
                 <p className="mt-4 text-base leading-8 text-muted">{item.description}</p>
                 {item.items ? (
@@ -44,7 +79,7 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
                     ))}
                   </div>
                 ) : null}
-              </div>
+              </SubtleImageCard>
             ))}
           </div>
         </section>
@@ -59,25 +94,36 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
-            {page.related.map((item) => (
-              <Link
+            {page.related.map((item, index) => (
+              <SubtleImageCard
                 key={item.href}
-                href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : undefined}
-                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="group rounded-2xl border border-line bg-white p-5 text-lg font-black text-ink shadow-sm transition hover:-translate-y-1 hover:shadow-card"
+                image={relatedBackgrounds[index % relatedBackgrounds.length]}
+                intensity="present"
+                className="rounded-2xl border border-line shadow-sm transition hover:-translate-y-1 hover:shadow-card"
               >
-                {item.label}
-                <span className="mt-5 flex items-center gap-2 text-sm font-extrabold text-brand-700">
-                  확인하기 <ArrowRight aria-hidden="true" size={17} className="transition group-hover:translate-x-1" />
-                </span>
-              </Link>
+                <Link
+                  href={item.href}
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="group block p-5 text-lg font-black text-ink"
+                >
+                  {item.label}
+                  <span className="mt-5 flex items-center gap-2 text-sm font-extrabold text-brand-700">
+                    확인하기 <ArrowRight aria-hidden="true" size={17} className="transition group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              </SubtleImageCard>
             ))}
           </div>
         </div>
       </section>
       <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-5xl rounded-[28px] border border-accent-300 bg-accent-100 p-6 sm:p-8">
+        <SubtleImageCard
+          image="/images/generated/cards-20260902/symptom-observation.webp"
+          intensity="present"
+          className="mx-auto max-w-5xl rounded-[28px] border border-accent-300 p-6 shadow-sm sm:p-8"
+          sizes="(min-width: 1024px) 960px, calc(100vw - 2rem)"
+        >
           <h2 className="text-2xl font-black text-ink">치료 전 안내</h2>
           <div className="mt-5 grid gap-3">
             {safetyCopy.map((item) => (
@@ -87,15 +133,15 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
               </p>
             ))}
           </div>
-        </div>
+        </SubtleImageCard>
       </section>
     </main>
   );
 }
 
-function InfoCard({ title, items }: { title: string; items: string[] }) {
+function InfoCard({ title, items, image }: { title: string; items: string[]; image: string }) {
   return (
-    <div className="rounded-[28px] border border-line bg-white p-6 shadow-sm">
+    <SubtleImageCard image={image} intensity="present" className="rounded-[28px] border border-line p-6 shadow-sm">
       <h2 className="text-2xl font-black text-ink">{title}</h2>
       <div className="mt-5 grid gap-3">
         {items.map((item) => (
@@ -105,6 +151,6 @@ function InfoCard({ title, items }: { title: string; items: string[] }) {
           </p>
         ))}
       </div>
-    </div>
+    </SubtleImageCard>
   );
 }
