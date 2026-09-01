@@ -354,10 +354,10 @@ export default function HomePage() {
                   src={item.image}
                   alt={item.imageAlt}
                   fill
-                  className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                  className={`${item.imageClassName ?? "object-cover"} transition duration-500 group-hover:scale-[1.03]`}
                   sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, calc(100vw - 2rem)"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071D2C]/96 via-[#071D2C]/68 to-[#071D2C]/44" />
+                <div className={`absolute inset-0 bg-gradient-to-t ${item.overlayClassName ?? "from-[#071D2C]/96 via-[#071D2C]/68 to-[#071D2C]/44"}`} />
                 <div className="relative flex min-h-[300px] flex-col p-6 text-white">
                   <h3 className="text-2xl font-black text-white">{item.title}</h3>
                   <p className="mt-4 flex-1 text-base leading-7 text-white/82">{item.description}</p>
