@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ExternalLink, MapPin } from "lucide-react";
 import CTASection from "@/components/CTASection";
@@ -86,27 +87,54 @@ const officialRehabLinks = [
 const patientNeedCards = [
   {
     title: "수술 후 회복 지연",
-    description: "수술 후 통증·저림·보행 불안이 남아 있다면 기존 영상자료와 현재 기능 상태를 함께 확인합니다."
+    description: "수술 후 통증·저림·보행 불안이 남아 있다면 기존 영상자료와 현재 기능 상태를 함께 확인합니다.",
+    image: "/images/rehab/gallery-01.jpg",
+    imageAlt: "수술 후 기능 회복을 돕는 새기준병원 치료팀"
   },
   {
     title: "척추관협착증·허리디스크 보행 제한",
-    description: "걷는 거리, 다리저림 위치, 쉬면 완화되는지 여부, 기존 치료 반응을 확인해 상담합니다."
+    description: "걷는 거리, 다리저림 위치, 쉬면 완화되는지 여부, 기존 치료 반응을 확인해 상담합니다.",
+    image: "/images/rehab/hero-rehab-center.jpg",
+    imageAlt: "하지 움직임을 확인하는 새기준병원 치료팀"
   },
   {
     title: "고령자 보행·균형",
-    description: "부모님의 보행 불안, 근력 저하, 낙상 위험, 보호자 동행 필요성을 함께 살펴봅니다."
+    description: "부모님의 보행 불안, 근력 저하, 낙상 위험, 보호자 동행 필요성을 함께 살펴봅니다.",
+    image: "/images/rehab/exercise-rehab-01.jpg",
+    imageAlt: "운동 기능을 확인하는 새기준병원 치료팀"
   },
   {
     title: "산후·육아 통증",
-    description: "아기 안기, 수유 자세, 반복되는 손목·허리·골반·목어깨 부담을 생활 동작과 함께 확인합니다."
+    description: "아기 안기, 수유 자세, 반복되는 손목·허리·골반·목어깨 부담을 생활 동작과 함께 확인합니다.",
+    image: "/images/rehab/manual-therapy-01.jpg",
+    imageAlt: "상지 움직임을 확인하는 새기준병원 치료팀"
   },
   {
     title: "직장인 생활 통증",
-    description: "오래 앉는 자세, 목어깨 결림, 허리 통증, 손목 통증처럼 반복되는 생활 통증을 상담합니다."
+    description: "오래 앉는 자세, 목어깨 결림, 허리 통증, 손목 통증처럼 반복되는 생활 통증을 상담합니다.",
+    image: "/images/rehab/rehab-room-02.jpg",
+    imageAlt: "새기준병원 회복재활센터 치료 공간"
   },
   {
     title: "급성 염좌·삐끗함",
-    description: "발목 염좌, 허리 삐끗함, 급성 목어깨 통증은 손상 정도와 움직임 제한을 확인합니다."
+    description: "발목 염좌, 허리 삐끗함, 급성 목어깨 통증은 손상 정도와 움직임 제한을 확인합니다.",
+    image: "/images/rehab/equipment-01.jpg",
+    imageAlt: "새기준병원 회복재활센터 치료 장비"
+  }
+];
+
+const visitPrepCards = [
+  {
+    title: "기존 검사자료",
+    description: "MRI·X-ray·CT 영상과 판독지, 수술기록지가 있다면 지참해 주세요. 현재 기능 상태와 함께 확인합니다."
+  },
+  {
+    title: "증상 변화 기록",
+    description: "통증·저림 위치, 걷는 거리, 악화되는 동작, 최근 낙상 여부를 메모하면 상담에 도움이 됩니다."
+  },
+  {
+    title: "수술 후 주의사항",
+    description: "수술 의료진에게 안내받은 운동 제한, 보조기 사용, 체중부하 지침과 복용약 정보를 함께 확인합니다."
   }
 ];
 
@@ -114,17 +142,21 @@ const policyGuideCards = [
   {
     title: "도수치료 관리기준 안내",
     description:
-      "도수치료 관련 관리기준 변화가 예정되어 있어 진찰 소견, 기능 상태, 기존 치료 반응을 함께 확인하는 과정이 중요해질 수 있습니다. 가입 보험의 보장 여부와 금액은 상품과 보험사 기준에 따라 달라질 수 있습니다."
+      "2026년 7월 1일부터 도수치료는 관리급여(본인부담률 95%)로 전환되었습니다. 다만 환자의 질환·상태, 기본치료 시행 및 호전 여부, 연간 인정 횟수 등 세부 급여기준을 모두 충족해야 하므로 진료·평가 후 적용 여부를 확인합니다.",
+    sourceHref: "https://www.hira.or.kr/rc/insu/insuadtcrtr/InsuAdtCrtrPopup.do?brdScnBltNo=4&isPopupYn=Y&mtgHmeDd=20260701&mtgMtrRegSno=1&sno=4",
+    sourceLabel: "건강보험심사평가원 급여기준 확인"
   },
   {
     title: "체외충격파 치료 안내",
     description:
-      "체외충격파 치료는 도수치료 관리기준과 다른 치료군입니다. 통증 부위와 손상 양상, 기존 치료 반응을 확인해 필요한 경우 본원 체외충격파 안내와 함께 상담합니다."
+      "체외충격파 치료는 도수치료 관리기준과 다른 치료군입니다. 통증 부위와 손상 양상, 기존 치료 반응을 확인해 필요한 경우 본원 체외충격파 안내와 함께 상담합니다.",
+    sourceHref: "https://new-standard.co.kr/sub/r50/s5020.php",
+    sourceLabel: "본원 체외충격파 안내"
   },
   {
     title: "채움수액 연계 상담",
     description:
-      "물리치료·운동재활 과정에서 회복 반응이 더디거나 전신 컨디션 저하가 동반되는 경우, 진료 후 필요한 범위에서 새기준 채움수액을 함께 상담할 수 있습니다. 채움수액은 의사 처방에 따라 선택적으로 고려하는 처방 기반 회복대사 수액관리이며, 특정 질환을 단독으로 치료하는 방법이 아니고 증상 변화나 체중 변화는 환자 상태에 따라 다를 수 있습니다."
+      "물리치료·운동재활 과정에서 회복 반응이 더디거나 전신 컨디션 저하가 동반되는 경우, 진료 후 필요한 범위에서 새기준 채움수액을 함께 상담할 수 있습니다. 채움수액은 의사 처방에 따라 선택적으로 고려하는 보조 관리이며 회복재활을 대신하지 않습니다."
   }
 ];
 
@@ -189,9 +221,42 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {patientNeedCards.map((item) => (
-              <div key={item.title} className="rounded-[28px] border border-line bg-white p-6 shadow-sm">
-                <h3 className="text-2xl font-black leading-tight text-ink">{item.title}</h3>
-                <p className="mt-4 text-base leading-8 text-muted">{item.description}</p>
+              <div key={item.title} className="group overflow-hidden rounded-[28px] border border-line bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-card">
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.imageAlt}
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, calc(100vw - 2rem)"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071D2C]/45 to-transparent" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-black leading-tight text-ink">{item.title}</h3>
+                  <p className="mt-4 text-base leading-8 text-muted">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-900 px-4 py-16 text-white sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionTitle
+            align="center"
+            eyebrow="Before Your Visit"
+            title="회복 상담 전 준비하면 좋은 자료"
+            description="수술과 검사 이력, 현재 증상 변화를 함께 확인하면 회복 단계와 필요한 평가 범위를 더 정확히 상담할 수 있습니다."
+            inverse
+          />
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {visitPrepCards.map((item, index) => (
+              <div key={item.title} className="rounded-[28px] border border-white/14 bg-white/8 p-6 backdrop-blur-sm">
+                <p className="text-sm font-extrabold text-brand-100">0{index + 1}</p>
+                <h3 className="mt-3 text-2xl font-black text-white">{item.title}</h3>
+                <p className="mt-4 text-base leading-8 text-white/78">{item.description}</p>
               </div>
             ))}
           </div>
@@ -211,6 +276,11 @@ export default function HomePage() {
               <div key={item.title} className="rounded-[28px] border border-line bg-white p-6 shadow-sm">
                 <h3 className="text-2xl font-black leading-tight text-ink">{item.title}</h3>
                 <p className="mt-4 text-base leading-8 text-muted">{item.description}</p>
+                {item.sourceHref && (
+                  <Link href={item.sourceHref} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-brand-700">
+                    {item.sourceLabel} <ExternalLink aria-hidden="true" size={16} />
+                  </Link>
+                )}
               </div>
             ))}
           </div>
@@ -290,16 +360,27 @@ export default function HomePage() {
             description="회복재활센터의 물리치료·도수치료·운동재활은 의사 진료와 연결해 환자 상태, 진찰 소견, 치료 반응을 함께 확인하며 상담합니다."
           />
           <div className="mt-10 grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
-            <div className="rounded-[28px] border border-line bg-calm p-6 shadow-sm">
-              <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-brand-700">Physical Therapist</p>
-              <h3 className="mt-3 text-3xl font-black leading-tight text-ink">사준호 재활치료실장</h3>
-              <p className="mt-2 text-lg font-bold text-brand-700">새기준병원 재활치료실장 / 물리치료사</p>
-              <p className="mt-5 text-base leading-8 text-muted">
-                2005년 물리치료사로 임상 현장에 참여한 이후 신경외과, 재활의학, 통증클리닉, 산업보건, 재활센터 등 다양한 현장에서 근골격계 재활 경험을 쌓아왔습니다.
-              </p>
-              <p className="mt-4 text-base leading-8 text-muted">
-                새기준병원 회복재활센터에서는 환자의 증상, 진찰 소견, 치료 반응을 함께 확인하며 물리치료·도수치료·운동재활·수술 전후 회복관리 방향을 돕습니다.
-              </p>
+            <div className="overflow-hidden rounded-[28px] border border-line bg-calm shadow-sm">
+              <div className="relative aspect-[16/10]">
+                <Image
+                  src="/images/rehab/hero-rehab-center.jpg"
+                  alt="새기준병원 회복재활센터에서 하지 기능을 확인하는 재활치료실장"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 45vw, calc(100vw - 2rem)"
+                />
+              </div>
+              <div className="p-6">
+                <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-brand-700">Physical Therapist</p>
+                <h3 className="mt-3 text-3xl font-black leading-tight text-ink">사준호 재활치료실장</h3>
+                <p className="mt-2 text-lg font-bold text-brand-700">새기준병원 재활치료실장 / 물리치료사</p>
+                <p className="mt-5 text-base leading-8 text-muted">
+                  2005년 물리치료사로 임상 현장에 참여한 이후 신경외과, 재활의학, 통증클리닉, 산업보건, 재활센터 등 다양한 현장에서 근골격계 재활 경험을 쌓아왔습니다.
+                </p>
+                <p className="mt-4 text-base leading-8 text-muted">
+                  새기준병원 회복재활센터에서는 환자의 증상, 진찰 소견, 치료 반응을 함께 확인하며 물리치료·도수치료·운동재활·수술 전후 회복관리 방향을 돕습니다.
+                </p>
+              </div>
             </div>
             <div className="grid gap-5 md:grid-cols-2">
               <div className="rounded-[28px] border border-line bg-white p-6 shadow-sm">

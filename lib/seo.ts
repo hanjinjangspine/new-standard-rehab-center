@@ -216,7 +216,7 @@ export function webPageJsonLd({ title, description, path }: { title: string; des
     name: title,
     description,
     inLanguage: "ko-KR",
-    dateModified: "2026-08-26",
+    dateModified: "2026-09-01",
     author: {
       "@id": `${SITE_URL}#new-standard-hospital`
     },
