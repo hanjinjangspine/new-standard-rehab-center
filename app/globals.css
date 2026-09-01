@@ -58,6 +58,22 @@ a {
   line-height: 1.85;
 }
 
+.program-card-section {
+  background-image:
+    linear-gradient(rgba(247, 251, 249, 0.84), rgba(247, 251, 249, 0.84)),
+    url("/images/generated/cards-20260902/recovery-exercise.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.program-detail-section {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.86), rgba(244, 249, 247, 0.86)),
+    url("/images/generated/cards-20260902/functional-assessment.webp");
+  background-position: center;
+  background-size: cover;
+}
+
 /* 콘텐츠 사진의 소유 표기: 로고·아이콘은 스크립트에서 제외합니다. */
 .photo-ownership-host {
   isolation: auto;
