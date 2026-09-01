@@ -428,12 +428,14 @@ export const connectedCareLinks = [
     imageAlt: "새기준병원 본원 로비"
   },
   {
-    title: "관절센터",
-    description: "무릎·어깨·족부·발목 등 관절 통증과 회복관리를 안내하는 새기준병원 관절센터입니다.",
-    href: "https://joint.new-standard.co.kr",
-    buttonText: "관절센터 보기",
-    image: "/images/hospital/doctors-group-five-2026.webp",
-    imageAlt: "새기준병원 의료진"
+    title: "이영진 원장",
+    description: "새기준병원 마취통증의학과 전문의로 수술 전 평가, 수술 중 모니터링, 수술 후 회복과 통증관리를 담당합니다.",
+    href: "https://new-standard.co.kr/sub/r10/lee-youngjin.php",
+    buttonText: "마취통증의학과 프로필",
+    image: "/images/hospital/doctor-lee-youngjin-20260901.png",
+    imageAlt: "새기준병원 마취통증의학과 이영진 원장",
+    imageClassName: "bg-[#DDEBE9] object-contain object-bottom",
+    overlayClassName: "from-[#071D2C]/98 via-[#071D2C]/84 to-[#071D2C]/72"
   },
   {
     title: "관절 회복관리",
