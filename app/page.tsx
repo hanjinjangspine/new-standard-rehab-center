@@ -24,19 +24,23 @@ export const metadata: Metadata = createMetadata({
 const centerPrinciples = [
   {
     title: "생활 통증 진입 창구",
-    description: "목·어깨·허리·손목·발목처럼 반복되는 생활 통증을 먼저 평가하고 필요한 진료 흐름을 안내합니다."
+    description: "목·어깨·허리·손목·발목처럼 반복되는 생활 통증을 먼저 평가하고 필요한 진료 흐름을 안내합니다.",
+    image: "/images/hospital/rehab-tour-03.jpg",
+    imageAlt: "새기준병원 회복재활센터 진입 공간"
   },
   {
     title: "진단 기반 회복관리",
-    description: "통증 부위, 진찰 소견, 영상검사 결과, 치료 반응을 함께 확인해 회복관리 방향을 상담합니다."
+    description: "통증 부위, 진찰 소견, 영상검사 결과, 치료 반응을 함께 확인해 회복관리 방향을 상담합니다.",
+    image: "/images/hospital/doctor-jang-desk-2026.jpg",
+    imageAlt: "진료실에서 상담을 준비하는 새기준병원 의료진"
   },
   {
     title: "수술 후 기능 회복 허브",
-    description: "척추·관절 수술 후 보행, 운동범위, 근력, 일상 복귀 단계를 의료진 안내와 함께 확인합니다."
+    description: "척추·관절 수술 후 보행, 운동범위, 근력, 일상 복귀 단계를 의료진 안내와 함께 확인합니다.",
+    image: "/images/hospital/doctors-na-park-2026.jpg",
+    imageAlt: "새기준병원 의료진"
   }
 ];
-
-const photoCards = rehabPhotos.rooms;
 
 const rehabDirectorProfile = {
   careers: [
@@ -88,38 +92,38 @@ const patientNeedCards = [
   {
     title: "수술 후 회복 지연",
     description: "수술 후 통증·저림·보행 불안이 남아 있다면 기존 영상자료와 현재 기능 상태를 함께 확인합니다.",
-    image: "/images/rehab/gallery-01.jpg",
-    imageAlt: "수술 후 기능 회복을 돕는 새기준병원 치료팀"
+    image: "/images/generated/postoperative-prep-20260901.webp",
+    imageAlt: "수술 후 회복 상담 준비를 상징하는 보조기와 지팡이 연출 이미지"
   },
   {
     title: "척추관협착증·허리디스크 보행 제한",
     description: "걷는 거리, 다리저림 위치, 쉬면 완화되는지 여부, 기존 치료 반응을 확인해 상담합니다.",
-    image: "/images/rehab/hero-rehab-center.jpg",
-    imageAlt: "하지 움직임을 확인하는 새기준병원 치료팀"
+    image: "/images/generated/gait-assessment-corridor-20260901.webp",
+    imageAlt: "보행 기능 평가 공간을 표현한 연출 이미지"
   },
   {
     title: "고령자 보행·균형",
     description: "부모님의 보행 불안, 근력 저하, 낙상 위험, 보호자 동행 필요성을 함께 살펴봅니다.",
-    image: "/images/rehab/exercise-rehab-01.jpg",
-    imageAlt: "운동 기능을 확인하는 새기준병원 치료팀"
+    image: "/images/generated/senior-balance-room-20260901.webp",
+    imageAlt: "고령자 보행과 균형 회복 공간을 표현한 연출 이미지"
   },
   {
     title: "산후·육아 통증",
     description: "아기 안기, 수유 자세, 반복되는 손목·허리·골반·목어깨 부담을 생활 동작과 함께 확인합니다.",
-    image: "/images/rehab/manual-therapy-01.jpg",
-    imageAlt: "상지 움직임을 확인하는 새기준병원 치료팀"
+    image: "/images/generated/parenting-recovery-corner-20260901.webp",
+    imageAlt: "산후와 육아 중 근골격계 부담을 표현한 생활 공간 연출 이미지"
   },
   {
     title: "직장인 생활 통증",
     description: "오래 앉는 자세, 목어깨 결림, 허리 통증, 손목 통증처럼 반복되는 생활 통증을 상담합니다.",
-    image: "/images/rehab/rehab-room-02.jpg",
-    imageAlt: "새기준병원 회복재활센터 치료 공간"
+    image: "/images/generated/ergonomic-workspace-20260901.webp",
+    imageAlt: "직장인의 자세 부담을 줄이는 업무 공간 연출 이미지"
   },
   {
     title: "급성 염좌·삐끗함",
     description: "발목 염좌, 허리 삐끗함, 급성 목어깨 통증은 손상 정도와 움직임 제한을 확인합니다.",
-    image: "/images/rehab/equipment-01.jpg",
-    imageAlt: "새기준병원 회복재활센터 치료 장비"
+    image: "/images/generated/acute-sprain-kit-20260901.webp",
+    imageAlt: "급성 염좌 초기 대응을 상징하는 보조기와 냉찜질 도구 연출 이미지"
   }
 ];
 
@@ -175,9 +179,19 @@ export default function HomePage() {
           />
           <div className="grid gap-4 sm:grid-cols-3">
             {centerPrinciples.map((item) => (
-              <div key={item.title} className="rounded-[24px] border border-line bg-white p-5 shadow-sm">
-                <h3 className="text-xl font-black text-ink">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-muted">{item.description}</p>
+              <div key={item.title} className="group relative min-h-[280px] overflow-hidden rounded-[24px] border border-white/30 shadow-sm">
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                  sizes="(min-width: 1024px) 22vw, (min-width: 640px) 33vw, calc(100vw - 2rem)"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071D2C]/95 via-[#071D2C]/54 to-[#071D2C]/10" />
+                <div className="relative flex min-h-[280px] flex-col justify-end p-5 text-white">
+                  <h3 className="text-xl font-black text-white">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-white/82">{item.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -190,7 +204,7 @@ export default function HomePage() {
             className="mx-auto aspect-[3/2] max-h-[448px] w-full max-w-2xl"
             sizes="(min-width: 1280px) 672px, (min-width: 1024px) 55vw, (min-width: 640px) 672px, calc(100vw - 2rem)"
           />
-          <div className="rounded-[28px] border border-line bg-calm p-6">
+          <div className="rounded-[28px] border border-white/70 bg-white/85 p-6 shadow-sm backdrop-blur-md">
             <h3 className="text-2xl font-black text-ink">새기준병원 회복재활센터</h3>
             <p className="mt-4 text-base leading-8 text-muted">
               급성 통증, 직장인 생활 통증, 산후·육아 통증, 고령 보행 문제, 척추·관절 수술 후 회복관리를 한 흐름에서 확인합니다. 치료 방법은 환자 상태와 검사 결과에 따라 달라질 수 있습니다.
@@ -221,20 +235,18 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {patientNeedCards.map((item) => (
-              <div key={item.title} className="group overflow-hidden rounded-[28px] border border-line bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-card">
-                <div className="relative aspect-[16/9] overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.imageAlt}
-                    fill
-                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, calc(100vw - 2rem)"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071D2C]/45 to-transparent" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-black leading-tight text-ink">{item.title}</h3>
-                  <p className="mt-4 text-base leading-8 text-muted">{item.description}</p>
+              <div key={item.title} className="group relative min-h-[380px] overflow-hidden rounded-[28px] border border-white/30 shadow-sm transition hover:-translate-y-1 hover:shadow-card">
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                  sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, calc(100vw - 2rem)"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071D2C]/96 via-[#071D2C]/50 to-[#071D2C]/6" />
+                <div className="relative flex min-h-[380px] flex-col justify-end p-6 text-white">
+                  <h3 className="text-2xl font-black leading-tight text-white">{item.title}</h3>
+                  <p className="mt-4 text-base leading-8 text-white/84">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -242,8 +254,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-brand-900 px-4 py-16 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative overflow-hidden px-4 py-16 text-white sm:px-6 lg:px-8">
+        <Image
+          src="/images/generated/visit-prep-background-20260901.webp"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[#071D2C]/82" />
+        <div className="relative mx-auto max-w-7xl">
           <SectionTitle
             align="center"
             eyebrow="Before Your Visit"
@@ -253,7 +273,7 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {visitPrepCards.map((item, index) => (
-              <div key={item.title} className="rounded-[28px] border border-white/14 bg-white/8 p-6 backdrop-blur-sm">
+              <div key={item.title} className="rounded-[28px] border border-white/20 bg-[#071D2C]/48 p-6 backdrop-blur-md">
                 <p className="text-sm font-extrabold text-brand-100">0{index + 1}</p>
                 <h3 className="mt-3 text-2xl font-black text-white">{item.title}</h3>
                 <p className="mt-4 text-base leading-8 text-white/78">{item.description}</p>
@@ -302,38 +322,25 @@ export default function HomePage() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex min-h-[240px] flex-col rounded-[28px] border border-line bg-calm p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-card"
+                className="group relative min-h-[300px] overflow-hidden rounded-[28px] border border-white/30 shadow-sm transition hover:-translate-y-1 hover:shadow-card"
               >
-                <h3 className="text-2xl font-black text-ink">{item.title}</h3>
-                <p className="mt-4 flex-1 text-base leading-7 text-muted">{item.description}</p>
-                <span className="mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-brand-700">
-                  {item.buttonText}
-                  <ExternalLink aria-hidden="true" size={17} className="transition group-hover:translate-x-1" />
-                </span>
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                  sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, calc(100vw - 2rem)"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071D2C]/96 via-[#071D2C]/68 to-[#071D2C]/44" />
+                <div className="relative flex min-h-[300px] flex-col p-6 text-white">
+                  <h3 className="text-2xl font-black text-white">{item.title}</h3>
+                  <p className="mt-4 flex-1 text-base leading-7 text-white/82">{item.description}</p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-[#B9F1E8]">
+                    {item.buttonText}
+                    <ExternalLink aria-hidden="true" size={17} className="transition group-hover:translate-x-1" />
+                  </span>
+                </div>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <SectionTitle
-            align="center"
-            eyebrow="Treatment Rooms & Equipment"
-            title="치료실과 장비는 회복 단계에 맞춰 사용합니다"
-            description="물리치료, 도수치료, 운동재활, 보행 회복관리 등은 환자 상태와 치료 반응에 따라 상담합니다."
-          />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {photoCards.map((item) => (
-              <RehabPhoto
-                key={item.src}
-                src={item.src}
-                alt={item.alt}
-                label={item.label}
-                className="aspect-[3/2] max-h-[280px] w-full"
-                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, calc(100vw - 2rem)"
-              />
             ))}
           </div>
         </div>
@@ -363,8 +370,8 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-[28px] border border-line bg-calm shadow-sm">
               <div className="relative aspect-[16/10]">
                 <Image
-                  src="/images/rehab/hero-rehab-center.jpg"
-                  alt="새기준병원 회복재활센터에서 하지 기능을 확인하는 재활치료실장"
+                  src="/images/rehab/gallery-01.jpg"
+                  alt="새기준병원 회복재활센터에서 치료 장비를 점검하는 재활치료실장"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 45vw, calc(100vw - 2rem)"
