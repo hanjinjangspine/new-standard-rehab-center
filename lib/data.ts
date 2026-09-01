@@ -66,37 +66,49 @@ export const programCards = [
     href: "/acute-sprain",
     description: "발목 염좌, 허리 삐끗함, 목·어깨 급성 통증에서 손상 정도와 회복 방향을 확인합니다.",
     tags: ["발목", "허리", "목·어깨"],
+    image: "/images/rehab/equipment-01.jpg",
+    imageAlt: "새기준병원 회복재활센터의 치료 장비",
     featured: true
   },
   {
     title: "산후·육아 통증",
     href: "/postpartum-parenting-pain",
     description: "육아 과정에서 반복되는 손목, 허리, 골반, 목·어깨 통증의 원인을 함께 확인합니다.",
-    tags: ["손목", "골반", "허리"]
+    tags: ["손목", "골반", "허리"],
+    image: "/images/rehab/manual-therapy-01.jpg",
+    imageAlt: "어깨와 팔 움직임을 확인하는 새기준병원 치료팀"
   },
   {
     title: "직장인 생활 통증",
     href: "/office-worker-pain",
     description: "거북목, 목·어깨 결림, 허리 통증처럼 반복되는 업무 자세 관련 통증을 평가합니다.",
-    tags: ["거북목", "허리", "손목"]
+    tags: ["거북목", "허리", "손목"],
+    image: "/images/rehab/exercise-rehab-01.jpg",
+    imageAlt: "상지 운동재활을 진행하는 새기준병원 치료팀"
   },
   {
     title: "고령 보행·균형",
     href: "/senior-gait-balance",
     description: "근력저하, 보행 불안, 균형 저하, 낙상 위험을 확인하고 회복관리 방향을 상담합니다.",
-    tags: ["보행", "균형", "낙상"]
+    tags: ["보행", "균형", "낙상"],
+    image: "/images/rehab/hero-rehab-center.jpg",
+    imageAlt: "하지 움직임과 기능을 확인하는 새기준병원 치료팀"
   },
   {
     title: "수술 후 회복관리",
     href: "/postoperative-recovery",
     description: "척추·관절 수술 후 보행, 운동범위, 근력, 일상 복귀 단계를 의료진과 함께 확인합니다.",
-    tags: ["척추", "관절", "회복"]
+    tags: ["척추", "관절", "회복"],
+    image: "/images/rehab/gallery-01.jpg",
+    imageAlt: "치료 장비로 회복관리를 진행하는 새기준병원 치료팀"
   },
   {
     title: "도수·운동재활",
     href: "/manual-exercise-rehab",
     description: "환자 상태와 치료 반응에 따라 물리치료, 도수치료, 운동재활, 자가운동 교육을 상담합니다.",
-    tags: ["도수치료", "운동재활", "자가운동"]
+    tags: ["도수치료", "운동재활", "자가운동"],
+    image: "/images/rehab/rehab-room-02.jpg",
+    imageAlt: "새기준병원 회복재활센터의 도수·물리치료 공간"
   }
 ];
 
@@ -310,8 +322,8 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
       },
       {
         title: "정책·관리기준 안내",
-        description: "도수치료 관련 관리기준 변화가 예정되어 있어 진료와 기능 상태 확인이 더 중요해질 수 있습니다. 가입 보험의 보장 여부와 금액은 상품과 보험사 기준에 따라 달라질 수 있습니다.",
-        items: ["병원이 보장 여부를 단정하지 않음", "진찰 소견과 치료 반응 확인", "필요한 치료 단계를 상담"]
+        description: "2026년 7월 1일부터 도수치료는 관리급여(본인부담률 95%)로 전환되었습니다. 다만 환자의 질환·상태, 기본치료 시행 및 호전 여부, 연간 인정 횟수 등 세부 급여기준을 모두 충족해야 하므로 진료·평가 후 적용 여부를 확인합니다. 가입 보험의 보장 여부와 금액은 상품과 보험사 기준에 따라 달라질 수 있습니다.",
+        items: ["관리급여 본인부담률 95%", "진찰 소견과 치료 반응 확인", "적용 여부·인정 횟수는 진료 후 확인"]
       },
       {
         title: "체외충격파와 별도 안내",
@@ -359,7 +371,7 @@ export const faqItems = [
   {
     question: "2026년 7월부터 도수치료 기준이 어떻게 달라지나요?",
     answer:
-      "도수치료 관련 관리기준 변화가 예정되어 있어 진찰 소견, 기능 상태, 치료 필요성 확인이 더 중요해질 수 있습니다. 실제 적용 여부는 환자 상태와 관련 기준을 함께 확인해 상담합니다."
+      "2026년 7월 1일부터 도수치료는 관리급여(본인부담률 95%)로 전환되었습니다. 급여 인정은 환자의 질환·상태, 기본치료 시행 및 호전 여부, 연간 인정 횟수 등 세부 기준을 모두 충족해야 하므로 진료·평가 후 확인합니다."
   },
   {
     question: "보험 적용 여부는 어떻게 확인하나요?",
