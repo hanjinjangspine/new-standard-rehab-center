@@ -17,7 +17,13 @@ html {
 
 body {
   margin: 0;
-  background: #ffffff;
+  background-color: #f6faf8;
+  background-image:
+    linear-gradient(rgba(248, 252, 250, 0.9), rgba(248, 252, 250, 0.9)),
+    url("/images/generated/ambient-recovery-background-20260901.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   color: #10212b;
   font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
