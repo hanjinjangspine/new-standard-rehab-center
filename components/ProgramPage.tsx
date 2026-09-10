@@ -135,6 +135,15 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
           </div>
         </SubtleImageCard>
       </section>
+      {slug === "postoperative-recovery" && (
+        <section aria-label="정보 제공 및 참고자료" className="mx-auto max-w-5xl px-4 py-8 text-sm leading-7 text-muted sm:px-6 lg:px-8">
+          <h2 className="font-bold text-ink">정보 제공 및 참고자료</h2>
+          <p>정보 제공: 새기준병원 회복재활센터 · <a href="https://new-standard.co.kr/sub/r10/s1020.php" className="underline">진료 의료진 소개</a></p>
+          <p>페이지 갱신일: <time dateTime="2026-09-10">2026년 9월 10일</time></p>
+          <p><a href="https://www.orthoinfo.org/recovery/total-knee-replacement-exercise-guide/" className="underline" target="_blank" rel="noopener noreferrer">미국정형외과학회(AAOS): 인공무릎관절 수술 후 운동 안내(영문)</a></p>
+          <p>무릎 수술 후 회복을 이해하기 위한 참고자료입니다. 다른 수술에 그대로 적용하지 않으며, 운동 종류와 시작 시점은 수술한 의료진의 지시를 따릅니다.</p>
+        </section>
+      )}
     </main>
   );
 }

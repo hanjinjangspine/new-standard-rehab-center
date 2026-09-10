@@ -85,6 +85,12 @@ export function siteJsonLd() {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "08:30",
+      closes: "12:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "13:30",
       closes: "17:30"
     },
     {
@@ -216,7 +222,8 @@ export function webPageJsonLd({ title, description, path }: { title: string; des
     name: title,
     description,
     inLanguage: "ko-KR",
-    dateModified: "2026-09-02",
+    dateModified: path === "/postoperative-recovery" ? "2026-09-10" : "2026-09-02",
+    ...(path === "/postoperative-recovery" ? { citation: ["https://www.orthoinfo.org/recovery/total-knee-replacement-exercise-guide/"] } : {}),
     author: {
       "@id": `${SITE_URL}#new-standard-hospital`
     },
