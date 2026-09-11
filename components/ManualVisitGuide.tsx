@@ -74,7 +74,7 @@ export default function ManualVisitGuide() {
             <li><a href="https://www.hira.or.kr/bbsDummy.do?brdBltNo=12133&brdScnBltNo=4&pageIndex=1&pgmid=HIRAA020002000100" className="underline" target="_blank" rel="noopener noreferrer">건강보험심사평가원: 도수치료 관리급여 전환 관련 기준 안내</a></li>
             <li><a href="https://www.nice.org.uk/guidance/NG59/chapter/recommendations#manual-therapies" className="underline" target="_blank" rel="noopener noreferrer">NICE NG59: 16세 초과 요통·좌골신경통의 도수치료 권고(영문)</a></li>
           </ul>
-          <p className="mt-3">NICE의 해당 권고는 요통·좌골신경통에서 도수치료를 운동을 포함한 치료 계획의 일부로 고려한다는 내용입니다. 모든 질환에 동일하게 적용하지 않으며, 개인별 치료나 보험 보장을 보장하지 않습니다.</p>
+          <p className="mt-3">NICE의 해당 권고는 요통·좌골신경통에서 도수치료를 운동을 포함한 치료 계획의 일부로 고려한다는 내용입니다. 모든 질환에 동일하게 적용하지 않으며, 개인별 치료 효과나 보험 적용을 보장하지 않습니다.</p>
         </aside>
       </div>
     </section>
