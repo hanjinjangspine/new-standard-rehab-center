@@ -222,7 +222,11 @@ export function webPageJsonLd({ title, description, path }: { title: string; des
     name: title,
     description,
     inLanguage: "ko-KR",
-    dateModified: path === "/postoperative-recovery" ? "2026-09-10" : "2026-09-02",
+    dateModified: path === "/manual-exercise-rehab" ? "2026-09-11" : path === "/postoperative-recovery" ? "2026-09-10" : "2026-09-02",
+    ...(path === "/manual-exercise-rehab" ? { citation: [
+      "https://www.hira.or.kr/bbsDummy.do?brdBltNo=12133&brdScnBltNo=4&pageIndex=1&pgmid=HIRAA020002000100",
+      "https://www.nice.org.uk/guidance/NG59/chapter/recommendations#manual-therapies"
+    ] } : {}),
     ...(path === "/postoperative-recovery" ? { citation: ["https://www.orthoinfo.org/recovery/total-knee-replacement-exercise-guide/"] } : {}),
     author: {
       "@id": `${SITE_URL}#new-standard-hospital`

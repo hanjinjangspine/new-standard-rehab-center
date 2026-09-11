@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import SEOJsonLd from "@/components/SEOJsonLd";
 import SubtleImageCard from "@/components/SubtleImageCard";
+import ManualVisitGuide from "@/components/ManualVisitGuide";
 import { ProgramSlug, programPages, safetyCopy } from "@/lib/data";
 import { webPageJsonLd } from "@/lib/seo";
 
@@ -84,6 +85,7 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
           </div>
         </section>
       ) : null}
+      {slug === "manual-exercise-rehab" && <ManualVisitGuide />}
       <section className="bg-calm px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
