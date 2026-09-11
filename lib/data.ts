@@ -301,8 +301,8 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
   },
   "manual-exercise-rehab": {
     title: "용인 도수치료 | 통증·기능 상태에 따른 운동재활 | 새기준병원",
-    h1: "도수치료, 통증 원인과 기능 상태를 먼저 확인합니다",
-    ctaLabel: "통증과 기능 상태 평가받기",
+    h1: "용인 도수치료, 통증 원인과 기능 상태부터",
+    ctaLabel: "진료 예약하기",
     eyebrow: "Manual Therapy & Exercise Rehabilitation",
     path: "/manual-exercise-rehab",
     description: "용인 새기준병원은 통증 원인과 진찰 소견, 관절가동범위·근력·보행·기존 치료 반응을 확인해 도수치료와 운동재활의 필요한 범위를 상담합니다.",
