@@ -12,7 +12,7 @@ import SectionTitle from "@/components/SectionTitle";
 import SubtleImageCard from "@/components/SubtleImageCard";
 import TreatmentFlow from "@/components/TreatmentFlow";
 import { aiSummary, connectedCareLinks, officialLinks, rehabPhotos, safetyCopy } from "@/lib/data";
-import { createMetadata, faqJsonLd } from "@/lib/seo";
+import { createMetadata, faqJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
   title: "용인 재활치료 | 척추·관절 수술 후 기능 회복 | 새기준병원",
@@ -192,6 +192,7 @@ export default function HomePage() {
   return (
     <main>
       <SEOJsonLd data={faqJsonLd()} />
+      <SEOJsonLd data={breadcrumbJsonLd("회복재활센터", "/")} />
       <HeroSection />
 
       <section className="px-4 py-16 sm:px-6 lg:px-8">

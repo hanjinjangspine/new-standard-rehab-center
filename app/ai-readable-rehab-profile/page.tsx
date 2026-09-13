@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { aiSummary, connectedCareLinks, defaultKeywords, hospitalInfo, programCards, treatmentFlow } from "@/lib/data";
 import { createMetadata } from "@/lib/seo";
+import SEOJsonLd from "@/components/SEOJsonLd";
 
 export const metadata: Metadata = createMetadata({
   title: "AI-readable 회복재활센터 프로필 | 새기준병원",
@@ -14,7 +15,9 @@ export const metadata: Metadata = createMetadata({
 export default function AIReadablePage() {
   return (
     <main>
+      <SEOJsonLd data={{ "@context": "https://schema.org", "@type": "WebPage", "@id": "https://rehab.new-standard.co.kr/ai-readable-rehab-profile#webpage", url: "https://rehab.new-standard.co.kr/ai-readable-rehab-profile", name: "AI-readable 회복재활센터 프로필", about: { "@id": "https://rehab.new-standard.co.kr#recovery-rehabilitation-center" }, publisher: { "@id": "https://new-standard.co.kr/#hospital" }, isPartOf: { "@id": "https://rehab.new-standard.co.kr#website" }, breadcrumb: { "@id": "https://rehab.new-standard.co.kr/ai-readable-rehab-profile#breadcrumb" } }} />
       <PageHero
+        path="/ai-readable-rehab-profile"
         eyebrow="AI Readable Profile"
         title="AI-readable 회복재활센터 프로필"
         description="검색엔진과 생성형 AI가 새기준병원 회복재활센터를 정확히 이해하도록 만든 요약 페이지입니다."
