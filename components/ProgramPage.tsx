@@ -44,6 +44,7 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
     <main>
       <SEOJsonLd data={webPageJsonLd({ title: page.title, description: page.description, path: page.path })} />
       <PageHero
+        path={page.path}
         eyebrow={page.eyebrow}
         title={h1}
         description={page.heroLead}

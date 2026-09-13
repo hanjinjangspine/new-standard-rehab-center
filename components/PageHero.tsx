@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import RehabPhoto from "@/components/RehabPhoto";
 import { hospitalInfo } from "@/lib/data";
+import Breadcrumb from "@/components/Breadcrumb";
 
 type PageHeroProps = {
   eyebrow: string;
@@ -10,12 +11,14 @@ type PageHeroProps = {
   imageSrc?: string;
   imageAlt?: string;
   ctaLabel?: string;
+  path: string;
 };
 
 export default function PageHero({
   eyebrow,
   title,
   description,
+  path,
   imageSrc = "/images/rehab/hero-rehab-center.jpg",
   imageAlt = "새기준병원 회복재활센터 치료 공간",
   ctaLabel = "현재 기능 상태 평가받기"
@@ -24,6 +27,7 @@ export default function PageHero({
     <section className="overflow-hidden border-b border-line bg-gradient-to-br from-brand-50 via-white to-accent-100 px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
       <div className="mx-auto grid max-w-[1180px] gap-7 md:gap-9 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-center lg:gap-12">
         <div className="order-1 min-w-0 md:order-2 lg:order-1">
+          <Breadcrumb title={title} path={path} />
           <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-brand-700">{eyebrow}</p>
           <h1 className="mt-4 max-w-3xl break-keep text-4xl font-black leading-tight tracking-[-0.025em] text-ink sm:text-5xl lg:text-[3rem]">
             {title}

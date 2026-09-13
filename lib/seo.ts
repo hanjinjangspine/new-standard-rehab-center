@@ -78,7 +78,7 @@ const mainTopics = [
 
 export function siteJsonLd() {
   const clinicId = `${SITE_URL}#recovery-rehabilitation-center`;
-  const hospitalId = `${SITE_URL}#new-standard-hospital`;
+  const hospitalId = "https://new-standard.co.kr/#hospital";
   const logoUrl = new URL(hospitalInfo.logoPath, SITE_URL).toString();
   const openingHoursSpecification = [
     {
@@ -153,7 +153,8 @@ export function siteJsonLd() {
         name: hospitalInfo.hospitalName,
         url: hospitalInfo.officialWebsiteUrl,
         logo: logoUrl,
-        sameAs: [hospitalInfo.officialWebsiteUrl, hospitalInfo.youtubeUrl],
+        sameAs: [hospitalInfo.youtubeUrl],
+        department: { "@id": clinicId },
         telephone: hospitalInfo.phone,
         openingHoursSpecification,
         address: {
@@ -174,24 +175,7 @@ export function siteJsonLd() {
           "@id": hospitalId
         }
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": `${SITE_URL}#breadcrumb`,
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "새기준병원",
-            item: new URL("/", hospitalInfo.officialWebsiteUrl).toString()
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "회복재활센터",
-            item: new URL("/", SITE_URL).toString()
-          }
-        ]
-      }
+
     ]
   };
 }
@@ -229,19 +213,32 @@ export function webPageJsonLd({ title, description, path }: { title: string; des
     ] } : {}),
     ...(path === "/postoperative-recovery" ? { citation: ["https://www.orthoinfo.org/recovery/total-knee-replacement-exercise-guide/"] } : {}),
     author: {
-      "@id": `${SITE_URL}#new-standard-hospital`
+      "@id": "https://new-standard.co.kr/#hospital"
     },
     publisher: {
-      "@id": `${SITE_URL}#new-standard-hospital`
-    },
-    reviewedBy: {
-      "@id": `${SITE_URL}#new-standard-hospital`
+      "@id": "https://new-standard.co.kr/#hospital"
     },
     about: {
       "@id": `${SITE_URL}#recovery-rehabilitation-center`
     },
+    breadcrumb: { "@id": `${url}#breadcrumb` },
     isPartOf: {
       "@id": `${SITE_URL}#website`
     }
+  };
+}
+
+// Used by both the visible breadcrumb and its JSON-LD.
+export function breadcrumbJsonLd(title: string, path: string) {
+  const url = new URL(path, SITE_URL).toString();
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${url}#breadcrumb`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "새기준병원", item: "https://new-standard.co.kr/" },
+      { "@type": "ListItem", position: 2, name: "회복재활센터", item: new URL("/", SITE_URL).toString() },
+      ...(path !== "/" ? [{ "@type": "ListItem", position: 3, name: title, item: url }] : [])
+    ]
   };
 }
