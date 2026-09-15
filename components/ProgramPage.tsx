@@ -90,7 +90,7 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
       <section className="bg-calm px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-brand-700">Related Care Path</p>
+            <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-brand-700">연관 진료 안내</p>
             <h2 className="mt-3 text-3xl font-black leading-tight text-ink sm:text-4xl">연결해서 보면 좋은 진료 흐름</h2>
             <p className="mt-5 text-lg leading-8 text-muted">
               증상의 원인과 회복 단계에 따라 회복재활센터 안에서 관리하거나, 척추센터·관절센터 진료와 함께 확인할 수 있습니다.

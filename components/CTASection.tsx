@@ -39,7 +39,7 @@ export default function CTASection({ title, description }: { title: string; desc
       <div className="mx-auto max-w-7xl rounded-2xl border border-[#D9E2E7] bg-[#F8FAFB] p-6 shadow-sm sm:p-8 lg:p-10">
         <div className="grid gap-7 lg:grid-cols-[1fr_minmax(280px,420px)] lg:items-center">
           <div>
-            <p className="text-sm font-extrabold tracking-[0.12em] text-[#2B7366]">NEW STANDARD RECOVERY</p>
+            <p className="text-sm font-extrabold tracking-[0.12em] text-[#2B7366]">새기준병원 회복재활센터</p>
             <h2 className="mt-3 text-3xl font-black leading-tight text-[#10283D] sm:text-4xl">{title}</h2>
             <p className="mt-5 max-w-3xl text-base leading-8 text-[#5B6770] sm:text-lg">{description}</p>
           </div>

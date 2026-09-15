@@ -19,7 +19,7 @@ export default function FAQSection() {
   return (
     <section className="bg-calm px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
-        <SectionTitle align="center" eyebrow="FAQ" title="회복재활센터 자주 묻는 질문" description="치료 여부와 방법은 환자 상태에 따라 달라질 수 있으므로 진료 상담을 통해 확인하는 것이 좋습니다." />
+        <SectionTitle align="center" eyebrow="자주 묻는 질문" title="회복재활센터 자주 묻는 질문" description="치료 여부와 방법은 환자 상태에 따라 달라질 수 있으므로 진료 상담을 통해 확인하는 것이 좋습니다." />
         <div className="mt-10 grid gap-4">
           {faqItems.map((item, index) => (
             <SubtleImageCard key={item.question} image={faqBackgrounds[index]} className="rounded-[24px] border border-line p-6 shadow-sm" sizes="(min-width: 1024px) 960px, calc(100vw - 2rem)">

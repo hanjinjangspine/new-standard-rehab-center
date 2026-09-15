@@ -20,7 +20,7 @@ export default function ContactPage() {
       <SEOJsonLd data={webPageJsonLd({ title: "오시는 길·진료 상담", description: metadata.description as string, path: "/contact" })} />
       <PageHero
         path="/contact"
-        eyebrow="Contact"
+        eyebrow="문의·예약"
         title="오시는 길·진료 상담"
         description="진료 일정은 병원 상황에 따라 변동될 수 있습니다. 내원 전 대표전화로 확인해 주세요."
         imageSrc="/images/rehab/rehab-room-02.jpg"
