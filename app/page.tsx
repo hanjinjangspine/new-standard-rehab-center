@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ExternalLink, MapPin } from "lucide-react";
+import { ExternalLink, MapPin } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import HeroSection from "@/components/HeroSection";
@@ -11,7 +11,7 @@ import SEOJsonLd from "@/components/SEOJsonLd";
 import SectionTitle from "@/components/SectionTitle";
 import SubtleImageCard from "@/components/SubtleImageCard";
 import TreatmentFlow from "@/components/TreatmentFlow";
-import { aiSummary, connectedCareLinks, officialLinks, rehabPhotos, safetyCopy } from "@/lib/data";
+import { connectedCareLinks, officialLinks, rehabPhotos, safetyCopy } from "@/lib/data";
 import { createMetadata, faqJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
@@ -50,7 +50,6 @@ const rehabDirectorProfile = {
     "명 가정의학과 물리치료실장",
     "오재활의학과 물리치료실",
     "한마음신경외과 물리치료실",
-    "스포츠마사지·체형관리/재활 센터 운영",
     "한국GM 군산공장 산업보건센터 물리·재활치료실",
     "국군계룡대지구병원 내과·물리치료실"
   ],
@@ -59,10 +58,7 @@ const rehabDirectorProfile = {
     "BLS Provider 이수",
     "Bobath Introductory Course 이수",
     "스포츠테이핑 교육 이수",
-    "MKC 경근학회 이수",
-    "Jera Thai Massage School Basic Course",
-    "Watpo Traditional Medical Massage School",
-    "Ong's Traditional Massage Professional Course"
+    "MKC 경근학회 이수"
   ],
   activities: ["남사읍 노인대학 건강강좌", "한국GM 임직원 대상 스트레칭 건강강좌"],
   fields: [
@@ -70,8 +66,6 @@ const rehabDirectorProfile = {
     "통증관리",
     "수술 전후 재활",
     "스포츠 재활",
-    "근막이완",
-    "체형관리",
     "산업보건 재활",
     "척추·관절 재활",
     "산후·육아 관련 근골격계 회복관리"
@@ -199,7 +193,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-4xl">
             <SectionTitle
-              eyebrow="Recovery Rehab Center"
+              eyebrow="회복재활센터"
               title="생활 통증과 수술 후 회복을 한 흐름으로 봅니다"
               description="회복재활센터는 도수치료만 안내하는 곳이 아닙니다. 통증의 원인과 기능 저하를 확인하고, 필요한 치료 단계를 상담하는 병원 안의 회복관리 센터입니다."
             />
@@ -244,7 +238,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <SectionTitle
             align="center"
-            eyebrow="Care Programs"
+            eyebrow="회복 프로그램"
             title="증상별 회복재활 프로그램"
             description="환자가 실제로 느끼는 증상에서 시작해 가능한 원인과 회복관리 방향을 확인할 수 있도록 구성했습니다."
           />
@@ -256,7 +250,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <SectionTitle
             align="center"
-            eyebrow="Patient Needs"
+            eyebrow="이런 분께 안내합니다"
             title="이런 상황이라면 상담해 보세요"
             description="특정 치료를 먼저 정해두지 않습니다. 진찰과 검사 결과, 기존 치료 반응을 확인한 뒤 필요한 단계를 상담합니다."
           />
@@ -293,7 +287,7 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-7xl">
           <SectionTitle
             align="center"
-            eyebrow="Before Your Visit"
+            eyebrow="방문 전 확인"
             title="회복 상담 전 준비하면 좋은 자료"
             description="수술과 검사 이력, 현재 증상 변화를 함께 확인하면 회복 단계와 필요한 평가 범위를 더 정확히 상담할 수 있습니다."
             inverse
@@ -314,7 +308,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <SectionTitle
             align="center"
-            eyebrow="Policy & Treatment Guide"
+            eyebrow="치료 제도 안내"
             title="도수치료·체외충격파·수액치료는 역할을 구분해 안내합니다"
             description="세 가지는 서로 다른 치료입니다. 비용과 보험 보장 여부는 병원이 확정해 안내하지 않으며, 진료 후 필요한 범위에서 상담합니다."
           />
@@ -338,7 +332,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <SectionTitle
             align="center"
-            eyebrow="Connected Care"
+            eyebrow="진료 연계"
             title="새기준병원 본원·전문센터 진료와 이어집니다"
             description="회복재활센터는 생활 통증의 첫 상담 창구입니다. 증상과 진찰 소견에 따라 본원 진료, 척추·관절 전문의 진료, 관절센터 회복관리로 이어질 수 있습니다."
           />
@@ -377,7 +371,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <SectionTitle
             align="center"
-            eyebrow="Evaluation Based Care"
+            eyebrow="진단 기반 회복관리"
             title="진단 기반 회복관리 흐름"
             description="같은 통증이라도 손상 정도와 원인이 다를 수 있으므로 증상, 진찰, 검사, 치료 반응을 단계적으로 확인합니다."
           />
@@ -389,7 +383,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <SectionTitle
             align="center"
-            eyebrow="Rehabilitation Director"
+            eyebrow="재활치료실장"
             title="재활치료실장 프로필"
             description="회복재활센터의 물리치료·도수치료·운동재활은 의사 진료와 연결해 환자 상태, 진찰 소견, 치료 반응을 함께 확인하며 상담합니다."
           />
@@ -405,7 +399,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-brand-700">Physical Therapist</p>
+                <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-brand-700">물리치료사</p>
                 <h3 className="mt-3 text-3xl font-black leading-tight text-ink">사준호 재활치료실장</h3>
                 <p className="mt-2 text-lg font-bold text-brand-700">새기준병원 재활치료실장 / 물리치료사</p>
                 <p className="mt-5 text-base leading-8 text-muted">
@@ -457,9 +451,8 @@ export default function HomePage() {
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <SectionTitle
-            eyebrow="Our Principle"
-            title="과장 표현보다 평가와 상담 중심으로 안내합니다"
-            description="치료 결과를 단정하지 않고, 환자 상태와 검사 결과를 함께 확인한 뒤 안내합니다."
+            eyebrow="치료 안내"
+            title="치료 전 알아두시면 좋은 점"
           />
           <div className="grid gap-3">
             {safetyCopy.map((item, index) => (
@@ -475,7 +468,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div>
-              <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-brand-100">Official Hospital Links</p>
+              <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-brand-100">본원 진료 연결</p>
               <h2 className="mt-3 text-3xl font-black leading-tight sm:text-4xl">본원·척추센터·관절센터와 이어지는 회복관리</h2>
               <p className="mt-5 text-lg leading-8 text-brand-50">
                 회복재활센터는 생활 통증으로 처음 찾는 분의 첫 상담 창구입니다. 필요하면 척추센터·관절센터 진료와 수술 후 회복관리로 이어집니다.
@@ -502,26 +495,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <div>
-            <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-brand-700">AI Readable Summary</p>
-            <h2 className="mt-3 text-3xl font-black leading-tight text-ink sm:text-4xl">센터 한눈에 보기</h2>
-            <p className="mt-5 text-lg leading-8 text-muted">생활 통증부터 수술 후 기능 회복까지 회복재활센터가 안내하는 범위를 한눈에 확인할 수 있습니다.</p>
-            <Link href="/ai-readable-rehab-profile" className="mt-6 inline-flex items-center gap-2 rounded-full border border-brand-200 px-5 py-3 text-sm font-extrabold text-brand-700 transition hover:bg-brand-50">
-              센터 요약 페이지 보기 <ArrowRight aria-hidden="true" size={17} />
-            </Link>
-          </div>
-          <SubtleImageCard image="/images/generated/visit-prep-background-20260901.webp" className="rounded-[28px] border border-line p-6 shadow-sm" sizes="(min-width: 1024px) 700px, calc(100vw - 2rem)">
-            <p className="text-base leading-8 text-muted">{aiSummary.ko}</p>
-          </SubtleImageCard>
-        </div>
-      </section>
-
       <section className="bg-calm px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <SectionTitle
-            eyebrow="Location"
+            eyebrow="오시는 길"
             title="용인 처인구에서 가까운 회복재활센터"
             description="새기준병원은 경기도 용인시 처인구 중부대로 1539에 위치합니다. 방문 전 대표전화로 진료 일정을 확인하시면 도움이 됩니다."
           />
