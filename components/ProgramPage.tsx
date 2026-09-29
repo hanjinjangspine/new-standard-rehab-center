@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import SEOJsonLd from "@/components/SEOJsonLd";
 import SubtleImageCard from "@/components/SubtleImageCard";
@@ -56,8 +56,22 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
         description={page.heroLead}
         imageSrc={page.heroImage}
         imageAlt={page.heroImageAlt}
+        hideImageOnMobile={page.heroImageAlt?.includes("연출 이미지")}
         ctaLabel={page.ctaLabel}
       />
+      <aside
+        aria-label="먼저 확인할 증상"
+        className="border-b border-amber-200 bg-amber-50 px-5 py-5"
+      >
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-base font-bold text-ink">
+            재활 상담보다 먼저 의사 진료가 필요한 변화
+          </h2>
+          <p className="mt-2 max-w-4xl text-base leading-7 text-ink">
+            {safetyCopy[3]}
+          </p>
+        </div>
+      </aside>
       <nav
         aria-label="이 페이지 안내"
         className="border-b border-line bg-white px-5 py-3"
@@ -65,6 +79,9 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
         <div className="mx-auto flex max-w-7xl flex-wrap gap-2">
           {[
             { href: "#symptoms", label: "증상·평가" },
+            ...(page.consultationGuide
+              ? [{ href: "#consultation-questions", label: "상담 질문" }]
+              : []),
             { href: "#visit-preparation", label: "방문 준비" },
             { href: "#related-care", label: "관련 진료" },
             { href: "#safety", label: "치료 전 확인" },
@@ -81,7 +98,7 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
       </nav>
       <section
         id="symptoms"
-        className="program-card-section px-4 py-16 sm:px-6 lg:px-8"
+        className="program-card-section px-4 py-12 sm:px-6 lg:px-8"
       >
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3">
           <InfoCard
@@ -101,8 +118,47 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
           />
         </div>
       </section>
+      {page.consultationGuide && (
+        <section
+          id="consultation-questions"
+          className="px-5 py-12 sm:px-6 lg:px-8"
+        >
+          <div className="mx-auto max-w-7xl">
+            <h2 className="text-2xl font-black text-ink">
+              상담에서 함께 정리할 내용
+            </h2>
+            <div className="mt-6 grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
+              <div className="rounded-2xl border border-line bg-white p-6">
+                <h3 className="text-xl font-bold text-ink">
+                  {page.consultationGuide.title}
+                </h3>
+                <p className="mt-3 max-w-3xl leading-7 text-muted">
+                  {page.consultationGuide.description}
+                </p>
+                <ul className="mt-4 list-disc space-y-3 pl-5 leading-7 text-ink">
+                  {page.consultationGuide.questions.map((q) => (
+                    <li key={q}>{q}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-2xl bg-brand-50 p-6">
+                <h3 className="text-xl font-bold text-ink">
+                  {page.consultationGuide.goalTitle}
+                </h3>
+                <p className="mt-3 leading-7 text-muted">
+                  {page.consultationGuide.goal}
+                </p>
+                <p className="mt-4 text-sm leading-6 text-muted">
+                  기억나는 범위에서 편하게 정리해 주세요. 질문에
+                  해당하는지만으로 질환이나 치료 필요성을 판단하지 않습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
       {page.detailSections ? (
-        <section className="program-detail-section px-4 py-16 sm:px-6 lg:px-8">
+        <section className="program-detail-section px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-3">
             {page.detailSections.map((item, index) => (
               <SubtleImageCard
@@ -127,11 +183,12 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
                         key={subItem}
                         className="flex gap-3 text-base leading-7 text-ink"
                       >
-                        <CheckCircle2
+                        <span
                           aria-hidden="true"
-                          size={20}
-                          className="mt-1 shrink-0 text-brand-700"
-                        />
+                          className="shrink-0 text-brand-700"
+                        >
+                          •
+                        </span>
                         {subItem}
                       </p>
                     ))}
@@ -154,9 +211,9 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
               방문 전 준비해 주세요
             </h2>
             <p className="mt-4 max-w-3xl leading-7 text-muted">
-              통증이 시작된 시점, 불편한 동작과 기존 치료 반응을 정리해 주세요.
-              가지고 계신 검사 자료·판독지, 수술 후 주의사항과 복용약 목록이
-              있으면 상담에 도움이 됩니다.
+              {slug === "postoperative-recovery"
+                ? "다른 병원에서 수술받은 경우에도 보유한 영상·판독지, 수술기록지와 복용약 정보를 가져오시면 상담에 도움이 됩니다. 수술 의료진에게 안내받은 운동 제한·보조기·체중부하 지침도 함께 확인합니다."
+                : "통증이 시작된 시점, 불편한 동작과 기존 치료 반응을 정리해 주세요. 가지고 계신 검사 자료·판독지와 복용약 목록이 있으면 상담에 도움이 됩니다."}
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
               <Link
@@ -165,24 +222,26 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
               >
                 진료 일정·오시는 길
               </Link>
-              <Link
-                href="/treatment-before-check"
-                className="flex min-h-11 items-center px-4 font-bold text-brand-700 underline"
-              >
-                치료 전 확인할 증상
-              </Link>
+              {slug !== "treatment-before-check" && (
+                <Link
+                  href="/treatment-before-check"
+                  className="flex min-h-11 items-center px-4 font-bold text-brand-700 underline"
+                >
+                  치료 전 확인할 증상
+                </Link>
+              )}
             </div>
           </div>
         </section>
       )}
-      <section id="related-care" className="bg-calm px-4 py-16 sm:px-6 lg:px-8">
+      <section id="related-care" className="bg-calm px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
             <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-brand-700">
               연관 진료 안내
             </p>
-            <h2 className="mt-3 text-3xl font-black leading-tight text-ink sm:text-4xl">
-              연결해서 보면 좋은 진료 흐름
+            <h2 className="mt-3 text-2xl font-black leading-tight text-ink sm:text-3xl">
+              다음으로 확인할 안내
             </h2>
             <p className="mt-5 text-lg leading-8 text-muted">
               증상의 원인과 회복 단계에 따라 회복재활센터 안에서 관리하거나,
@@ -222,7 +281,7 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
           </div>
         </div>
       </section>
-      <section id="safety" className="px-4 py-16 sm:px-6 lg:px-8">
+      <section id="safety" className="px-4 py-12 sm:px-6 lg:px-8">
         <SubtleImageCard
           image="/images/generated/cards-20260902/symptom-observation.webp"
           intensity="present"
@@ -231,16 +290,28 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
         >
           <h2 className="text-2xl font-black text-ink">치료 전 안내</h2>
           <div className="mt-5 grid gap-3">
-            {safetyCopy.map((item) => (
-              <p key={item} className="flex gap-3 text-base leading-7 text-ink">
-                <CheckCircle2
-                  aria-hidden="true"
-                  size={20}
-                  className="mt-1 shrink-0 text-brand-700"
-                />
-                {item}
-              </p>
-            ))}
+            {safetyCopy
+              .filter(
+                (_, index) =>
+                  index === 0 ||
+                  (index === 1 && slug === "manual-exercise-rehab") ||
+                  (index === 2 &&
+                    ["acute-sprain", "treatment-before-check"].includes(
+                      slug,
+                    )) ||
+                  (index === 4 && slug === "postoperative-recovery"),
+              )
+              .map((item) => (
+                <p
+                  key={item}
+                  className="flex gap-3 text-base leading-7 text-ink"
+                >
+                  <span aria-hidden="true" className="shrink-0 text-brand-700">
+                    •
+                  </span>
+                  {item}
+                </p>
+              ))}
           </div>
         </SubtleImageCard>
       </section>
@@ -295,22 +366,14 @@ function InfoCard({
   return (
     <SubtleImageCard
       image={image}
-      intensity="present"
-      className="rounded-[28px] border border-line p-6 shadow-sm"
+      className="rounded-2xl border border-line p-6 shadow-sm"
     >
-      <h2 className="text-2xl font-black text-ink">{title}</h2>
-      <div className="mt-5 grid gap-3">
+      <h2 className="text-xl font-bold text-ink">{title}</h2>
+      <ul className="mt-4 list-disc space-y-3 pl-5 text-base leading-7 text-muted">
         {items.map((item) => (
-          <p key={item} className="flex gap-3 text-base leading-7 text-muted">
-            <CheckCircle2
-              aria-hidden="true"
-              size={20}
-              className="mt-1 shrink-0 text-brand-700"
-            />
-            {item}
-          </p>
+          <li key={item}>{item}</li>
         ))}
-      </div>
+      </ul>
     </SubtleImageCard>
   );
 }

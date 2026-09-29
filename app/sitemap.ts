@@ -3,14 +3,14 @@ import { SITE_URL } from "@/lib/data";
 import { programPages } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-
   const staticRoutes = ["/", "/contact", "/ai-readable-rehab-profile"];
   const programRoutes = Object.values(programPages).map((page) => page.path);
 
   return [...staticRoutes, ...programRoutes].map((route) => ({
     url: new URL(route, SITE_URL).toString(),
-    ...(route === "/contact" ? {} : { lastModified: route === "/manual-exercise-rehab" ? "2026-09-11" : "2026-09-29" }),
+    lastModified:
+      route === "/manual-exercise-rehab" ? "2026-09-11" : "2026-09-29",
     changeFrequency: route === "/" ? "weekly" : "monthly",
-    priority: route === "/" ? 1 : 0.82
+    priority: route === "/" ? 1 : 0.82,
   }));
 }

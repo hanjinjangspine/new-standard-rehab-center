@@ -9,37 +9,120 @@ import { createMetadata, webPageJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
   title: "오시는 길·진료 상담 | 새기준병원 회복재활센터",
-  description: "새기준병원 회복재활센터 주소, 대표전화, 네이버 예약, 진료시간 확인 안내입니다. 경기도 용인시 처인구 중부대로 1539.",
+  description:
+    "새기준병원 회복재활센터 주소, 대표전화, 네이버 예약, 진료시간 확인 안내입니다. 경기도 용인시 처인구 중부대로 1539.",
   path: "/contact",
-  keywords: ["새기준병원 오시는 길", "용인 회복재활 상담", "처인구 물리치료"]
+  keywords: ["새기준병원 오시는 길", "용인 회복재활 상담", "처인구 물리치료"],
 });
 
 export default function ContactPage() {
   return (
     <main>
-      <SEOJsonLd data={webPageJsonLd({ title: "오시는 길·진료 상담", description: metadata.description as string, path: "/contact" })} />
+      <SEOJsonLd
+        data={webPageJsonLd({
+          title: "오시는 길·진료 상담",
+          description: metadata.description as string,
+          path: "/contact",
+        })}
+      />
       <PageHero
+        compact
         path="/contact"
         eyebrow="문의·예약"
-        title="오시는 길·진료 상담"
-        description="진료 일정은 병원 상황에 따라 변동될 수 있습니다. 내원 전 대표전화로 확인해 주세요."
+        title="진료시간·오시는 길"
+        description="경기도 용인시 처인구 중부대로 1539 · 내원 전 031-328-0333으로 의료진 진료와 치료실 일정을 확인해 주세요."
         imageSrc="/images/rehab/rehab-room-02.jpg"
         imageAlt="새기준병원 회복재활센터 도수치료실과 물리치료실 입구"
       />
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3">
-          <ContactCard icon={<Phone size={26} />} title="대표전화" text={hospitalInfo.phone} href={hospitalInfo.consultationPhoneHref} linkText="전화 걸기" />
-          <ContactCard icon={<CalendarCheck size={26} />} title="네이버 예약" text="예약 페이지에서 가능한 일정을 확인해 주세요." href={hospitalInfo.naverReservationHref} linkText="예약하기" />
-          <ContactCard icon={<MapPin size={26} />} title="주소" text={hospitalInfo.address} href={hospitalInfo.naverMapUrl} linkText="지도 보기" />
+      <section
+        aria-labelledby="visit-hours"
+        className="bg-white px-5 py-12 sm:px-6 lg:px-8"
+      >
+        <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-2">
+          <div>
+            <h2 id="visit-hours" className="text-2xl font-black text-ink">
+              진료시간을 먼저 확인해 주세요
+            </h2>
+            <dl className="mt-5 divide-y divide-line rounded-2xl border border-line px-5">
+              {[
+                { day: "평일", hours: "08:30–17:30" },
+                { day: "토요일", hours: "08:30–12:30" },
+                { day: "일요일", hours: "09:00–13:00" },
+              ].map((row) => (
+                <div key={row.day} className="flex justify-between gap-4 py-4">
+                  <dt className="font-bold">{row.day}</dt>
+                  <dd>{row.hours}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mt-4 leading-7 text-muted">
+              평일 점심시간 12:30–13:30 · 토·일요일 점심시간 없음
+            </p>
+          </div>
+          <div className="rounded-2xl bg-calm p-6">
+            <h2 className="text-xl font-bold text-ink">
+              예약과 치료실 일정은 따로 확인해 주세요
+            </h2>
+            <p className="mt-3 leading-7 text-muted">
+              위 시간은 병원 진료시간입니다. 의료진별 진료와 치료실 운영, 당일
+              치료 가능 여부는 내원 전 대표전화로 확인해 주세요. 진료 예약이
+              특정 치료의 시행을 확정하는 것은 아닙니다.
+            </p>
+            <p className="mt-3 leading-7 text-muted">
+              공휴일 진료는 날짜별 공식 공지를 확인해 주세요.
+            </p>
+            <a
+              href="https://new-standard.co.kr/sub/r10/s1040.php"
+              className="mt-4 inline-flex min-h-11 items-center font-bold text-brand-700 underline"
+            >
+              본원 최신 진료시간·공휴일 공지 확인
+            </a>
+          </div>
         </div>
       </section>
-      <section className="bg-calm px-4 py-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3">
+          <ContactCard
+            icon={<Phone size={26} />}
+            title="대표전화"
+            text={hospitalInfo.phone}
+            href={hospitalInfo.consultationPhoneHref}
+            linkText="전화 걸기"
+          />
+          <ContactCard
+            icon={<CalendarCheck size={26} />}
+            title="네이버 예약"
+            text="예약 페이지에서 가능한 일정을 확인해 주세요."
+            href={hospitalInfo.naverReservationHref}
+            linkText="예약하기"
+          />
+          <ContactCard
+            icon={<MapPin size={26} />}
+            title="주소"
+            text={hospitalInfo.address}
+            href={hospitalInfo.naverMapUrl}
+            linkText="지도 보기"
+          />
+        </div>
+      </section>
+      <section className="bg-calm px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl rounded-[28px] border border-line bg-white p-8 shadow-sm">
-          <h2 className="text-3xl font-black text-ink">진료 전 준비하면 좋은 자료</h2>
+          <h2 className="text-3xl font-black text-ink">
+            진료 전 준비하면 좋은 자료
+          </h2>
           <div className="mt-6 grid gap-4 text-base leading-7 text-muted">
-            <p>기존 X-ray, MRI, 초음파 등 영상자료가 있다면 진료 상담에 도움이 됩니다.</p>
-            <p>언제부터 아팠는지, 어떤 동작에서 악화되는지, 이전 치료 반응은 어땠는지 정리해 오시면 좋습니다.</p>
-            <p>수술 후 회복관리 상담은 수술명, 수술일, 주치의 지시사항, 보조기 착용 여부를 함께 확인합니다.</p>
+            <p>
+              기존 X-ray, MRI, 초음파 등 영상자료가 있다면 진료 상담에 도움이
+              됩니다.
+            </p>
+            <p>
+              언제부터 아팠는지, 어떤 동작에서 악화되는지, 이전 치료 반응은
+              어땠는지 정리해 오시면 좋습니다.
+            </p>
+            <p>
+              수술 후 회복관리 상담은 수술명, 수술일, 주치의 지시사항, 보조기
+              착용 여부를 함께 확인합니다.
+            </p>
           </div>
         </div>
       </section>
@@ -47,13 +130,32 @@ export default function ContactPage() {
   );
 }
 
-function ContactCard({ icon, title, text, href, linkText }: { icon: ReactNode; title: string; text: string; href: string; linkText: string }) {
+function ContactCard({
+  icon,
+  title,
+  text,
+  href,
+  linkText,
+}: {
+  icon: ReactNode;
+  title: string;
+  text: string;
+  href: string;
+  linkText: string;
+}) {
   return (
     <div className="rounded-[28px] border border-line bg-white p-6 shadow-sm">
-      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-50 text-brand-700">{icon}</div>
+      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-50 text-brand-700">
+        {icon}
+      </div>
       <h2 className="mt-5 text-2xl font-black text-ink">{title}</h2>
       <p className="mt-3 min-h-14 text-base leading-7 text-muted">{text}</p>
-      <Link href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="mt-5 inline-flex rounded-full bg-brand-700 px-5 py-3 text-sm font-extrabold text-white transition hover:bg-brand-800">
+      <Link
+        href={href}
+        target={href.startsWith("http") ? "_blank" : undefined}
+        rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+        className="mt-5 inline-flex rounded-full bg-brand-700 px-5 py-3 text-sm font-extrabold text-white transition hover:bg-brand-800"
+      >
         {linkText}
       </Link>
     </div>
