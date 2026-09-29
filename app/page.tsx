@@ -167,7 +167,7 @@ export default function HomePage() {
             align="center"
             eyebrow="회복 프로그램"
             title="증상별 회복재활 프로그램"
-            description="환자가 실제로 느끼는 증상에서 시작해 가능한 원인과 회복관리 방향을 확인할 수 있도록 구성했습니다."
+            description="지금 불편한 상황에 가까운 안내를 골라 보세요. 진료에서 살피는 내용과 상담 전에 준비할 일을 확인할 수 있습니다."
           />
         </div>
       </section>
@@ -178,8 +178,8 @@ export default function HomePage() {
           <div className="max-w-4xl">
             <SectionTitle
               eyebrow="회복재활센터"
-              title="생활 통증과 수술 후 회복을 한 흐름으로 봅니다"
-              description="회복재활센터는 도수치료만 안내하는 곳이 아닙니다. 통증의 원인과 기능 저하를 확인하고, 필요한 치료 단계를 상담하는 병원 안의 회복관리 센터입니다."
+              title="일상에서 생긴 통증부터 수술 후 회복까지"
+              description="회복재활센터에서는 통증의 원인과 움직임의 어려움을 살핍니다. 진료를 바탕으로 필요한 치료와 회복 계획을 상담합니다."
             />
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -212,7 +212,7 @@ export default function HomePage() {
             align="center"
             eyebrow="방문 전 확인"
             title="회복 상담 전 준비하면 좋은 자료"
-            description="수술과 검사 이력, 현재 증상 변화를 함께 확인하면 회복 단계와 필요한 평가 범위를 더 정확히 상담할 수 있습니다."
+            description="받았던 수술과 검사, 최근 달라진 증상을 정리해 주세요. 회복 단계와 필요한 평가 범위를 상담할 때 참고합니다."
             inverse
           />
           <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -282,7 +282,7 @@ export default function HomePage() {
             align="center"
             eyebrow="진단 기반 회복관리"
             title="진단 기반 회복관리 흐름"
-            description="같은 통증이라도 손상 정도와 원인이 다를 수 있으므로 증상, 진찰, 검사, 치료 반응을 단계적으로 확인합니다."
+            description="같은 곳이 아파도 원인과 손상 정도는 다를 수 있습니다. 증상과 진찰·검사 결과, 치료를 받은 뒤의 변화를 살펴봅니다."
           />
         </div>
       </section>
@@ -294,7 +294,7 @@ export default function HomePage() {
             align="center"
             eyebrow="재활치료실장"
             title="재활치료실장 프로필"
-            description="회복재활센터의 물리치료·도수치료·운동재활은 의사 진료와 연결해 환자 상태, 진찰 소견, 치료 반응을 함께 확인하며 상담합니다."
+            description="물리치료·도수치료·운동재활 상담은 의사 진료를 바탕으로 합니다. 현재 상태와 진찰 소견, 치료 후의 변화를 살펴봅니다."
           />
           <div className="mt-10 grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
             <div className="overflow-hidden rounded-[28px] border border-line bg-calm shadow-sm">
@@ -499,8 +499,8 @@ export default function HomePage() {
 
       <FAQSection />
       <CTASection
-        title="현재 기능 상태를 평가하고 다음 회복 단계를 확인해 보세요"
-        description="통증 강도뿐 아니라 보행, 근력, 관절가동범위, 일상 동작과 기존 치료 반응을 함께 확인해 척추·관절 질환과 수술 후 회복 방향을 상담합니다."
+        title="지금 어려운 움직임부터 이야기해 주세요"
+        description="통증의 정도와 걷는 모습, 근력, 관절의 움직임을 살핍니다. 일상에서 불편한 동작과 이전 치료 후의 변화를 듣고, 척추·관절 질환과 수술 후의 현재 기능 상태를 평가해 다음 회복 단계를 상담합니다."
       />
     </main>
   );

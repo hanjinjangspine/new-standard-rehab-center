@@ -125,7 +125,7 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
         >
           <div className="mx-auto max-w-7xl">
             <h2 className="text-2xl font-black text-ink">
-              상담에서 함께 정리할 내용
+              진료 전에 생각해 볼 질문
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
               <div className="rounded-2xl border border-line bg-white p-6">
@@ -244,8 +244,7 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
               다음으로 확인할 안내
             </h2>
             <p className="mt-5 text-lg leading-8 text-muted">
-              증상의 원인과 회복 단계에 따라 회복재활센터 안에서 관리하거나,
-              척추센터·관절센터 진료와 함께 확인할 수 있습니다.
+              회복재활센터에서 받을 관리와 척추센터·관절센터 진료가 필요한지는 증상의 원인과 회복 단계에 따라 상의합니다. 아래에서 관련 안내를 찾아보세요.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">

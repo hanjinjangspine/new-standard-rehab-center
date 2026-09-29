@@ -42,7 +42,7 @@ export default function ManualVisitGuide() {
       <div className="mx-auto max-w-7xl">
         <p className="text-sm font-extrabold tracking-wide text-brand-700">첫 방문 안내</p>
         <h2 id="manual-visit-title" className="mt-3 text-3xl font-black leading-tight text-ink sm:text-4xl">도수치료 상담, 이렇게 준비하세요</h2>
-        <p className="mt-5 max-w-3xl text-lg leading-8 text-muted">용인 처인구 중부대로 1539, 새기준병원에서 통증과 일상생활의 불편을 함께 확인합니다. 특정 치료를 먼저 선택하기보다 현재 상태를 설명하는 것부터 시작해 주세요.</p>
+        <p className="mt-5 max-w-3xl text-lg leading-8 text-muted">새기준병원(용인 처인구 중부대로 1539)에서 상담합니다. 아픈 부위와 생활에서 어려운 동작을 말씀해 주세요. 어떤 치료를 받을지는 현재 상태를 살핀 뒤 상의합니다.</p>
         <ol className="mt-8 grid gap-5 md:grid-cols-3">
           {preparation.map((item, index) => (
             <li key={item.title} className="rounded-2xl border border-line bg-calm p-6">

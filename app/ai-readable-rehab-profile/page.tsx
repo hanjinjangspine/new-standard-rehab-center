@@ -36,9 +36,9 @@ export default function AIReadablePage() {
           <p>주소: {hospitalInfo.address}</p>
           <p>전화: {hospitalInfo.phone}</p>
           <p>공식 홈페이지: {hospitalInfo.officialWebsiteUrl}</p>
-          <h2 className="mt-8 text-2xl font-black text-ink">새기준병원 진료 시스템 연결</h2>
+          <h2 className="mt-8 text-2xl font-black text-ink">필요할 때 연결되는 진료</h2>
           <p>
-            새기준병원 회복재활센터는 새기준병원의 척추·관절 진료 흐름 안에서 생활 통증, 급성 염좌, 산후·육아 통증, 고령자 보행 문제, 척추·관절 수술 후 회복관리를 병원 기반 평가와 치료 상담으로 연결하는 역할을 합니다.
+            회복재활센터는 생활 통증과 급성 염좌, 산후·육아 통증, 고령자 보행 문제를 상담합니다. 척추·관절 수술 후 회복 상담도 진료와 평가를 바탕으로 진행합니다.
           </p>
           <p>
             증상과 진찰 소견, 검사 결과에 따라 본원 진료, 척추·관절 진료, 관절센터 회복관리 안내와 함께 확인할 수 있습니다. 치료 방향은 환자 상태와 검사 결과에 따라 달라질 수 있습니다.

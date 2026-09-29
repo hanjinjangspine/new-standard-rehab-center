@@ -16,7 +16,7 @@ export default function HeroSection() {
             <span className="block">기능 회복이 필요할 때</span>
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-7 text-[#5B6770] sm:text-lg sm:leading-8 lg:mt-6 lg:text-xl">
-            통증과 함께 보행·근력·일상 동작을 확인합니다. 진찰과 검사 결과, 수술 전후 회복 단계에 맞춰 필요한 치료 방향을 상담합니다.
+            통증이 일상에 어떤 불편을 주는지 듣고, 보행·근력·일상 동작을 확인합니다. 진찰과 검사 결과, 수술 전후 회복 단계에 맞춰 필요한 치료 방향을 상담합니다.
           </p>
           <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:gap-3 lg:mt-8">
             <Link href={hospitalInfo.naverReservationHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#2B7366] px-5 py-3 text-sm font-extrabold text-white shadow-sm transition hover:bg-[#245F55] sm:px-6 sm:py-4 sm:text-base">
