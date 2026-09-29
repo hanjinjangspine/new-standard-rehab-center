@@ -10,7 +10,7 @@ import { webPageJsonLd } from "@/lib/seo";
 const infoCardBackgrounds = [
   "/images/generated/cards-20260902/symptom-observation.webp",
   "/images/generated/cards-20260902/functional-assessment.webp",
-  "/images/generated/cards-20260902/recovery-exercise.webp"
+  "/images/generated/cards-20260902/recovery-exercise.webp",
 ];
 
 const detailBackgrounds: Partial<Record<ProgramSlug, string[]>> = {
@@ -20,20 +20,20 @@ const detailBackgrounds: Partial<Record<ProgramSlug, string[]>> = {
     "/images/generated/cards-20260902/recovery-exercise.webp",
     "/images/generated/cards-20260902/spine-recovery.webp",
     "/images/generated/cards-20260902/knee-recovery.webp",
-    "/images/generated/cards-20260902/shoulder-recovery.webp"
+    "/images/generated/cards-20260902/shoulder-recovery.webp",
   ],
   "manual-exercise-rehab": [
     "/images/generated/cards-20260902/functional-assessment.webp",
     "/images/generated/cards-20260902/medical-records.webp",
-    "/images/generated/cards-20260902/recovery-exercise.webp"
-  ]
+    "/images/generated/cards-20260902/recovery-exercise.webp",
+  ],
 };
 
 const relatedBackgrounds = [
   "/images/generated/cards-20260902/spine-recovery.webp",
   "/images/generated/cards-20260902/knee-recovery.webp",
   "/images/generated/cards-20260902/recovery-exercise.webp",
-  "/images/generated/cards-20260902/functional-assessment.webp"
+  "/images/generated/cards-20260902/functional-assessment.webp",
 ];
 
 export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
@@ -42,7 +42,13 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
 
   return (
     <main>
-      <SEOJsonLd data={webPageJsonLd({ title: page.title, description: page.description, path: page.path })} />
+      <SEOJsonLd
+        data={webPageJsonLd({
+          title: page.title,
+          description: page.description,
+          path: page.path,
+        })}
+      />
       <PageHero
         path={page.path}
         eyebrow={page.eyebrow}
@@ -52,11 +58,47 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
         imageAlt={page.heroImageAlt}
         ctaLabel={page.ctaLabel}
       />
-      <section className="program-card-section px-4 py-16 sm:px-6 lg:px-8">
+      <nav
+        aria-label="이 페이지 안내"
+        className="border-b border-line bg-white px-5 py-3"
+      >
+        <div className="mx-auto flex max-w-7xl flex-wrap gap-2">
+          {[
+            { href: "#symptoms", label: "증상·평가" },
+            { href: "#visit-preparation", label: "방문 준비" },
+            { href: "#related-care", label: "관련 진료" },
+            { href: "#safety", label: "치료 전 확인" },
+          ].map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="flex min-h-11 items-center rounded-xl bg-calm px-4 text-sm font-bold text-brand-700"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </nav>
+      <section
+        id="symptoms"
+        className="program-card-section px-4 py-16 sm:px-6 lg:px-8"
+      >
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3">
-          <InfoCard title="이런 증상이 있을 때" items={page.symptoms} image={infoCardBackgrounds[0]} />
-          <InfoCard title="진료에서 확인하는 것" items={page.checks} image={infoCardBackgrounds[1]} />
-          <InfoCard title="회복관리 방향" items={page.care} image={infoCardBackgrounds[2]} />
+          <InfoCard
+            title="이런 증상이 있을 때"
+            items={page.symptoms}
+            image={infoCardBackgrounds[0]}
+          />
+          <InfoCard
+            title="진료에서 확인하는 것"
+            items={page.checks}
+            image={infoCardBackgrounds[1]}
+          />
+          <InfoCard
+            title="회복관리 방향"
+            items={page.care}
+            image={infoCardBackgrounds[2]}
+          />
         </div>
       </section>
       {page.detailSections ? (
@@ -65,17 +107,31 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
             {page.detailSections.map((item, index) => (
               <SubtleImageCard
                 key={item.title}
-                image={detailBackgrounds[slug]?.[index] ?? infoCardBackgrounds[index % infoCardBackgrounds.length]}
+                image={
+                  detailBackgrounds[slug]?.[index] ??
+                  infoCardBackgrounds[index % infoCardBackgrounds.length]
+                }
                 intensity="present"
                 className="rounded-[28px] border border-line p-6 shadow-sm"
               >
-                <h2 className="text-2xl font-black leading-tight text-ink">{item.title}</h2>
-                <p className="mt-4 text-base leading-8 text-muted">{item.description}</p>
+                <h2 className="text-2xl font-black leading-tight text-ink">
+                  {item.title}
+                </h2>
+                <p className="mt-4 text-base leading-8 text-muted">
+                  {item.description}
+                </p>
                 {item.items ? (
                   <div className="mt-5 grid gap-3">
                     {item.items.map((subItem) => (
-                      <p key={subItem} className="flex gap-3 text-base leading-7 text-ink">
-                        <CheckCircle2 aria-hidden="true" size={20} className="mt-1 shrink-0 text-brand-700" />
+                      <p
+                        key={subItem}
+                        className="flex gap-3 text-base leading-7 text-ink"
+                      >
+                        <CheckCircle2
+                          aria-hidden="true"
+                          size={20}
+                          className="mt-1 shrink-0 text-brand-700"
+                        />
                         {subItem}
                       </p>
                     ))}
@@ -86,14 +142,51 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
           </div>
         </section>
       ) : null}
-      {slug === "manual-exercise-rehab" && <ManualVisitGuide />}
-      <section className="bg-calm px-4 py-16 sm:px-6 lg:px-8">
+      {slug === "manual-exercise-rehab" && (
+        <div id="visit-preparation">
+          <ManualVisitGuide />
+        </div>
+      )}
+      {slug !== "manual-exercise-rehab" && (
+        <section id="visit-preparation" className="bg-white px-5 py-12">
+          <div className="mx-auto max-w-7xl rounded-2xl border border-line p-6">
+            <h2 className="text-2xl font-black text-ink">
+              방문 전 준비해 주세요
+            </h2>
+            <p className="mt-4 max-w-3xl leading-7 text-muted">
+              통증이 시작된 시점, 불편한 동작과 기존 치료 반응을 정리해 주세요.
+              가지고 계신 검사 자료·판독지, 수술 후 주의사항과 복용약 목록이
+              있으면 상담에 도움이 됩니다.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="flex min-h-11 items-center rounded-xl bg-brand-700 px-4 font-bold text-white"
+              >
+                진료 일정·오시는 길
+              </Link>
+              <Link
+                href="/treatment-before-check"
+                className="flex min-h-11 items-center px-4 font-bold text-brand-700 underline"
+              >
+                치료 전 확인할 증상
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+      <section id="related-care" className="bg-calm px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-brand-700">연관 진료 안내</p>
-            <h2 className="mt-3 text-3xl font-black leading-tight text-ink sm:text-4xl">연결해서 보면 좋은 진료 흐름</h2>
+            <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-brand-700">
+              연관 진료 안내
+            </p>
+            <h2 className="mt-3 text-3xl font-black leading-tight text-ink sm:text-4xl">
+              연결해서 보면 좋은 진료 흐름
+            </h2>
             <p className="mt-5 text-lg leading-8 text-muted">
-              증상의 원인과 회복 단계에 따라 회복재활센터 안에서 관리하거나, 척추센터·관절센터 진료와 함께 확인할 수 있습니다.
+              증상의 원인과 회복 단계에 따라 회복재활센터 안에서 관리하거나,
+              척추센터·관절센터 진료와 함께 확인할 수 있습니다.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -107,12 +200,21 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
                 <Link
                   href={item.href}
                   target={item.href.startsWith("http") ? "_blank" : undefined}
-                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  rel={
+                    item.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
                   className="group block p-5 text-lg font-black text-ink"
                 >
                   {item.label}
                   <span className="mt-5 flex items-center gap-2 text-sm font-extrabold text-brand-700">
-                    확인하기 <ArrowRight aria-hidden="true" size={17} className="transition group-hover:translate-x-1" />
+                    확인하기{" "}
+                    <ArrowRight
+                      aria-hidden="true"
+                      size={17}
+                      className="transition group-hover:translate-x-1"
+                    />
                   </span>
                 </Link>
               </SubtleImageCard>
@@ -120,7 +222,7 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
           </div>
         </div>
       </section>
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <section id="safety" className="px-4 py-16 sm:px-6 lg:px-8">
         <SubtleImageCard
           image="/images/generated/cards-20260902/symptom-observation.webp"
           intensity="present"
@@ -131,7 +233,11 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
           <div className="mt-5 grid gap-3">
             {safetyCopy.map((item) => (
               <p key={item} className="flex gap-3 text-base leading-7 text-ink">
-                <CheckCircle2 aria-hidden="true" size={20} className="mt-1 shrink-0 text-brand-700" />
+                <CheckCircle2
+                  aria-hidden="true"
+                  size={20}
+                  className="mt-1 shrink-0 text-brand-700"
+                />
                 {item}
               </p>
             ))}
@@ -139,26 +245,68 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
         </SubtleImageCard>
       </section>
       {slug === "postoperative-recovery" && (
-        <section aria-label="정보 제공 및 참고자료" className="mx-auto max-w-5xl px-4 py-8 text-sm leading-7 text-muted sm:px-6 lg:px-8">
+        <section
+          aria-label="정보 제공 및 참고자료"
+          className="mx-auto max-w-5xl px-4 py-8 text-sm leading-7 text-muted sm:px-6 lg:px-8"
+        >
           <h2 className="font-bold text-ink">정보 제공 및 참고자료</h2>
-          <p>정보 제공: 새기준병원 회복재활센터 · <a href="https://new-standard.co.kr/sub/r10/s1020.php" className="underline">진료 의료진 소개</a></p>
-          <p>페이지 갱신일: <time dateTime="2026-09-10">2026년 9월 10일</time></p>
-          <p><a href="https://www.orthoinfo.org/recovery/total-knee-replacement-exercise-guide/" className="underline" target="_blank" rel="noopener noreferrer">미국정형외과학회(AAOS): 인공무릎관절 수술 후 운동 안내(영문)</a></p>
-          <p>무릎 수술 후 회복을 이해하기 위한 참고자료입니다. 다른 수술에 그대로 적용하지 않으며, 운동 종류와 시작 시점은 수술한 의료진의 지시를 따릅니다.</p>
+          <p>
+            정보 제공: 새기준병원 회복재활센터 ·{" "}
+            <a
+              href="https://new-standard.co.kr/sub/r10/s1020.php"
+              className="underline"
+            >
+              진료 의료진 소개
+            </a>
+          </p>
+          <p>
+            페이지 갱신일: <time dateTime="2026-09-10">2026년 9월 10일</time>
+          </p>
+          <p>
+            <a
+              href="https://www.orthoinfo.org/recovery/total-knee-replacement-exercise-guide/"
+              className="underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              미국정형외과학회(AAOS): 인공무릎관절 수술 후 운동 안내(영문)
+            </a>
+          </p>
+          <p>
+            무릎 수술 후 회복을 이해하기 위한 참고자료입니다. 다른 수술에 그대로
+            적용하지 않으며, 운동 종류와 시작 시점은 수술한 의료진의 지시를
+            따릅니다.
+          </p>
         </section>
       )}
     </main>
   );
 }
 
-function InfoCard({ title, items, image }: { title: string; items: string[]; image: string }) {
+function InfoCard({
+  title,
+  items,
+  image,
+}: {
+  title: string;
+  items: string[];
+  image: string;
+}) {
   return (
-    <SubtleImageCard image={image} intensity="present" className="rounded-[28px] border border-line p-6 shadow-sm">
+    <SubtleImageCard
+      image={image}
+      intensity="present"
+      className="rounded-[28px] border border-line p-6 shadow-sm"
+    >
       <h2 className="text-2xl font-black text-ink">{title}</h2>
       <div className="mt-5 grid gap-3">
         {items.map((item) => (
           <p key={item} className="flex gap-3 text-base leading-7 text-muted">
-            <CheckCircle2 aria-hidden="true" size={20} className="mt-1 shrink-0 text-brand-700" />
+            <CheckCircle2
+              aria-hidden="true"
+              size={20}
+              className="mt-1 shrink-0 text-brand-700"
+            />
             {item}
           </p>
         ))}

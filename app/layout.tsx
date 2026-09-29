@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og/og-recovery-center.svg",
+        url: "/og/og-recovery-center.png",
         width: 1200,
         height: 630,
         alt: "새기준병원 회복재활센터 대표 이미지"
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "용인 재활치료 | 척추·관절 수술 후 기능 회복 | 새기준병원",
     description:
       "통증뿐 아니라 보행·근력·관절가동범위·일상기능을 평가해 척추·관절 질환과 수술 후 기능 회복을 상담합니다.",
-    images: ["/og/og-recovery-center.svg"]
+    images: ["/og/og-recovery-center.png"]
   }
 };
 
