@@ -18,12 +18,6 @@ html {
 body {
   margin: 0;
   background-color: #f6faf8;
-  background-image:
-    linear-gradient(rgba(248, 252, 250, 0.84), rgba(248, 252, 250, 0.84)),
-    url("/images/generated/ambient-recovery-background-20260901.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
   color: #10212b;
   font-family: "Pretendard Variable", Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-kerning: normal;
@@ -58,21 +52,8 @@ a {
   line-height: 1.85;
 }
 
-.program-card-section {
-  background-image:
-    linear-gradient(rgba(247, 251, 249, 0.84), rgba(247, 251, 249, 0.84)),
-    url("/images/generated/cards-20260902/recovery-exercise.webp");
-  background-position: center;
-  background-size: cover;
-}
-
-.program-detail-section {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.86), rgba(244, 249, 247, 0.86)),
-    url("/images/generated/cards-20260902/functional-assessment.webp");
-  background-position: center;
-  background-size: cover;
-}
+.program-card-section { background: #f6faf8; }
+.program-detail-section { background: #fff; }
 
 /* 콘텐츠 사진의 소유 표기: 로고·아이콘은 스크립트에서 제외합니다. */
 .photo-ownership-host {
@@ -109,3 +90,9 @@ a {
     font-size: 0.61rem;
   }
 }
+
+:where(a, button, summary):focus-visible { outline: 3px solid #2b7366; outline-offset: 4px; }
+[id] { scroll-margin-top: 160px; }
+.max-w-7xl { max-width: 1200px; }
+@media (max-width: 639px) { main section.px-4 { padding-left: 20px; padding-right: 20px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: 0.01ms !important; } }

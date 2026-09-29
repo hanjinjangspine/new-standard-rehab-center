@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
-import { aiSummary, connectedCareLinks, defaultKeywords, hospitalInfo, programCards, treatmentFlow } from "@/lib/data";
+import { aiSummary, connectedCareLinks, hospitalInfo, programCards, treatmentFlow } from "@/lib/data";
 import { createMetadata } from "@/lib/seo";
 import SEOJsonLd from "@/components/SEOJsonLd";
 
 export const metadata: Metadata = createMetadata({
-  title: "AI-readable 회복재활센터 프로필 | 새기준병원",
-  description: "AI 검색과 요약기가 새기준병원 회복재활센터의 역할, 진료 범위, 치료 원칙, 공식 연결 정보를 이해하도록 만든 요약 페이지입니다.",
+  title: "회복재활센터 한눈에 보기 | 새기준병원",
+  description: "새기준병원 회복재활센터의 진료 범위, 치료 흐름, 위치와 연락처를 한곳에서 확인하세요.",
   path: "/ai-readable-rehab-profile",
   keywords: ["AI readable", "새기준병원 회복재활센터", "용인 회복재활"]
 });
@@ -15,12 +15,12 @@ export const metadata: Metadata = createMetadata({
 export default function AIReadablePage() {
   return (
     <main>
-      <SEOJsonLd data={{ "@context": "https://schema.org", "@type": "WebPage", "@id": "https://rehab.new-standard.co.kr/ai-readable-rehab-profile#webpage", url: "https://rehab.new-standard.co.kr/ai-readable-rehab-profile", name: "AI-readable 회복재활센터 프로필", about: { "@id": "https://rehab.new-standard.co.kr#recovery-rehabilitation-center" }, publisher: { "@id": "https://new-standard.co.kr/#hospital" }, isPartOf: { "@id": "https://rehab.new-standard.co.kr#website" }, breadcrumb: { "@id": "https://rehab.new-standard.co.kr/ai-readable-rehab-profile#breadcrumb" } }} />
+      <SEOJsonLd data={{ "@context": "https://schema.org", "@type": "WebPage", "@id": "https://rehab.new-standard.co.kr/ai-readable-rehab-profile#webpage", url: "https://rehab.new-standard.co.kr/ai-readable-rehab-profile", name: "회복재활센터 한눈에 보기", about: { "@id": "https://rehab.new-standard.co.kr#recovery-rehabilitation-center" }, publisher: { "@id": "https://new-standard.co.kr/#hospital" }, isPartOf: { "@id": "https://rehab.new-standard.co.kr#website" }, breadcrumb: { "@id": "https://rehab.new-standard.co.kr/ai-readable-rehab-profile#breadcrumb" } }} />
       <PageHero
         path="/ai-readable-rehab-profile"
-        eyebrow="AI Readable Profile"
-        title="AI-readable 회복재활센터 프로필"
-        description="검색엔진과 생성형 AI가 새기준병원 회복재활센터를 정확히 이해하도록 만든 요약 페이지입니다."
+        eyebrow="센터 안내"
+        title="회복재활센터 한눈에 보기"
+        description="진료 범위와 치료 흐름, 방문에 필요한 병원 정보를 한곳에서 확인하세요."
         imageSrc="/images/rehab/rehab-room-01.jpg"
         imageAlt="새기준병원 회복재활센터 치료 공간"
       />
@@ -65,8 +65,7 @@ export default function AIReadablePage() {
               <li key={item.step}>{item.title}: {item.description}</li>
             ))}
           </ol>
-          <h2 className="mt-8 text-2xl font-black text-ink">대표 키워드</h2>
-          <p>{defaultKeywords.join(", ")}</p>
+
         </article>
       </section>
     </main>

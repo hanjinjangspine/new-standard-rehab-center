@@ -11,7 +11,7 @@ type MetadataInput = {
 
 export function createMetadata({ title, description, path = "/", keywords = [] }: MetadataInput): Metadata {
   const url = new URL(path, SITE_URL).toString();
-  const ogImageUrl = new URL("/og/og-recovery-center.svg", SITE_URL).toString();
+  const ogImageUrl = new URL("/og/og-recovery-center.png", SITE_URL).toString();
 
   return {
     title,
@@ -117,7 +117,7 @@ export function siteJsonLd() {
         alternateName: [hospitalInfo.formerName, hospitalInfo.englishName],
         url: SITE_URL,
         logo: logoUrl,
-        image: new URL("/og/og-recovery-center.svg", SITE_URL).toString(),
+        image: new URL("/og/og-recovery-center.png", SITE_URL).toString(),
         parentOrganization: {
           "@id": hospitalId
         },
@@ -206,7 +206,7 @@ export function webPageJsonLd({ title, description, path }: { title: string; des
     name: title,
     description,
     inLanguage: "ko-KR",
-    dateModified: path === "/manual-exercise-rehab" ? "2026-09-11" : path === "/postoperative-recovery" ? "2026-09-10" : "2026-09-02",
+    dateModified: path === "/contact" ? "2026-09-02" : path === "/manual-exercise-rehab" ? "2026-09-11" : "2026-09-29",
     ...(path === "/manual-exercise-rehab" ? { citation: [
       "https://www.hira.or.kr/bbsDummy.do?brdBltNo=12133&brdScnBltNo=4&pageIndex=1&pgmid=HIRAA020002000100",
       "https://www.nice.org.uk/guidance/NG59/chapter/recommendations#manual-therapies"
