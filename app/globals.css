@@ -96,4 +96,3 @@ a {
 .max-w-7xl { max-width: 1200px; }
 @media (max-width: 639px) { main section.px-4 { padding-left: 20px; padding-right: 20px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: 0.01ms !important; } }
-

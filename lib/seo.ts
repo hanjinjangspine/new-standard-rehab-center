@@ -242,4 +242,3 @@ export function breadcrumbJsonLd(title: string, path: string) {
     ]
   };
 }
-
