@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { aiSummary, defaultKeywords, faqItems, hospitalInfo, SITE_URL } from "@/lib/data";
+import {
+  aiSummary,
+  defaultKeywords,
+  faqItems,
+  hospitalInfo,
+  SITE_URL,
+} from "@/lib/data";
 import { siteConfig } from "@/lib/site";
 
 type MetadataInput = {
@@ -9,7 +15,12 @@ type MetadataInput = {
   keywords?: string[];
 };
 
-export function createMetadata({ title, description, path = "/", keywords = [] }: MetadataInput): Metadata {
+export function createMetadata({
+  title,
+  description,
+  path = "/",
+  keywords = [],
+}: MetadataInput): Metadata {
   const url = new URL(path, SITE_URL).toString();
   const ogImageUrl = new URL("/og/og-recovery-center.png", SITE_URL).toString();
 
@@ -25,15 +36,15 @@ export function createMetadata({ title, description, path = "/", keywords = [] }
           googleBot: {
             index: false,
             follow: false,
-            noimageindex: true
-          }
+            noimageindex: true,
+          },
         }
       : {
           index: true,
-          follow: true
+          follow: true,
         },
     alternates: {
-      canonical: url
+      canonical: url,
     },
     openGraph: {
       title,
@@ -47,16 +58,16 @@ export function createMetadata({ title, description, path = "/", keywords = [] }
           url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: "새기준병원 회복재활센터 대표 이미지"
-        }
-      ]
+          alt: "새기준병원 회복재활센터 대표 이미지",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [ogImageUrl]
-    }
+      images: [ogImageUrl],
+    },
   };
 }
 
@@ -73,7 +84,7 @@ const mainTopics = [
   "균형 운동",
   "Physical Therapy",
   "Manual Therapy",
-  "Exercise Rehabilitation"
+  "Exercise Rehabilitation",
 ];
 
 export function siteJsonLd() {
@@ -85,26 +96,26 @@ export function siteJsonLd() {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "08:30",
-      closes: "12:30"
+      closes: "12:30",
     },
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "13:30",
-      closes: "17:30"
+      closes: "17:30",
     },
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: "Saturday",
       opens: "08:30",
-      closes: "12:30"
+      closes: "12:30",
     },
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: "Sunday",
       opens: "09:00",
-      closes: "13:00"
-    }
+      closes: "13:00",
+    },
   ];
 
   return {
@@ -119,7 +130,7 @@ export function siteJsonLd() {
         logo: logoUrl,
         image: new URL("/og/og-recovery-center.png", SITE_URL).toString(),
         parentOrganization: {
-          "@id": hospitalId
+          "@id": hospitalId,
         },
         medicalSpecialty: ["PhysicalTherapy", "Rehabilitation", "Orthopedic"],
         address: {
@@ -127,7 +138,7 @@ export function siteJsonLd() {
           streetAddress: "중부대로 1539",
           addressLocality: "용인시 처인구",
           addressRegion: "경기도",
-          addressCountry: "KR"
+          addressCountry: "KR",
         },
         areaServed: ["용인시", "처인구", "경기도"],
         telephone: hospitalInfo.phone,
@@ -137,15 +148,15 @@ export function siteJsonLd() {
           telephone: hospitalInfo.phone,
           contactType: "hospital main phone",
           areaServed: "KR",
-          availableLanguage: ["ko"]
+          availableLanguage: ["ko"],
         },
         potentialAction: {
           "@type": "ReserveAction",
           target: hospitalInfo.naverReservationUrl,
-          name: "Naver Booking"
+          name: "Naver Booking",
         },
         description: aiSummary.ko,
-        knowsAbout: mainTopics
+        knowsAbout: mainTopics,
       },
       {
         "@type": "Hospital",
@@ -162,8 +173,8 @@ export function siteJsonLd() {
           streetAddress: "중부대로 1539",
           addressLocality: "용인시 처인구",
           addressRegion: "경기도",
-          addressCountry: "KR"
-        }
+          addressCountry: "KR",
+        },
       },
       {
         "@type": "WebSite",
@@ -172,11 +183,10 @@ export function siteJsonLd() {
         name: hospitalInfo.centerName,
         inLanguage: "ko-KR",
         publisher: {
-          "@id": hospitalId
-        }
+          "@id": hospitalId,
+        },
       },
-
-    ]
+    ],
   };
 }
 
@@ -190,13 +200,21 @@ export function faqJsonLd() {
       name: item.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: item.answer
-      }
-    }))
+        text: item.answer,
+      },
+    })),
   };
 }
 
-export function webPageJsonLd({ title, description, path }: { title: string; description: string; path: string }) {
+export function webPageJsonLd({
+  title,
+  description,
+  path,
+}: {
+  title: string;
+  description: string;
+  path: string;
+}) {
   const url = new URL(path, SITE_URL).toString();
   return {
     "@context": "https://schema.org",
@@ -206,25 +224,36 @@ export function webPageJsonLd({ title, description, path }: { title: string; des
     name: title,
     description,
     inLanguage: "ko-KR",
-    dateModified: path === "/contact" ? "2026-09-02" : path === "/manual-exercise-rehab" ? "2026-09-11" : "2026-09-29",
-    ...(path === "/manual-exercise-rehab" ? { citation: [
-      "https://www.hira.or.kr/bbsDummy.do?brdBltNo=12133&brdScnBltNo=4&pageIndex=1&pgmid=HIRAA020002000100",
-      "https://www.nice.org.uk/guidance/NG59/chapter/recommendations#manual-therapies"
-    ] } : {}),
-    ...(path === "/postoperative-recovery" ? { citation: ["https://www.orthoinfo.org/recovery/total-knee-replacement-exercise-guide/"] } : {}),
+    dateModified:
+      path === "/manual-exercise-rehab" ? "2026-09-11" : "2026-09-29",
+    ...(path === "/manual-exercise-rehab"
+      ? {
+          citation: [
+            "https://www.hira.or.kr/bbsDummy.do?brdBltNo=12133&brdScnBltNo=4&pageIndex=1&pgmid=HIRAA020002000100",
+            "https://www.nice.org.uk/guidance/NG59/chapter/recommendations#manual-therapies",
+          ],
+        }
+      : {}),
+    ...(path === "/postoperative-recovery"
+      ? {
+          citation: [
+            "https://www.orthoinfo.org/recovery/total-knee-replacement-exercise-guide/",
+          ],
+        }
+      : {}),
     author: {
-      "@id": "https://new-standard.co.kr/#hospital"
+      "@id": "https://new-standard.co.kr/#hospital",
     },
     publisher: {
-      "@id": "https://new-standard.co.kr/#hospital"
+      "@id": "https://new-standard.co.kr/#hospital",
     },
     about: {
-      "@id": `${SITE_URL}#recovery-rehabilitation-center`
+      "@id": `${SITE_URL}#recovery-rehabilitation-center`,
     },
     breadcrumb: { "@id": `${url}#breadcrumb` },
     isPartOf: {
-      "@id": `${SITE_URL}#website`
-    }
+      "@id": `${SITE_URL}#website`,
+    },
   };
 }
 
@@ -236,9 +265,21 @@ export function breadcrumbJsonLd(title: string, path: string) {
     "@type": "BreadcrumbList",
     "@id": `${url}#breadcrumb`,
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "새기준병원", item: "https://new-standard.co.kr/" },
-      { "@type": "ListItem", position: 2, name: "회복재활센터", item: new URL("/", SITE_URL).toString() },
-      ...(path !== "/" ? [{ "@type": "ListItem", position: 3, name: title, item: url }] : [])
-    ]
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "새기준병원",
+        item: "https://new-standard.co.kr/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "회복재활센터",
+        item: new URL("/", SITE_URL).toString(),
+      },
+      ...(path !== "/"
+        ? [{ "@type": "ListItem", position: 3, name: title, item: url }]
+        : []),
+    ],
   };
 }

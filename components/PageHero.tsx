@@ -12,6 +12,8 @@ type PageHeroProps = {
   imageAlt?: string;
   ctaLabel?: string;
   path: string;
+  compact?: boolean;
+  hideImageOnMobile?: boolean;
 };
 
 export default function PageHero({
@@ -19,39 +21,66 @@ export default function PageHero({
   title,
   description,
   path,
+  compact = false,
+  hideImageOnMobile = false,
   imageSrc = "/images/rehab/hero-rehab-center.jpg",
   imageAlt = "새기준병원 회복재활센터 치료 공간",
-  ctaLabel = "현재 기능 상태 평가받기"
+  ctaLabel = "진료 상담 예약",
 }: PageHeroProps) {
   return (
     <section className="overflow-hidden border-b border-line bg-gradient-to-br from-brand-50 via-white to-accent-100 px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
-      <div className="mx-auto grid max-w-[1180px] gap-7 md:gap-9 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-center lg:gap-12">
+      <div
+        className={`mx-auto grid max-w-[1180px] gap-7 md:gap-9 ${compact ? "" : "lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-center lg:gap-12"}`}
+      >
         <div className="order-1 min-w-0 ">
           <Breadcrumb title={title} path={path} />
-          <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-brand-700">{eyebrow}</p>
-          <h1 className="mt-4 max-w-3xl break-keep text-4xl font-black leading-tight tracking-[-0.025em] text-ink sm:text-5xl lg:text-[3rem]">
+          <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-brand-700">
+            {eyebrow}
+          </p>
+          <h1 className="mt-4 max-w-3xl break-keep text-[2rem] font-black leading-tight tracking-[-0.025em] text-ink sm:text-5xl lg:text-[2.75rem]">
             {title}
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">{description}</p>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <Link href={hospitalInfo.naverReservationHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-700 px-6 py-3.5 text-base font-extrabold text-white shadow-card transition hover:bg-brand-800">
-              {ctaLabel} <ArrowRight aria-hidden="true" size={18} />
-            </Link>
-            <Link href="/contact" className="inline-flex items-center justify-center rounded-xl border border-brand-200 bg-white px-6 py-3.5 text-base font-extrabold text-brand-700 transition hover:bg-brand-50">
-              오시는 길
-            </Link>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+            {description}
+          </p>
+          {!compact && (
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href={hospitalInfo.naverReservationHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-700 px-6 py-3.5 text-base font-extrabold text-white shadow-card transition hover:bg-brand-800"
+              >
+                {ctaLabel} <ArrowRight aria-hidden="true" size={18} />
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-xl border border-brand-200 bg-white px-6 py-3.5 text-base font-extrabold text-brand-700 transition hover:bg-brand-50"
+              >
+                오시는 길
+              </Link>
+            </div>
+          )}
+        </div>
+        {!compact && (
+          <div
+            className={`order-2 ${hideImageOnMobile ? "hidden sm:block" : ""}`}
+          >
+            <RehabPhoto
+              src={imageSrc}
+              alt={imageAlt}
+              className="mx-auto aspect-[3/2] max-h-[520px] w-full max-w-[920px]"
+              imageClassName="object-contain"
+              sizes="(min-width: 1024px) 50vw, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
+              priority
+            />
+            {imageAlt.includes("연출 이미지") && (
+              <p className="mt-2 text-right text-xs leading-5 text-muted">
+                이해를 돕기 위한 연출 이미지
+              </p>
+            )}
           </div>
-        </div>
-        <div className="order-2 ">
-          <RehabPhoto
-            src={imageSrc}
-            alt={imageAlt}
-            className="mx-auto aspect-[3/2] max-h-[520px] w-full max-w-[920px]"
-            imageClassName="object-contain"
-            sizes="(min-width: 1024px) 50vw, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
-            priority
-          />
-        </div>
+        )}
       </div>
     </section>
   );

@@ -23,14 +23,15 @@ export const hospitalInfo = {
   googleMapUrl: siteConfig.googleMapUrl,
   logoPath: siteConfig.logoPath,
   logoAlt: siteConfig.logoAlt,
-  hours: "평일 08:30-12:30, 13:30-17:30 (점심 12:30-13:30) / 토요일 08:30-12:30 / 일요일 09:00-13:00 (토·일 점심시간 없음)",
+  hours:
+    "평일 08:30-12:30, 13:30-17:30 (점심 12:30-13:30) / 토요일 08:30-12:30 / 일요일 09:00-13:00 (토·일 점심시간 없음)",
   hoursNote: "진료 일정은 의료진 사정 및 병원 상황에 따라 변동될 수 있습니다.",
   hoursConfirmation: "내원 전 대표전화 031-328-0333으로 확인해 주세요.",
   baseUrl: siteConfig.baseUrl,
   commonNotice:
     "새기준병원 회복재활센터는 생활 통증, 진단 기반 회복관리, 척추·관절 수술 후 기능 회복을 안내하는 병원 기반 회복재활 정보 페이지입니다.",
   officialRelationship:
-    "진료 예약과 병원 기본 정보는 새기준병원 공식 홈페이지에서도 확인하실 수 있습니다."
+    "진료 예약과 병원 기본 정보는 새기준병원 공식 홈페이지에서도 확인하실 수 있습니다.",
 };
 
 export const defaultKeywords = [
@@ -39,14 +40,12 @@ export const defaultKeywords = [
   "용인 도수치료",
   "운동재활",
   "수술 후 회복관리",
-  "새기준병원 회복재활센터"
+  "새기준병원 회복재활센터",
 ];
 
 export const aiSummary = {
-  ko:
-    "새기준병원 회복재활센터는 경기도 용인시 처인구에 위치한 새기준병원의 회복재활 진료 안내 페이지입니다. 생활 통증, 급성 염좌, 산후·육아 통증, 직장인 통증, 고령자 보행·균형 문제, 척추·관절 수술 후 기능 회복관리를 다룹니다. 치료 방향은 통증 부위, 진찰 소견, 영상검사 결과, 치료 반응을 함께 확인한 뒤 물리치료·도수치료·운동재활 중에서 상담합니다.",
-  en:
-    "New Standard Hospital Recovery Rehabilitation Center is a hospital-based rehabilitation information site in Yongin, South Korea. It covers everyday pain, acute sprain, postpartum and parenting-related pain, office-worker musculoskeletal pain, gait and balance issues in older adults, and functional recovery after spine and joint surgery. Clinical decisions require individualized evaluation."
+  ko: "새기준병원 회복재활센터는 경기도 용인시 처인구에 위치한 새기준병원의 회복재활 진료 안내 페이지입니다. 생활 통증, 급성 염좌, 산후·육아 통증, 직장인 통증, 고령자 보행·균형 문제, 척추·관절 수술 후 기능 회복관리를 다룹니다. 치료 방향은 통증 부위, 진찰 소견, 영상검사 결과, 치료 반응을 함께 확인한 뒤 물리치료·도수치료·운동재활 중에서 상담합니다.",
+  en: "New Standard Hospital Recovery Rehabilitation Center is a hospital-based rehabilitation information site in Yongin, South Korea. It covers everyday pain, acute sprain, postpartum and parenting-related pain, office-worker musculoskeletal pain, gait and balance issues in older adults, and functional recovery after spine and joint surgery. Clinical decisions require individualized evaluation.",
 };
 
 export const navItems = [
@@ -57,82 +56,92 @@ export const navItems = [
   { label: "보행·균형", href: "/senior-gait-balance" },
   { label: "수술후회복", href: "/postoperative-recovery" },
   { label: "도수·운동", href: "/manual-exercise-rehab" },
-  { label: "오시는길", href: "/contact" }
+  { label: "오시는길", href: "/contact" },
 ];
 
 export const programCards = [
   {
     title: "급성 염좌·갑작스러운 통증",
     href: "/acute-sprain",
-    description: "발목 염좌, 허리 삐끗함, 목·어깨 급성 통증은 손상 정도를 먼저 확인한 뒤 회복 방향을 상담합니다.",
+    description:
+      "발목 염좌, 허리 삐끗함, 목·어깨 급성 통증은 손상 정도를 먼저 확인한 뒤 회복 방향을 상담합니다.",
     tags: ["발목", "허리", "목·어깨"],
     image: "/images/rehab/equipment-01.jpg",
     imageAlt: "새기준병원 회복재활센터의 치료 장비",
-    featured: true
+    featured: true,
   },
   {
     title: "산후·육아 통증",
     href: "/postpartum-parenting-pain",
-    description: "육아 과정에서 반복되는 손목, 허리, 골반, 목·어깨 통증의 원인을 함께 확인합니다.",
+    description:
+      "육아 과정에서 반복되는 손목, 허리, 골반, 목·어깨 통증의 원인을 함께 확인합니다.",
     tags: ["손목", "골반", "허리"],
     image: "/images/rehab/manual-therapy-01.jpg",
-    imageAlt: "어깨와 팔 움직임을 확인하는 새기준병원 치료팀"
+    imageAlt: "어깨와 팔 움직임을 확인하는 새기준병원 치료팀",
   },
   {
     title: "직장인 생활 통증",
     href: "/office-worker-pain",
-    description: "거북목, 목·어깨 결림, 허리 통증처럼 반복되는 업무 자세 관련 통증을 평가합니다.",
+    description:
+      "거북목, 목·어깨 결림, 허리 통증처럼 반복되는 업무 자세 관련 통증을 평가합니다.",
     tags: ["거북목", "허리", "손목"],
     image: "/images/rehab/exercise-rehab-01.jpg",
-    imageAlt: "상지 운동재활을 진행하는 새기준병원 치료팀"
+    imageAlt: "상지 운동재활을 진행하는 새기준병원 치료팀",
   },
   {
     title: "고령자 보행·균형",
     href: "/senior-gait-balance",
-    description: "근력 저하, 보행 불안, 균형 저하, 낙상 위험을 확인하고 회복관리 방향을 상담합니다.",
+    description:
+      "근력 저하, 보행 불안, 균형 저하, 낙상 위험을 확인하고 회복관리 방향을 상담합니다.",
     tags: ["보행", "균형", "낙상"],
     image: "/images/hospital/rehab-tour-01.jpg",
-    imageAlt: "새기준병원 운동치료실과 회복재활센터 입구"
+    imageAlt: "새기준병원 운동치료실과 회복재활센터 입구",
   },
   {
     title: "수술 후 회복관리",
     href: "/postoperative-recovery",
-    description: "수술 부위와 시기에 맞춰 보행·근력·일상 복귀 단계를 확인하고, 수술 의료진의 지침을 기준으로 회복관리 방향을 상담합니다.",
+    description:
+      "수술 부위와 시기에 맞춰 보행·근력·일상 복귀 단계를 확인하고, 수술 의료진의 지침을 기준으로 회복관리 방향을 상담합니다.",
     tags: ["척추", "관절", "회복"],
     image: "/images/rehab/rehab-room-01.jpg",
-    imageAlt: "새기준병원 도수치료실과 물리치료실 입구"
+    imageAlt: "새기준병원 도수치료실과 물리치료실 입구",
   },
   {
     title: "도수·운동재활",
     href: "/manual-exercise-rehab",
-    description: "환자 상태와 치료 반응에 따라 물리치료, 도수치료, 운동재활, 자가운동 교육을 상담합니다.",
+    description:
+      "환자 상태와 치료 반응에 따라 물리치료, 도수치료, 운동재활, 자가운동 교육을 상담합니다.",
     tags: ["도수치료", "운동재활", "자가운동"],
     image: "/images/rehab/rehab-room-02.jpg",
-    imageAlt: "새기준병원 회복재활센터의 도수·물리치료 공간"
-  }
+    imageAlt: "새기준병원 회복재활센터의 도수·물리치료 공간",
+  },
 ];
 
 export const treatmentFlow = [
   {
     step: "01",
     title: "증상과 생활 동작 확인",
-    description: "언제 아픈지, 어떤 동작에서 악화되는지, 회복을 방해하는 생활 습관을 확인합니다."
+    description:
+      "언제 아픈지, 어떤 동작에서 악화되는지, 회복을 방해하는 생활 습관을 확인합니다.",
   },
   {
     step: "02",
     title: "진찰·검사 필요성 판단",
-    description: "의사 진찰에서 근력, 관절가동범위, 신경 증상을 확인하고 영상검사가 필요한지 판단합니다."
+    description:
+      "의사 진찰에서 근력, 관절가동범위, 신경 증상을 확인하고 영상검사가 필요한지 판단합니다.",
   },
   {
     step: "03",
     title: "치료 방향 상담",
-    description: "환자 상태에 따라 물리치료, 도수치료, 운동재활, 전문센터 연결 여부를 상담합니다."
+    description:
+      "환자 상태에 따라 물리치료, 도수치료, 운동재활, 전문센터 연결 여부를 상담합니다.",
   },
   {
     step: "04",
     title: "반응 확인과 회복관리",
-    description: "통증 변화, 보행, 관절가동범위, 근력, 일상 복귀 정도를 확인하며 회복 방향을 조정합니다."
-  }
+    description:
+      "통증 변화, 보행, 관절가동범위, 근력, 일상 복귀 정도를 확인하며 회복 방향을 조정합니다.",
+  },
 ];
 
 export const targetGroups = [
@@ -140,7 +149,7 @@ export const targetGroups = [
   "출산 후 또는 육아 중 손목·허리·골반 통증이 지속되는 경우",
   "장시간 앉아서 일한 뒤 목·어깨·허리 통증이 반복되는 경우",
   "보행이 불안하거나 균형 저하, 낙상 위험이 걱정되는 경우",
-  "척추·관절 수술 후 기능 회복 방향을 상담하고 싶은 경우"
+  "척추·관절 수술 후 기능 회복 방향을 상담하고 싶은 경우",
 ];
 
 export const safetyCopy = [
@@ -148,7 +157,7 @@ export const safetyCopy = [
   "도수치료와 운동재활은 증상, 진찰 소견, 치료 반응에 따라 선택적으로 상담할 수 있습니다.",
   "급성 통증은 골절, 관절 손상, 신경 증상 동반 여부 확인이 필요할 수 있습니다.",
   "다리에 힘이 빠지거나 대소변 조절이 어렵거나 열이 나는 경우에는 재활 상담보다 먼저 의사 진료가 필요합니다.",
-  "수술 후 회복관리는 수술 범위, 의료진 지시사항, 보행과 근력 상태를 함께 확인해야 합니다."
+  "수술 후 회복관리는 수술 범위, 의료진 지시사항, 보행과 근력 상태를 함께 확인해야 합니다.",
 ];
 
 export type ProgramSlug =
@@ -174,6 +183,13 @@ type ProgramPageData = {
   symptoms: string[];
   checks: string[];
   care: string[];
+  consultationGuide?: {
+    title: string;
+    description: string;
+    questions: string[];
+    goalTitle: string;
+    goal: string;
+  };
   detailSections?: { title: string; description: string; items?: string[] }[];
   related: { label: string; href: string }[];
 };
@@ -181,269 +197,488 @@ type ProgramPageData = {
 export const programPages: Record<ProgramSlug, ProgramPageData> = {
   "acute-sprain": {
     title: "급성 염좌·갑작스러운 통증 | 새기준병원 회복재활센터",
-    eyebrow: "Acute Sprain & Sudden Pain",
+    eyebrow: "급성 통증 상담",
+    ctaLabel: "급성 통증 진료 상담",
     path: "/acute-sprain",
-    description: "발목 염좌, 허리 삐끗함, 목·어깨 급성 통증에서 손상 정도와 회복관리 방향을 상담합니다.",
+    description:
+      "발목 염좌, 허리 삐끗함, 목·어깨 급성 통증에서 손상 정도와 회복관리 방향을 상담합니다.",
     keywords: ["발목 염좌", "급성 통증", "물리치료"],
-    heroLead: "갑작스러운 통증은 단순 근육통처럼 보여도 관절, 인대, 신경 증상을 함께 확인해야 할 수 있습니다.",
+    heroLead:
+      "갑작스러운 통증은 단순 근육통처럼 보여도 관절, 인대, 신경 증상을 함께 확인해야 할 수 있습니다.",
     heroImage: "/images/generated/acute-sprain-kit-20260901.webp",
-    heroImageAlt: "급성 염좌 초기 대응을 상징하는 보조기와 냉찜질 도구 연출 이미지",
-    symptoms: ["발목을 삔 뒤 통증과 부종이 지속됨", "허리를 삐끗한 뒤 움직임이 불편함", "목이나 어깨가 갑자기 뻣뻣함", "무릎·손목·발목 통증이 반복됨"],
-    checks: ["통증 위치와 압통", "부종과 열감", "관절 불안정성", "영상검사 필요성"],
-    care: ["초기 통증과 부종 관리", "관절가동범위 회복", "재손상 방지 운동", "필요 시 전문센터 진료 연결"],
+    heroImageAlt:
+      "급성 염좌 초기 대응을 상징하는 보조기와 냉찜질 도구 연출 이미지",
+    symptoms: [
+      "발목을 삔 뒤 통증과 부종이 지속됨",
+      "허리를 삐끗한 뒤 움직임이 불편함",
+      "목이나 어깨가 갑자기 뻣뻣함",
+      "다친 뒤 붓기와 움직임 제한이 걱정됨",
+    ],
+    checks: [
+      "통증 위치와 압통",
+      "부종과 열감",
+      "관절 불안정성",
+      "영상검사 필요성",
+    ],
+    care: [
+      "초기 통증과 부종 관리",
+      "관절가동범위 회복",
+      "재손상 방지 운동",
+      "필요 시 전문센터 진료 연결",
+    ],
+    consultationGuide: {
+      title: "다친 순간과 이후 변화를 알려 주세요",
+      description:
+        "통증이 생긴 상황과 지금 어려운 동작을 구분해 설명하면 진료에서 확인할 내용을 정리하는 데 도움이 됩니다.",
+      questions: [
+        "언제, 어떤 동작 중에 통증이 시작됐나요?",
+        "처음과 비교해 붓기나 움직임은 어떻게 달라졌나요?",
+        "걷기·계단·물건 잡기 중 특히 불편한 동작은 무엇인가요?",
+      ],
+      goalTitle: "진료 후 확인할 질문",
+      goal: "어떤 움직임을 조심해야 하는지, 일상 동작과 운동을 어느 범위에서 다시 시작할지 물어보세요. 치료 종류와 범위는 손상 정도를 확인한 뒤 상의합니다.",
+    },
     related: [
+      {
+        label: "발목 인대 손상 안내",
+        href: "https://joint.new-standard.co.kr/patient-guides/lateral-ankle-ligament-injury",
+      },
+      {
+        label: "발·발목 진료 안내",
+        href: "https://joint.new-standard.co.kr/foot-ankle",
+      },
       { label: "도수·운동재활", href: "/manual-exercise-rehab" },
-      { label: "관절센터", href: "https://joint.new-standard.co.kr" }
-    ]
+    ],
   },
   "postpartum-parenting-pain": {
     title: "산후·육아 통증 | 새기준병원 회복재활센터",
-    eyebrow: "Postpartum & Parenting Pain",
+    eyebrow: "산후·육아 통증 상담",
     path: "/postpartum-parenting-pain",
-    description: "산후와 육아 과정에서 반복되는 손목, 허리, 골반, 목·어깨 통증의 회복관리 방향을 상담합니다.",
+    description:
+      "산후와 육아 과정에서 반복되는 손목, 허리, 골반, 목·어깨 통증의 회복관리 방향을 상담합니다.",
     keywords: ["산후 허리 통증", "육아 손목 통증", "골반 통증"],
-    heroLead: "아기를 안고, 수유하고, 반복적으로 들어 올리는 동작은 손목·허리·골반·목·어깨에 부담을 줄 수 있습니다.",
+    heroLead:
+      "아기를 안고, 수유하고, 반복적으로 들어 올리는 동작은 손목·허리·골반·목·어깨에 부담을 줄 수 있습니다.",
     heroImage: "/images/generated/parenting-recovery-corner-20260901.webp",
     heroImageAlt: "산후와 육아 중 근골격계 부담을 표현한 생활 공간 연출 이미지",
-    symptoms: ["아기를 안을 때 손목이나 팔꿈치가 아픔", "수유 자세 뒤 목·어깨가 뻐근함", "산후 허리·골반 통증이 지속됨", "육아 동작 후 통증이 악화됨"],
-    checks: ["통증을 유발하는 육아 동작", "손목·허리 관절 부담", "골반과 코어 안정성", "수면 부족과 회복 지연 요인"],
-    care: ["손목·허리 부담을 줄이는 동작 교육", "통증 부위 물리치료와 운동재활", "골반·코어 안정화 운동", "필요 시 진료와 검사 연결"],
+    symptoms: [
+      "아기를 안을 때 손목이나 팔꿈치가 아픔",
+      "수유 자세 뒤 목·어깨가 뻐근함",
+      "산후 허리·골반 통증이 지속됨",
+      "육아 동작 후 통증이 악화됨",
+    ],
+    checks: [
+      "통증을 유발하는 육아 동작",
+      "손목·허리 관절 부담",
+      "골반과 코어 안정성",
+      "수면 부족과 회복 지연 요인",
+    ],
+    care: [
+      "손목·허리 부담을 줄이는 동작 교육",
+      "통증 부위 물리치료와 운동재활",
+      "골반·코어 안정화 운동",
+      "필요 시 진료와 검사 연결",
+    ],
+    consultationGuide: {
+      title: "하루 중 가장 힘든 육아 동작을 짚어 보세요",
+      description:
+        "아기 안기, 수유, 들어 올리기처럼 반복하는 동작과 통증이 나타나는 부위를 함께 알려 주세요.",
+      questions: [
+        "어떤 자세에서 손목·허리·골반이 가장 불편한가요?",
+        "하루 중 반복하는 동작과 쉬기 어려운 시간대는 언제인가요?",
+        "출산 후 경과와 현재 받고 있는 치료가 있나요?",
+      ],
+      goalTitle: "생활에서 바꾸고 싶은 목표",
+      goal: "예를 들어 아기를 안는 시간이나 수유 자세에서 느끼는 부담을 설명해 주세요. 진찰 후 조정할 생활 동작과 필요한 치료 범위를 함께 정리합니다.",
+    },
     related: [
       { label: "직장인 생활 통증", href: "/office-worker-pain" },
-      { label: "치료 전 확인", href: "/treatment-before-check" }
-    ]
+      { label: "치료 전 확인", href: "/treatment-before-check" },
+    ],
   },
   "office-worker-pain": {
     title: "직장인 목·어깨·허리 통증 | 새기준병원 회복재활센터",
-    eyebrow: "Office Worker Pain",
+    eyebrow: "직장인 생활 통증",
     path: "/office-worker-pain",
-    description: "거북목, 목·어깨 결림, 허리 통증, 손목 통증 등 직장인 생활 통증의 원인과 회복 방향을 상담합니다.",
+    description:
+      "거북목, 목·어깨 결림, 허리 통증, 손목 통증 등 직장인 생활 통증의 원인과 회복 방향을 상담합니다.",
     keywords: ["직장인 통증", "거북목", "허리 통증"],
-    heroLead: "오래 앉는 자세, 모니터 높이, 스마트폰 사용, 반복적인 손목 사용은 통증을 반복시키는 배경이 될 수 있습니다.",
+    heroLead:
+      "오래 앉는 자세, 모니터 높이, 스마트폰 사용, 반복적인 손목 사용은 통증을 반복시키는 배경이 될 수 있습니다.",
     heroImage: "/images/generated/ergonomic-workspace-20260901.webp",
     heroImageAlt: "직장인의 자세 부담을 줄이는 업무 공간 연출 이미지",
-    symptoms: ["목과 어깨가 무겁고 결림", "오래 앉으면 허리가 뻐근함", "손목·팔꿈치 주변 통증이 반복됨", "자세를 고쳐도 금방 통증이 다시 생김"],
-    checks: ["목·어깨·허리 가동성", "근력과 자세 유지 능력", "신경 증상 동반 여부", "업무 환경과 반복 동작"],
-    care: ["통증 부위 물리치료", "자세·근력 기반 운동재활", "자가운동과 생활 동작 교육", "필요 시 척추센터·관절센터 연결"],
+    symptoms: [
+      "목과 어깨가 무겁고 결림",
+      "오래 앉으면 허리가 뻐근함",
+      "손목·팔꿈치 주변 통증이 반복됨",
+      "자세를 고쳐도 금방 통증이 다시 생김",
+    ],
+    checks: [
+      "목·어깨·허리 가동성",
+      "근력과 자세 유지 능력",
+      "신경 증상 동반 여부",
+      "업무 환경과 반복 동작",
+    ],
+    care: [
+      "통증 부위 물리치료",
+      "자세·근력 기반 운동재활",
+      "자가운동과 생활 동작 교육",
+      "필요 시 척추센터·관절센터 연결",
+    ],
+    consultationGuide: {
+      title: "통증이 생기는 업무 장면을 설명해 주세요",
+      description:
+        "불편한 부위만 적기보다 어떤 일을 얼마나 한 뒤 불편해지는지 알려 주시면 상담에 도움이 됩니다.",
+      questions: [
+        "앉아서 일할 때, 이동할 때, 손을 반복해 쓸 때 중 언제 불편한가요?",
+        "목·어깨·허리 통증과 함께 저림이나 힘의 변화가 있나요?",
+        "지금까지 바꿔 본 작업 환경이나 치료 후 변화가 있나요?",
+      ],
+      goalTitle: "업무 복귀와 관리 목표를 함께 정합니다",
+      goal: "오래 앉아 있기, 모니터 보기, 손목 사용 등 어려운 업무 동작을 알려 주세요. 진료 후 필요한 치료와 업무 중 조정할 동작, 자가운동 범위를 상의합니다.",
+    },
     related: [
-      { label: "척추센터", href: "https://new-standard.co.kr/sub/r30/spine-center.php" },
-      { label: "도수·운동재활", href: "/manual-exercise-rehab" }
-    ]
+      {
+        label: "척추센터",
+        href: "https://new-standard.co.kr/sub/r30/spine-center.php",
+      },
+      { label: "도수·운동재활", href: "/manual-exercise-rehab" },
+    ],
   },
   "senior-gait-balance": {
     title: "고령자 보행·균형 회복 | 새기준병원 회복재활센터",
-    eyebrow: "Senior Gait & Balance",
+    eyebrow: "고령자 보행·균형",
     path: "/senior-gait-balance",
-    description: "고령 환자의 보행 불안, 근력 저하, 균형 저하, 낙상 위험을 확인하고 회복관리 방향을 상담합니다.",
+    description:
+      "고령 환자의 보행 불안, 근력 저하, 균형 저하, 낙상 위험을 확인하고 회복관리 방향을 상담합니다.",
     keywords: ["보행 재활", "균형 운동", "낙상 예방"],
-    heroLead: "고령 환자의 보행 문제는 무릎, 허리, 근력, 균형, 신경 증상이 복합적으로 작용할 수 있습니다.",
+    heroLead:
+      "고령 환자의 보행 문제는 무릎, 허리, 근력, 균형, 신경 증상이 복합적으로 작용할 수 있습니다.",
     heroImage: "/images/generated/senior-balance-room-20260901.webp",
     heroImageAlt: "고령자 보행과 균형 회복 공간을 표현한 연출 이미지",
-    symptoms: ["걷는 거리가 줄고 자주 쉬게 됨", "계단이나 경사에서 불안함", "무릎·허리 통증 때문에 보행이 어려움", "넘어질까 불안해 외출이 줄어듦"],
-    checks: ["하지 근력과 균형", "보행 패턴", "통증 부위와 신경 증상", "낙상 위험과 생활 환경"],
-    care: ["균형·근력 운동", "보행 안정성 회복관리", "무릎·척추 질환 진료 연결", "보호자에게 필요한 운동·생활 관리 안내"],
+    symptoms: [
+      "걷는 거리가 줄고 자주 쉬게 됨",
+      "계단이나 경사에서 불안함",
+      "무릎·허리 통증 때문에 보행이 어려움",
+      "넘어질까 불안해 외출이 줄어듦",
+    ],
+    checks: [
+      "하지 근력과 균형",
+      "보행 패턴",
+      "통증 부위와 신경 증상",
+      "낙상 위험과 생활 환경",
+    ],
+    care: [
+      "균형·근력 운동",
+      "보행 안정성 회복관리",
+      "무릎·척추 질환 진료 연결",
+      "보호자에게 필요한 운동·생활 관리 안내",
+    ],
+    consultationGuide: {
+      title: "평소 걷던 모습과 달라진 점을 알려 주세요",
+      description:
+        "가능하면 보호자와 함께 이전에 가능했던 일과 최근 어려워진 일을 정리해 주세요.",
+      questions: [
+        "예전과 비교해 걷는 거리와 쉬는 횟수가 달라졌나요?",
+        "집 안 이동, 계단, 바깥길 중 어디에서 특히 불안한가요?",
+        "최근 넘어진 경험, 보조기 사용, 복용약을 알려 주세요.",
+      ],
+      goalTitle: "환자와 보호자가 함께 확인할 질문",
+      goal: "보행과 일상 동작에서 도움이 필요한 범위, 집에서 가능한 운동과 피해야 할 동작을 진료 후 확인해 주세요. 목표와 관리 방법은 근력·균형·통증 평가에 맞춰 상의합니다.",
+    },
     related: [
       { label: "수술 후 회복관리", href: "/postoperative-recovery" },
-      { label: "관절센터", href: "https://joint.new-standard.co.kr" }
-    ]
+      { label: "관절센터", href: "https://joint.new-standard.co.kr" },
+    ],
   },
   "postoperative-recovery": {
-    title: "용인 수술 후 재활 | 척추·무릎 기능 회복 | 새기준병원",
-    h1: "척추·무릎 수술 후, 현재 기능 단계에 맞춰 회복합니다",
+    title: "용인 수술 후 재활 | 척추·관절 기능 회복 | 새기준병원",
+    h1: "척추·관절 수술 후, 현재 기능 단계에 맞춰 회복합니다",
     ctaLabel: "수술 후 재활 계획 상담하기",
-    eyebrow: "Postoperative Recovery",
+    eyebrow: "수술 후 회복관리",
     path: "/postoperative-recovery",
-    description: "용인 새기준병원은 척추·무릎 수술 후 통증·저림·부종·보행·관절가동범위·근력과 일상 복귀 단계를 함께 확인해 재활 계획을 상담합니다.",
+    description:
+      "용인 새기준병원은 척추·무릎 수술 후 통증·저림·부종·보행·관절가동범위·근력과 일상 복귀 단계를 함께 확인해 재활 계획을 상담합니다.",
     keywords: ["용인 수술후재활", "용인 척추수술후재활", "용인 무릎수술후재활"],
-    heroLead: "수술 후에도 통증이나 저림, 보행 불안이 남아 불안할 수 있습니다. 회복 과정은 수술 범위와 환자 상태에 따라 달라질 수 있어 기존 자료와 현재 기능 상태를 함께 확인합니다.",
+    heroLead:
+      "수술한 의료진의 운동·보조기·체중부하 지침을 우선합니다. 통증이나 저림, 보행 불안이 남아 있다면 수술 범위와 기존 자료, 현재 기능 상태를 함께 확인해 회복 방향을 상담합니다.",
     heroImage: "/images/generated/postoperative-prep-20260901.webp",
-    heroImageAlt: "수술 후 회복 상담 준비를 상징하는 보조기와 지팡이 연출 이미지",
-    symptoms: ["수술 후 저림이나 통증이 남아 걱정됨", "걷는 속도와 안정성이 떨어짐", "관절가동범위와 근력이 제한됨", "일상 복귀 시점과 허용되는 운동 범위가 궁금함"],
-    checks: ["수술 종류와 시기, 수술기록지", "MRI·X-ray 등 기존 검사자료", "보행·관절가동범위·근력·균형", "통증 반응과 기존 치료 반응"],
-    care: ["수술 단계에 맞는 회복 운동", "보행과 일상 동작 훈련", "척추센터·관절센터와 연계한 회복관리", "자가운동과 보호자 주의사항 안내"],
+    heroImageAlt:
+      "수술 후 회복 상담 준비를 상징하는 보조기와 지팡이 연출 이미지",
+    symptoms: [
+      "수술 후 저림이나 통증이 남아 걱정됨",
+      "걷는 속도와 안정성이 떨어짐",
+      "관절가동범위와 근력이 제한됨",
+      "일상 복귀 시점과 허용되는 운동 범위가 궁금함",
+    ],
+    checks: [
+      "수술 종류와 시기, 수술기록지",
+      "MRI·X-ray 등 기존 검사자료",
+      "보행·관절가동범위·근력·균형",
+      "통증 반응과 기존 치료 반응",
+    ],
+    care: [
+      "수술 단계에 맞는 회복 운동",
+      "보행과 일상 동작 훈련",
+      "척추센터·관절센터와 연계한 회복관리",
+      "자가운동과 보호자 주의사항 안내",
+    ],
     detailSections: [
       {
-        title: "수술 후 불안 상담",
-        description: "수술 후 통증이나 저림이 남아도 온라인 안내만으로 원인을 단정하지 않습니다. 현재 증상, 보행 제한, 근력 변화, 수술 범위와 회복 경과를 함께 확인해 상담합니다.",
-        items: ["통증·저림 위치 확인", "걷는 거리와 균형 상태 확인", "보호자 동행 상담 가능"]
-      },
-      {
-        title: "준비하면 좋은 자료",
-        description: "다른 병원에서 수술을 받았거나 기존 검사가 있다면 자료를 지참하면 상담에 도움이 될 수 있습니다. 자료는 치료 방향을 정리하기 위한 참고 정보로 함께 확인합니다.",
-        items: ["MRI·X-ray·CT 자료", "판독지와 수술기록지", "복용약과 기존 치료 이력"]
-      },
-      {
-        title: "회복 과정 확인",
-        description: "회복 과정은 모든 환자에게 동일하지 않습니다. 수술 범위, 통증 반응, 보행과 근력 상태를 확인해 물리치료, 운동재활, 자가운동 교육 방향을 상담합니다.",
-        items: ["보행·근력·균형", "관절가동범위", "일상 동작 복귀 단계"]
-      },
-      {
         title: "척추 수술 후 확인",
-        description: "허리디스크·척추관협착증 수술 후에는 통증과 저림의 위치, 근력 변화, 걷는 거리와 자세 변화, 수술 부위 의료진 지침을 함께 확인합니다.",
-        items: ["다리 저림·근력 변화", "걷는 거리와 균형", "수술 단계에 맞는 운동 범위"]
+        description:
+          "허리디스크·척추관협착증 수술 후에는 통증과 저림의 위치, 근력 변화, 걷는 거리와 자세 변화, 수술 부위 의료진 지침을 함께 확인합니다.",
+        items: [
+          "다리 저림·근력 변화",
+          "걷는 거리와 균형",
+          "수술 단계에 맞는 운동 범위",
+        ],
       },
       {
         title: "무릎 수술 후 확인",
-        description: "인공관절·연골판·인대 수술 후에는 부종과 통증, 무릎 굽힘·펴짐, 체중 부하, 보행 안정성과 허벅지 근력을 단계적으로 확인합니다.",
-        items: ["부종과 관절가동범위", "체중 부하와 보행", "허벅지 근력과 계단 기능"]
+        description:
+          "인공관절·연골판·인대 수술 후에는 부종과 통증, 무릎 굽힘·펴짐, 체중 부하, 보행 안정성과 허벅지 근력을 단계적으로 확인합니다.",
+        items: [
+          "부종과 관절가동범위",
+          "체중 부하와 보행",
+          "허벅지 근력과 계단 기능",
+        ],
       },
       {
         title: "어깨 수술 후 확인",
-        description: "회전근개 등 어깨 수술 후에는 수술 부위 보호 지침을 우선하고, 허용된 범위에서 관절가동범위와 근력, 일상 동작 회복을 확인합니다.",
-        items: ["수술 부위 보호 지침", "어깨 관절가동범위", "근력과 일상 동작 복귀"]
-      }
+        description:
+          "회전근개 등 어깨 수술 후에는 수술 부위 보호 지침을 우선하고, 허용된 범위에서 관절가동범위와 근력, 일상 동작 회복을 확인합니다.",
+        items: [
+          "수술 부위 보호 지침",
+          "어깨 관절가동범위",
+          "근력과 일상 동작 복귀",
+        ],
+      },
     ],
     related: [
-      { label: "척추수술 판단·2차 의견", href: "https://new-standard.co.kr/sub/r40/spine-surgery-second-opinion.php" },
-      { label: "무릎 통증·수술 판단", href: "https://joint.new-standard.co.kr/knee" },
-      { label: "무릎 인공관절 판단 기준", href: "https://joint.new-standard.co.kr/patient-guides/knee-osteoarthritis-replacement" }
-    ]
+      {
+        label: "척추수술 후 회복 안내",
+        href: "https://new-standard.co.kr/sub/r30/spine-surgery-recovery.php",
+      },
+      {
+        label: "관절 수술 후 회복 안내",
+        href: "https://joint.new-standard.co.kr/recovery",
+      },
+      {
+        label: "퇴원 후 생활관리 안내",
+        href: "https://new-standard.co.kr/discharge/index.php",
+      },
+    ],
   },
   "manual-exercise-rehab": {
     title: "용인 도수치료 | 통증·기능 상태에 따른 운동재활 | 새기준병원",
     h1: "용인 도수치료, 통증 원인과 기능 상태부터",
     ctaLabel: "진료 예약하기",
-    eyebrow: "Manual Therapy & Exercise Rehabilitation",
+    eyebrow: "도수치료·운동재활",
     path: "/manual-exercise-rehab",
-    description: "용인 새기준병원은 통증 원인과 진찰 소견, 관절가동범위·근력·보행·기존 치료 반응을 확인해 도수치료와 운동재활의 필요한 범위를 상담합니다.",
+    description:
+      "용인 새기준병원은 통증 원인과 진찰 소견, 관절가동범위·근력·보행·기존 치료 반응을 확인해 도수치료와 운동재활의 필요한 범위를 상담합니다.",
     keywords: ["용인 도수치료", "용인 운동치료", "용인 운동재활"],
-    heroLead: "도수치료와 운동재활은 단독 상품처럼 모든 환자에게 동일하게 적용되는 과정이 아닙니다. 진찰 소견, 기능 상태, 기존 치료 반응을 확인한 뒤 필요한 치료 단계를 상담합니다.",
+    heroLead:
+      "도수치료와 운동재활은 단독 상품처럼 모든 환자에게 동일하게 적용되는 과정이 아닙니다. 진찰 소견, 기능 상태, 기존 치료 반응을 확인한 뒤 필요한 치료 단계를 상담합니다.",
     heroImage: "/images/generated/gait-assessment-corridor-20260901.webp",
     heroImageAlt: "회복재활 평가 공간을 표현한 연출 이미지",
-    symptoms: ["통증이 반복되고 자세·움직임에 따라 악화됨", "운동을 시작하고 싶지만 어떤 동작이 안전한지 모름", "도수치료 관리기준 변화가 궁금함", "수술 전후 기능 회복 계획이 필요함"],
-    checks: ["통증 원인과 피해야 할 동작", "관절 가동범위와 근력", "보행·균형·일상 동작", "치료 반응과 자가운동 수행 가능성"],
-    care: ["물리치료", "도수치료 필요성 상담", "운동재활과 자가운동 교육", "전문 진료와 검사 필요성 판단"],
+    symptoms: [
+      "통증이 반복되고 자세·움직임에 따라 악화됨",
+      "운동을 시작하고 싶지만 어떤 동작이 안전한지 모름",
+      "도수치료 관리기준 변화가 궁금함",
+      "수술 전후 기능 회복 계획이 필요함",
+    ],
+    checks: [
+      "통증 원인과 피해야 할 동작",
+      "관절 가동범위와 근력",
+      "보행·균형·일상 동작",
+      "치료 반응과 자가운동 수행 가능성",
+    ],
+    care: [
+      "물리치료",
+      "도수치료 필요성 상담",
+      "운동재활과 자가운동 교육",
+      "전문 진료와 검사 필요성 판단",
+    ],
     detailSections: [
       {
         title: "도수치료와 운동재활 구분",
-        description: "도수치료는 통증 부위와 움직임 제한을 확인해 필요한 경우 상담하며, 운동재활은 보행, 근력, 균형, 관절가동범위, 일상 동작을 함께 살펴보는 회복관리 과정입니다.",
-        items: ["도수치료 필요성은 진료 후 판단", "운동재활은 기능 회복 중심", "모든 환자에게 동일 적용하지 않음"]
+        description:
+          "도수치료는 통증 부위와 움직임 제한을 확인해 필요한 경우 상담하며, 운동재활은 보행, 근력, 균형, 관절가동범위, 일상 동작을 함께 살펴보는 회복관리 과정입니다.",
+        items: [
+          "도수치료 필요성은 진료 후 판단",
+          "운동재활은 기능 회복 중심",
+          "모든 환자에게 동일 적용하지 않음",
+        ],
       },
       {
         title: "정책·관리기준 안내",
-        description: "2026년 7월 1일부터 도수치료는 관리급여(본인부담률 95%)로 전환되었습니다. 다만 환자의 질환·상태, 기본치료 시행 및 호전 여부, 연간 인정 횟수 등 세부 급여기준을 모두 충족해야 하므로 진료·평가 후 적용 여부를 확인합니다. 가입 보험의 보장 여부와 금액은 상품과 보험사 기준에 따라 달라질 수 있습니다.",
-        items: ["관리급여 본인부담률 95%", "진찰 소견과 치료 반응 확인", "적용 여부·인정 횟수는 진료 후 확인"]
+        description:
+          "2026년 7월 1일부터 도수치료는 관리급여(본인부담률 95%)로 전환되었습니다. 다만 환자의 질환·상태, 기본치료 시행 및 호전 여부, 연간 인정 횟수 등 세부 급여기준을 모두 충족해야 하므로 진료·평가 후 적용 여부를 확인합니다. 가입 보험의 보장 여부와 금액은 상품과 보험사 기준에 따라 달라질 수 있습니다.",
+        items: [
+          "관리급여 본인부담률 95%",
+          "진찰 소견과 치료 반응 확인",
+          "적용 여부·인정 횟수는 진료 후 확인",
+        ],
       },
       {
         title: "체외충격파와 별도 안내",
-        description: "체외충격파 치료는 도수치료와 다른 치료입니다. 통증 부위, 손상 양상, 기존 치료 반응을 확인한 뒤 필요한 경우 별도로 상담할 수 있습니다.",
-        items: ["도수치료 관리기준과 혼동하지 않음", "통증 부위와 손상 양상 확인", "본원 체외충격파 안내와 연결"]
-      }
+        description:
+          "체외충격파 치료는 도수치료와 다른 치료입니다. 통증 부위, 손상 양상, 기존 치료 반응을 확인한 뒤 필요한 경우 별도로 상담할 수 있습니다.",
+        items: [
+          "도수치료 관리기준과 혼동하지 않음",
+          "통증 부위와 손상 양상 확인",
+          "본원 체외충격파 안내와 연결",
+        ],
+      },
     ],
     related: [
       { label: "치료 전 확인", href: "/treatment-before-check" },
       { label: "수술 후 회복재활", href: "/postoperative-recovery" },
-      { label: "척추센터", href: "https://new-standard.co.kr/sub/r30/spine-center.php" },
-      { label: "관절센터", href: "https://joint.new-standard.co.kr" }
-    ]
+      {
+        label: "척추센터",
+        href: "https://new-standard.co.kr/sub/r30/spine-center.php",
+      },
+      { label: "관절센터", href: "https://joint.new-standard.co.kr" },
+    ],
   },
   "treatment-before-check": {
     title: "치료 전 확인해야 할 증상 | 새기준병원 회복재활센터",
-    eyebrow: "Before Treatment Check",
+    eyebrow: "치료 전 상태 확인",
     path: "/treatment-before-check",
-    description: "회복재활 전 통증 위치, 근력 저하, 부종, 보행 변화, 기존 검사자료를 확인하면 상담에 도움이 됩니다.",
+    description:
+      "회복재활 전 통증 위치, 근력 저하, 부종, 보행 변화, 기존 검사자료를 확인하면 상담에 도움이 됩니다.",
     keywords: ["치료 전 확인", "재활 상담", "통증 평가"],
-    heroLead: "같은 통증이라도 단순 근육통, 관절 손상, 신경 증상에 따라 치료 방향이 달라질 수 있습니다.",
+    heroLead:
+      "같은 통증이라도 단순 근육통, 관절 손상, 신경 증상에 따라 치료 방향이 달라질 수 있습니다.",
     heroImage: "/images/rehab/rehab-room-01.jpg",
-    heroImageAlt: "진료와 치료 전 상태를 확인하는 새기준병원 회복재활센터 치료 공간",
-    symptoms: ["저림이나 근력 저하가 동반됨", "부종·열감이 지속됨", "야간통이나 체중부하 통증이 심함", "반복 치료에도 통증이 계속됨"],
-    checks: ["통증 시작 시점과 악화 동작", "기존 X-ray·MRI 자료", "신경 증상과 근력 변화", "이전 치료 반응"],
-    care: ["진료와 검사 필요성 판단", "물리치료·운동재활 방향 상담", "척추센터·관절센터 연결", "생활 동작과 자가운동 안내"],
+    heroImageAlt:
+      "진료와 치료 전 상태를 확인하는 새기준병원 회복재활센터 치료 공간",
+    symptoms: [
+      "저림이나 근력 저하가 동반됨",
+      "부종·열감이 지속됨",
+      "야간통이나 체중부하 통증이 심함",
+      "반복 치료에도 통증이 계속됨",
+    ],
+    checks: [
+      "통증 시작 시점과 악화 동작",
+      "기존 X-ray·MRI 자료",
+      "신경 증상과 근력 변화",
+      "이전 치료 반응",
+    ],
+    care: [
+      "진료와 검사 필요성 판단",
+      "물리치료·운동재활 방향 상담",
+      "척추센터·관절센터 연결",
+      "생활 동작과 자가운동 안내",
+    ],
     related: [
       { label: "급성 염좌", href: "/acute-sprain" },
-      { label: "도수·운동재활", href: "/manual-exercise-rehab" }
-    ]
-  }
+      { label: "도수·운동재활", href: "/manual-exercise-rehab" },
+    ],
+  },
 };
 
 export const faqItems = [
   {
     question: "회복재활센터는 수술 환자만 이용하나요?",
     answer:
-      "아닙니다. 생활 통증, 급성 염좌, 산후·육아 통증, 직장인 통증, 고령자 보행·균형 문제도 진료와 상담을 통해 회복관리 방향을 확인할 수 있습니다."
+      "아닙니다. 생활 통증, 급성 염좌, 산후·육아 통증, 직장인 통증, 고령자 보행·균형 문제도 진료와 상담을 통해 회복관리 방향을 확인할 수 있습니다.",
   },
   {
     question: "도수치료를 바로 받을 수 있나요?",
     answer:
-      "먼저 의사 진료가 필요합니다. 도수치료는 모든 환자에게 같은 방식으로 적용되는 치료가 아니어서, 진찰 소견과 기존 치료 반응을 확인한 뒤 필요한 경우 처방에 따라 시행합니다."
+      "먼저 의사 진료가 필요합니다. 도수치료는 모든 환자에게 같은 방식으로 적용되는 치료가 아니어서, 진찰 소견과 기존 치료 반응을 확인한 뒤 필요한 경우 처방에 따라 시행합니다.",
   },
   {
     question: "2026년 7월부터 도수치료 기준이 어떻게 달라지나요?",
     answer:
-      "관리급여(본인부담률 95%)로 바뀌었고, 적용 여부는 진료·평가 후 확인합니다. 자세한 기준은 위 도수치료 관리급여 안내와 건강보험심사평가원 링크를 참고해 주세요."
+      "관리급여(본인부담률 95%)로 바뀌었고, 적용 여부는 진료·평가 후 확인합니다. 자세한 기준은 위 도수치료 관리급여 안내와 건강보험심사평가원 링크를 참고해 주세요.",
   },
   {
     question: "보험 적용 여부는 어떻게 확인하나요?",
     answer:
-      "실손보험 등 보장 여부와 금액은 보험사와 상품 기준에 따라 다르므로 가입하신 보험사에 확인해 주세요. 병원은 보장 여부를 확정해 안내하지 않으며, 진료 후 청구에 필요한 서류 발급을 안내합니다."
+      "실손보험 등 보장 여부와 금액은 보험사와 상품 기준에 따라 다르므로 가입하신 보험사에 확인해 주세요. 병원은 보장 여부를 확정해 안내하지 않으며, 진료 후 청구에 필요한 서류 발급을 안내합니다.",
   },
   {
     question: "체외충격파와 도수치료는 같은 치료인가요?",
     answer:
-      "아닙니다. 체외충격파 치료는 도수치료와 다른 치료입니다. 통증 부위, 손상 양상, 기존 치료 반응을 확인한 뒤 필요한 경우 별도로 상담합니다."
+      "아닙니다. 체외충격파 치료는 도수치료와 다른 치료입니다. 통증 부위, 손상 양상, 기존 치료 반응을 확인한 뒤 필요한 경우 별도로 상담합니다.",
   },
   {
     question: "수술 후 회복이 늦으면 재활 상담이 필요한가요?",
     answer:
-      "수술 후 통증, 저림, 보행 불안, 관절가동범위 제한이 지속되면 수술 범위, 기존 영상자료, 현재 기능 상태를 함께 확인해 회복관리 방향을 상담할 수 있습니다. 필요하면 수술 의료진 진료를 먼저 안내합니다."
+      "수술 후 통증, 저림, 보행 불안, 관절가동범위 제한이 지속되면 수술 범위, 기존 영상자료, 현재 기능 상태를 함께 확인해 회복관리 방향을 상담할 수 있습니다. 필요하면 수술 의료진 진료를 먼저 안내합니다.",
   },
   {
     question: "다른 병원에서 수술받았는데 회복 상담이 가능한가요?",
     answer:
-      "기존 MRI, X-ray, 판독지, 수술기록지, 복용약 정보를 지참하면 상담에 도움이 될 수 있습니다. 이전 진료를 부정하기보다 현재 증상과 기능 상태를 함께 확인합니다."
+      "기존 MRI, X-ray, 판독지, 수술기록지, 복용약 정보를 지참하면 상담에 도움이 될 수 있습니다. 이전 진료를 부정하기보다 현재 증상과 기능 상태를 함께 확인합니다.",
   },
   {
     question: "부모님 보행이 불안할 때 보호자가 같이 가도 되나요?",
     answer:
-      "보호자 동행은 증상 변화, 걷는 거리, 낙상 경험, 복용약, 일상생활 제한을 함께 설명하는 데 도움이 될 수 있습니다. 치료 방향은 진료 후 상담합니다."
+      "보호자 동행은 증상 변화, 걷는 거리, 낙상 경험, 복용약, 일상생활 제한을 함께 설명하는 데 도움이 될 수 있습니다. 치료 방향은 진료 후 상담합니다.",
   },
   {
     question: "산후·육아 통증도 상담할 수 있나요?",
     answer:
-      "아기 안기, 수유 자세, 반복되는 손목·허리·골반·목·어깨 통증은 생활 동작과 근골격계 부담을 함께 확인해 상담할 수 있습니다."
+      "아기 안기, 수유 자세, 반복되는 손목·허리·골반·목·어깨 통증은 생활 동작과 근골격계 부담을 함께 확인해 상담할 수 있습니다.",
   },
   {
     question: "수액치료가 회복재활을 대신하나요?",
     answer:
-      "수액치료는 질환 진단이나 기능 회복관리를 대신하지 않습니다. 전신 컨디션 저하 등은 진료 후 필요한 범위에서 보조적으로 상담할 수 있습니다."
-  }
+      "수액치료는 질환 진단이나 기능 회복관리를 대신하지 않습니다. 전신 컨디션 저하 등은 진료 후 필요한 범위에서 보조적으로 상담할 수 있습니다.",
+  },
 ];
-
 
 export const officialLinks = [
   { label: "새기준병원 본원", href: "https://new-standard.co.kr" },
-  { label: "척추센터", href: "https://new-standard.co.kr/sub/r30/spine-center.php" },
+  {
+    label: "척추센터",
+    href: "https://new-standard.co.kr/sub/r30/spine-center.php",
+  },
   { label: "관절센터", href: "https://joint.new-standard.co.kr" },
-  { label: "오시는 길·진료시간", href: "https://new-standard.co.kr/sub/r10/s1040.php" },
-  { label: "온라인 상담", href: "https://new-standard.co.kr/bbs/board.php?bo_table=counsel" }
+  {
+    label: "오시는 길·진료시간",
+    href: "https://new-standard.co.kr/sub/r10/s1040.php",
+  },
+  {
+    label: "온라인 상담",
+    href: "https://new-standard.co.kr/bbs/board.php?bo_table=counsel",
+  },
 ];
 
 export const connectedCareLinks = [
   {
     title: "새기준병원 본원",
-    description: "전문의 진료, 영상검사, 척추·관절 진료가 함께 이루어지는 본원 홈페이지입니다.",
+    description:
+      "전문의 진료, 영상검사, 척추·관절 진료가 함께 이루어지는 본원 홈페이지입니다.",
     href: "https://new-standard.co.kr",
     buttonText: "본원 홈페이지",
     image: "/images/hospital/main-lobby-2026.jpg",
-    imageAlt: "새기준병원 본원 로비"
+    imageAlt: "새기준병원 본원 로비",
   },
   {
     title: "이영진 원장",
-    description: "새기준병원 마취통증의학과 전문의로 수술 전 평가, 수술 중 모니터링, 수술 후 회복과 통증관리를 담당합니다.",
+    description:
+      "새기준병원 마취통증의학과 전문의로 수술 전 평가, 수술 중 모니터링, 수술 후 회복과 통증관리를 담당합니다.",
     href: "https://new-standard.co.kr/sub/r10/lee-youngjin.php",
     buttonText: "마취통증의학과 프로필",
     image: "/images/hospital/doctor-lee-youngjin-20260901.png",
     imageAlt: "새기준병원 마취통증의학과 이영진 원장",
     imageClassName: "bg-[#DDEBE9] object-contain object-bottom",
-    overlayClassName: "from-[#071D2C]/98 via-[#071D2C]/84 to-[#071D2C]/72"
+    overlayClassName: "from-[#071D2C]/98 via-[#071D2C]/84 to-[#071D2C]/72",
   },
   {
     title: "관절 회복관리",
-    description: "관절 치료 후 회복관리, 관절가동범위, 보행 회복과 관련된 정보를 확인할 수 있습니다.",
+    description:
+      "관절 치료 후 회복관리, 관절가동범위, 보행 회복과 관련된 정보를 확인할 수 있습니다.",
     href: "https://joint.new-standard.co.kr/recovery",
     buttonText: "회복관리 보기",
     image: "/images/hospital/staff-outpatient-20260702.webp",
-    imageAlt: "새기준병원 외래 안내 직원"
+    imageAlt: "새기준병원 외래 안내 직원",
   },
   {
     title: "오시는 길",
@@ -451,22 +686,38 @@ export const connectedCareLinks = [
     href: "https://new-standard.co.kr/sub/r10/s1040.php",
     buttonText: "오시는 길",
     image: "/images/hospital/rehab-tour-04.jpg",
-    imageAlt: "새기준병원 회복재활센터 안내 공간"
-  }
+    imageAlt: "새기준병원 회복재활센터 안내 공간",
+  },
 ];
 
 export const rehabPhotos = {
   hero: "/images/rehab/hero-rehab-center.jpg",
   center: "/images/hospital/rehab-tour-02.jpg",
   rooms: [
-    { src: "/images/rehab/rehab-room-02.jpg", alt: "새기준병원 회복재활센터 치료실", label: "치료실" },
-    { src: "/images/rehab/manual-therapy-01.jpg", alt: "도수치료 공간", label: "도수치료" },
-    { src: "/images/rehab/exercise-rehab-01.jpg", alt: "운동재활 공간", label: "운동재활" },
-    { src: "/images/rehab/equipment-01.jpg", alt: "회복재활 장비", label: "재활 장비" }
+    {
+      src: "/images/rehab/rehab-room-02.jpg",
+      alt: "새기준병원 회복재활센터 치료실",
+      label: "치료실",
+    },
+    {
+      src: "/images/rehab/manual-therapy-01.jpg",
+      alt: "도수치료 공간",
+      label: "도수치료",
+    },
+    {
+      src: "/images/rehab/exercise-rehab-01.jpg",
+      alt: "운동재활 공간",
+      label: "운동재활",
+    },
+    {
+      src: "/images/rehab/equipment-01.jpg",
+      alt: "회복재활 장비",
+      label: "재활 장비",
+    },
   ],
   gallery: [
     { src: "/images/rehab/gallery-01.jpg", alt: "회복재활센터 갤러리" },
     { src: "/images/rehab/rehab-room-01.jpg", alt: "회복재활센터 내부" },
-    { src: "/images/rehab/exercise-rehab-01.jpg", alt: "운동재활 안내" }
-  ]
+    { src: "/images/rehab/exercise-rehab-01.jpg", alt: "운동재활 안내" },
+  ],
 };
