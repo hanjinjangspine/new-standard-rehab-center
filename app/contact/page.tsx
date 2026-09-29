@@ -112,12 +112,10 @@ export default function ContactPage() {
           </h2>
           <div className="mt-6 grid gap-4 text-base leading-7 text-muted">
             <p>
-              기존 X-ray, MRI, 초음파 등 영상자료가 있다면 진료 상담에 도움이
-              됩니다.
+              가지고 계신 X-ray·MRI·초음파 영상자료가 있다면 가져와 주세요.
             </p>
             <p>
-              언제부터 아팠는지, 어떤 동작에서 악화되는지, 이전 치료 반응은
-              어땠는지 정리해 오시면 좋습니다.
+              언제부터 아팠는지, 어떤 동작에서 더 아픈지, 치료를 받은 뒤에는 어땠는지 메모해 주세요.
             </p>
             <p>
               수술 후 회복관리 상담은 수술명, 수술일, 주치의 지시사항, 보조기

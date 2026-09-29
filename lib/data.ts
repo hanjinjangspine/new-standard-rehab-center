@@ -29,7 +29,7 @@ export const hospitalInfo = {
   hoursConfirmation: "내원 전 대표전화 031-328-0333으로 확인해 주세요.",
   baseUrl: siteConfig.baseUrl,
   commonNotice:
-    "새기준병원 회복재활센터는 생활 통증, 진단 기반 회복관리, 척추·관절 수술 후 기능 회복을 안내하는 병원 기반 회복재활 정보 페이지입니다.",
+    "새기준병원 회복재활센터의 진료 안내입니다. 생활 속 통증과 진단에 따른 회복관리, 척추·관절 수술 후 기능 회복에 관한 정보를 제공합니다.",
   officialRelationship:
     "진료 예약과 병원 기본 정보는 새기준병원 공식 홈페이지에서도 확인하실 수 있습니다.",
 };
@@ -74,7 +74,7 @@ export const programCards = [
     title: "산후·육아 통증",
     href: "/postpartum-parenting-pain",
     description:
-      "육아 과정에서 반복되는 손목, 허리, 골반, 목·어깨 통증의 원인을 함께 확인합니다.",
+      "아기를 안거나 수유하는 등 육아 중 반복되는 손목·허리·골반·목·어깨 통증을 살핍니다.",
     tags: ["손목", "골반", "허리"],
     image: "/images/rehab/manual-therapy-01.jpg",
     imageAlt: "어깨와 팔 움직임을 확인하는 새기준병원 치료팀",
@@ -229,7 +229,7 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
     consultationGuide: {
       title: "다친 순간과 이후 변화를 알려 주세요",
       description:
-        "통증이 생긴 상황과 지금 어려운 동작을 구분해 설명하면 진료에서 확인할 내용을 정리하는 데 도움이 됩니다.",
+        "언제 어떤 상황에서 통증이 생겼는지, 그 뒤 무엇이 달라졌는지 알려 주세요. 지금 하기 어려운 동작도 말씀해 주세요.",
       questions: [
         "언제, 어떤 동작 중에 통증이 시작됐나요?",
         "처음과 비교해 붓기나 움직임은 어떻게 달라졌나요?",
@@ -286,9 +286,9 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
       questions: [
         "어떤 자세에서 손목·허리·골반이 가장 불편한가요?",
         "하루 중 반복하는 동작과 쉬기 어려운 시간대는 언제인가요?",
-        "출산 후 경과와 현재 받고 있는 치료가 있나요?",
+        "출산 후 몸 상태는 어떻게 달라졌나요? 현재 받고 있는 치료가 있다면 알려 주세요.",
       ],
-      goalTitle: "생활에서 바꾸고 싶은 목표",
+      goalTitle: "조금 더 편해졌으면 하는 육아 동작",
       goal: "예를 들어 아기를 안는 시간이나 수유 자세에서 느끼는 부담을 설명해 주세요. 진찰 후 조정할 생활 동작과 필요한 치료 범위를 함께 정리합니다.",
     },
     related: [
@@ -328,13 +328,13 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
     consultationGuide: {
       title: "통증이 생기는 업무 장면을 설명해 주세요",
       description:
-        "불편한 부위만 적기보다 어떤 일을 얼마나 한 뒤 불편해지는지 알려 주시면 상담에 도움이 됩니다.",
+        "어떤 일을 얼마나 오래 했을 때 아픈지 알려 주세요. 불편한 부위와 그때 하던 일을 적어 오셔도 좋습니다.",
       questions: [
         "앉아서 일할 때, 이동할 때, 손을 반복해 쓸 때 중 언제 불편한가요?",
         "목·어깨·허리 통증과 함께 저림이나 힘의 변화가 있나요?",
         "지금까지 바꿔 본 작업 환경이나 치료 후 변화가 있나요?",
       ],
-      goalTitle: "업무 복귀와 관리 목표를 함께 정합니다",
+      goalTitle: "일할 때 어려운 동작부터",
       goal: "오래 앉아 있기, 모니터 보기, 손목 사용 등 어려운 업무 동작을 알려 주세요. 진료 후 필요한 치료와 업무 중 조정할 동작, 자가운동 범위를 상의합니다.",
     },
     related: [
@@ -377,7 +377,7 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
     consultationGuide: {
       title: "평소 걷던 모습과 달라진 점을 알려 주세요",
       description:
-        "가능하면 보호자와 함께 이전에 가능했던 일과 최근 어려워진 일을 정리해 주세요.",
+        "이전에는 가능했지만 요즘 어려워진 일을 떠올려 보세요. 가능하면 보호자와 함께 정리해 주세요.",
       questions: [
         "예전과 비교해 걷는 거리와 쉬는 횟수가 달라졌나요?",
         "집 안 이동, 계단, 바깥길 중 어디에서 특히 불안한가요?",
@@ -393,7 +393,7 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
   },
   "postoperative-recovery": {
     title: "용인 수술 후 재활 | 척추·관절 기능 회복 | 새기준병원",
-    h1: "척추·관절 수술 후, 현재 기능 단계에 맞춰 회복합니다",
+    h1: "척추·관절 수술 후, 다시 움직이기 위한 재활 상담",
     ctaLabel: "수술 후 재활 계획 상담하기",
     eyebrow: "수술 후 회복관리",
     path: "/postoperative-recovery",
