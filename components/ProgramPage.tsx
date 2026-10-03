@@ -330,7 +330,7 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
             </a>
           </p>
           <p>
-            페이지 갱신일: <time dateTime="2026-09-10">2026년 9월 10일</time>
+            페이지 갱신일: <time dateTime="2026-09-29">2026년 9월 29일</time>
           </p>
           <p>
             <a
