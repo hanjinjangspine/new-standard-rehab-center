@@ -9,6 +9,7 @@ import { siteJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import SiteAnalytics from "@/components/SiteAnalytics";
 import "./globals.css";
+import SiteVisuals from "@/components/SiteVisuals";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -79,6 +80,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="ko">
       <body className="pb-[calc(5rem+env(safe-area-inset-bottom))] md:pb-0">
         <SiteAnalytics />
+        <SiteVisuals />
         <SEOJsonLd data={siteJsonLd()} />
         <PhotoOwnershipNotice />
         <Header />
