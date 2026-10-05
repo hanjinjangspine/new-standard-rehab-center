@@ -1,4 +1,6 @@
 "use client";
+
+import HospitalSearch from "@/components/HospitalSearch";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -139,6 +141,7 @@ export default function Header() {
           치료 전 확인할 증상
         </Link>
       </nav>
-    </header>
+    <HospitalSearch />
+      </header>
   );
 }
