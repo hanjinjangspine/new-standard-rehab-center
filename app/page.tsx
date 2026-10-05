@@ -93,19 +93,19 @@ const visitPrepCards = [
     title: "기존 검사자료",
     description:
       "MRI·X-ray·CT 영상과 판독지, 수술기록지가 있다면 지참해 주세요. 현재 기능 상태와 함께 확인합니다.",
-    image: "/images/generated/visit-prep-background-20260901.webp",
+    image: "/images/content-images-v5/consult.webp",
   },
   {
     title: "증상 변화 기록",
     description:
       "통증·저림 위치, 걷는 거리, 악화되는 동작, 최근 낙상 여부를 메모하면 상담에 도움이 됩니다.",
-    image: "/images/generated/gait-assessment-corridor-20260901.webp",
+    image: "/images/content-images-v5/gait.webp",
   },
   {
     title: "수술 후 주의사항",
     description:
       "수술 의료진에게 안내받은 운동 제한, 보조기 사용, 체중부하 지침과 복용약 정보를 함께 확인합니다.",
-    image: "/images/generated/postoperative-prep-20260901.webp",
+    image: "/images/content-images-v5/postoperative.webp",
   },
 ];
 
@@ -143,11 +143,11 @@ const profileBackgrounds = [
 ];
 
 const safetyBackgrounds = [
-  "/images/generated/visit-prep-background-20260901.webp",
+  "/images/content-images-v5/consult.webp",
   "/images/rehab/manual-therapy-01.jpg",
-  "/images/generated/acute-sprain-kit-20260901.webp",
-  "/images/generated/gait-assessment-corridor-20260901.webp",
-  "/images/generated/postoperative-prep-20260901.webp",
+  "/images/content-images-v5/acute.webp",
+  "/images/content-images-v5/gait.webp",
+  "/images/content-images-v5/postoperative.webp",
   "/images/rehab/equipment-01.jpg",
   "/images/hospital/rehab-tour-04.jpg",
 ];
@@ -200,7 +200,7 @@ export default function HomePage() {
 
       <section className="relative overflow-hidden px-5 py-12 text-white sm:px-6 lg:px-8">
         <Image
-          src="/images/generated/visit-prep-background-20260901.webp"
+          src="/images/content-images-v5/consult.webp"
           alt=""
           fill
           className="object-cover"
