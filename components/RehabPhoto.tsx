@@ -1,5 +1,8 @@
 "use client";
 
+import { explanatoryImageAlt } from "@/lib/visual-image-labels";
+
+
 import Image from "next/image";
 import { Image as ImageIcon } from "lucide-react";
 import { useState } from "react";
@@ -37,7 +40,7 @@ export default function RehabPhoto({
     <div className={`relative overflow-hidden rounded-[28px] bg-brand-50 shadow-card ${className}`}>
       <Image
         src={src}
-        alt={alt}
+        alt={explanatoryImageAlt(src, alt)}
         fill
         priority={priority}
         sizes={sizes}

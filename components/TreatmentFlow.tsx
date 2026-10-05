@@ -2,10 +2,10 @@ import { treatmentFlow } from "@/lib/data";
 import SubtleImageCard from "@/components/SubtleImageCard";
 
 const flowImages = [
-  "/images/generated/ergonomic-workspace-20260901.webp",
-  "/images/generated/visit-prep-background-20260901.webp",
+  "/images/content-images-v5/posture.webp",
+  "/images/content-images-v5/consult.webp",
   "/images/rehab/manual-therapy-01.jpg",
-  "/images/generated/postoperative-prep-20260901.webp"
+  "/images/content-images-v5/postoperative.webp"
 ];
 
 export default function TreatmentFlow() {

@@ -205,7 +205,7 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
     keywords: ["발목 염좌", "급성 통증", "물리치료"],
     heroLead:
       "갑작스러운 통증은 단순 근육통처럼 보여도 관절, 인대, 신경 증상을 함께 확인해야 할 수 있습니다.",
-    heroImage: "/images/generated/acute-sprain-kit-20260901.webp",
+    heroImage: "/images/content-images-v5/acute.webp",
     heroImageAlt:
       "급성 염좌 초기 대응을 상징하는 보조기와 냉찜질 도구 연출 이미지",
     symptoms: [
@@ -259,7 +259,7 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
     keywords: ["산후 허리 통증", "육아 손목 통증", "골반 통증"],
     heroLead:
       "아기를 안고, 수유하고, 반복적으로 들어 올리는 동작은 손목·허리·골반·목·어깨에 부담을 줄 수 있습니다.",
-    heroImage: "/images/generated/parenting-recovery-corner-20260901.webp",
+    heroImage: "/images/content-images-v5/parenting.webp",
     heroImageAlt: "산후와 육아 중 근골격계 부담을 표현한 생활 공간 연출 이미지",
     symptoms: [
       "아기를 안을 때 손목이나 팔꿈치가 아픔",
@@ -305,7 +305,7 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
     keywords: ["직장인 통증", "거북목", "허리 통증"],
     heroLead:
       "오래 앉는 자세, 모니터 높이, 스마트폰 사용, 반복적인 손목 사용은 통증을 반복시키는 배경이 될 수 있습니다.",
-    heroImage: "/images/generated/ergonomic-workspace-20260901.webp",
+    heroImage: "/images/content-images-v5/posture.webp",
     heroImageAlt: "직장인의 자세 부담을 줄이는 업무 공간 연출 이미지",
     symptoms: [
       "목과 어깨가 무겁고 결림",
@@ -354,7 +354,7 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
     keywords: ["보행 재활", "균형 운동", "낙상 예방"],
     heroLead:
       "고령 환자의 보행 문제는 무릎, 허리, 근력, 균형, 신경 증상이 복합적으로 작용할 수 있습니다.",
-    heroImage: "/images/generated/senior-balance-room-20260901.webp",
+    heroImage: "/images/content-images-v5/senior.webp",
     heroImageAlt: "고령자 보행과 균형 회복 공간을 표현한 연출 이미지",
     symptoms: [
       "걷는 거리가 줄고 자주 쉬게 됨",
@@ -402,7 +402,7 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
     keywords: ["용인 수술후재활", "용인 척추수술후재활", "용인 무릎수술후재활"],
     heroLead:
       "수술한 의료진의 운동·보조기·체중부하 지침을 우선합니다. 통증이나 저림, 보행 불안이 남아 있다면 수술 범위와 기존 자료, 현재 기능 상태를 함께 확인해 회복 방향을 상담합니다.",
-    heroImage: "/images/generated/postoperative-prep-20260901.webp",
+    heroImage: "/images/content-images-v5/postoperative.webp",
     heroImageAlt:
       "수술 후 회복 상담 준비를 상징하는 보조기와 지팡이 연출 이미지",
     symptoms: [
@@ -481,7 +481,7 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
     keywords: ["용인 도수치료", "용인 운동치료", "용인 운동재활"],
     heroLead:
       "도수치료와 운동재활은 단독 상품처럼 모든 환자에게 동일하게 적용되는 과정이 아닙니다. 진찰 소견, 기능 상태, 기존 치료 반응을 확인한 뒤 필요한 치료 단계를 상담합니다.",
-    heroImage: "/images/generated/gait-assessment-corridor-20260901.webp",
+    heroImage: "/images/content-images-v5/gait.webp",
     heroImageAlt: "회복재활 평가 공간을 표현한 연출 이미지",
     symptoms: [
       "통증이 반복되고 자세·움직임에 따라 악화됨",

@@ -8,32 +8,32 @@ import { ProgramSlug, programPages, safetyCopy } from "@/lib/data";
 import { webPageJsonLd } from "@/lib/seo";
 
 const infoCardBackgrounds = [
-  "/images/generated/cards-20260902/symptom-observation.webp",
-  "/images/generated/cards-20260902/functional-assessment.webp",
-  "/images/generated/cards-20260902/recovery-exercise.webp",
+  "/images/content-images-v5/consult.webp",
+  "/images/content-images-v5/gait.webp",
+  "/images/content-images-v5/rehab.webp",
 ];
 
 const detailBackgrounds: Partial<Record<ProgramSlug, string[]>> = {
   "postoperative-recovery": [
-    "/images/generated/cards-20260902/postoperative-consultation.webp",
-    "/images/generated/cards-20260902/medical-records.webp",
-    "/images/generated/cards-20260902/recovery-exercise.webp",
-    "/images/generated/cards-20260902/spine-recovery.webp",
-    "/images/generated/cards-20260902/knee-recovery.webp",
-    "/images/generated/cards-20260902/shoulder-recovery.webp",
+    "/images/content-images-v5/postoperative.webp",
+    "/images/content-images-v5/decision.webp",
+    "/images/content-images-v5/rehab.webp",
+    "/images/content-images-v5/lumbar.webp",
+    "/images/content-images-v5/knee.webp",
+    "/images/content-images-v5/shoulder.webp",
   ],
   "manual-exercise-rehab": [
-    "/images/generated/cards-20260902/functional-assessment.webp",
-    "/images/generated/cards-20260902/medical-records.webp",
-    "/images/generated/cards-20260902/recovery-exercise.webp",
+    "/images/content-images-v5/gait.webp",
+    "/images/content-images-v5/decision.webp",
+    "/images/content-images-v5/rehab.webp",
   ],
 };
 
 const relatedBackgrounds = [
-  "/images/generated/cards-20260902/spine-recovery.webp",
-  "/images/generated/cards-20260902/knee-recovery.webp",
-  "/images/generated/cards-20260902/recovery-exercise.webp",
-  "/images/generated/cards-20260902/functional-assessment.webp",
+  "/images/content-images-v5/lumbar.webp",
+  "/images/content-images-v5/knee.webp",
+  "/images/content-images-v5/rehab.webp",
+  "/images/content-images-v5/gait.webp",
 ];
 
 export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
@@ -282,7 +282,7 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
       </section>
       <section id="safety" className="px-4 py-12 sm:px-6 lg:px-8">
         <SubtleImageCard
-          image="/images/generated/cards-20260902/symptom-observation.webp"
+          image="/images/content-images-v5/consult.webp"
           intensity="present"
           className="mx-auto max-w-5xl rounded-[28px] border border-accent-300 p-6 shadow-sm sm:p-8"
           sizes="(min-width: 1024px) 960px, calc(100vw - 2rem)"
