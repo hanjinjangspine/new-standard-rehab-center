@@ -38,3 +38,7 @@
 - Tailwind 비표준 투명도 /82,/78,/12,/8,/14 표기를 arbitrary alpha로 바꿔 사진 배경 위 흰색 글자의 대비와 어두운 링크 카드 배경을 복구했다. 홈3폭 추가 검수.
 - 기존 postoperative.webp의 실제 물건은 무릎 보조기이므로 척추/범용 회복 카드에서는 제외했다. 본원 다리·어깨 공개 치료사진은 해당 관절 회복 설명에만 직접 연결하고 개별 환자의 치료/결과로 설명하지 않는다.
 - Gemini Deep Research 중간 자문(총괄 전달): UBE 감압·UBE-TLIF·경추전방술 구분, 출처/이미지부위 일치, 증상→검사→판단→회복 흐름. 본문은 수술종류·범위별 회복계획으로 한정하며 보장된 회복기간이나 임상효과는 추가하지 않았다.
+
+## 배포 게이트에서 발견한 의존성 보완
+
+GitHub quality의 production audit가 기존 source-map-js 1.2.1에 대해 GHSA-68fv-2mgg-jv7q(CVE-2026-93749)를 보고했다. 공식 advisory의 patched version 1.2.2를 확인하고 npm update source-map-js로 lockfile의 해당 패키지 version/resolved/integrity 3개 필드만 갱신했다. 검증 게이트를 완화하지 않았다. Search 362개 고유URL/12질의 회귀검사도 통과했다.
