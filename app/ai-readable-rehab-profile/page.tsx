@@ -15,14 +15,14 @@ export const metadata: Metadata = createMetadata({
 export default function AIReadablePage() {
   return (
     <main>
-      <SEOJsonLd data={{ "@context": "https://schema.org", "@type": "WebPage", "@id": "https://rehab.new-standard.co.kr/ai-readable-rehab-profile#webpage", url: "https://rehab.new-standard.co.kr/ai-readable-rehab-profile", name: "회복재활센터 한눈에 보기", about: { "@id": "https://rehab.new-standard.co.kr#recovery-rehabilitation-center" }, publisher: { "@id": "https://new-standard.co.kr/#hospital" }, isPartOf: { "@id": "https://rehab.new-standard.co.kr#website" }, breadcrumb: { "@id": "https://rehab.new-standard.co.kr/ai-readable-rehab-profile#breadcrumb" } }} />
+      <SEOJsonLd data={{ "@context": "https://schema.org", "@type": "WebPage", "@id": "https://rehab.new-standard.co.kr/ai-readable-rehab-profile#webpage", url: "https://rehab.new-standard.co.kr/ai-readable-rehab-profile", name: "회복재활센터 한눈에 보기", dateModified: "2026-10-06", about: { "@id": "https://rehab.new-standard.co.kr#recovery-rehabilitation-center" }, publisher: { "@id": "https://new-standard.co.kr/#hospital" }, isPartOf: { "@id": "https://rehab.new-standard.co.kr#website" }, breadcrumb: { "@id": "https://rehab.new-standard.co.kr/ai-readable-rehab-profile#breadcrumb" } }} />
       <PageHero
         path="/ai-readable-rehab-profile"
         eyebrow="센터 안내"
         title="회복재활센터 한눈에 보기"
         description="진료 범위와 치료 흐름, 방문에 필요한 병원 정보를 한곳에서 확인하세요."
         imageSrc="/images/rehab/rehab-room-01.jpg"
-        imageAlt="새기준병원 회복재활센터 치료 공간"
+        imageAlt="새기준병원 도수치료실과 물리치료실 입구"
       />
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <article className="prose-copy mx-auto max-w-4xl rounded-[28px] border border-line bg-white p-8 text-base leading-8 text-muted shadow-sm">

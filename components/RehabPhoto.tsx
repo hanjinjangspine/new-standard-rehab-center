@@ -31,7 +31,7 @@ export default function RehabPhoto({
       <div className={`flex min-h-[220px] flex-col items-center justify-center rounded-[28px] border border-dashed border-brand-200 bg-brand-50 p-6 text-center text-brand-800 ${className}`}>
         <ImageIcon aria-hidden="true" size={32} />
         <p className="mt-3 text-sm font-extrabold">{label || alt}</p>
-        <p className="mt-2 text-xs leading-5 text-brand-700">사진 파일을 {src} 경로에 추가하면 자동으로 표시됩니다.</p>
+        <p className="mt-2 text-xs leading-5 text-brand-700">사진을 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.</p>
       </div>
     );
   }

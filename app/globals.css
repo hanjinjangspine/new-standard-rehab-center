@@ -97,52 +97,11 @@ a {
 @media (max-width: 639px) { main section.px-4 { padding-left: 20px; padding-right: 20px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: 0.01ms !important; } }
 
-/* Sitewide decorative image system. Text is always above a light image wash. */
-body.nsv-site { background-color:#f7faf9; background-image:linear-gradient(rgba(255,255,255,.82),rgba(255,255,255,.9)),var(--nsv-garden); background-size:cover; background-position:center top; }
-.nsv-section { background-image:linear-gradient(100deg,rgba(255,255,255,.98) 15%,rgba(255,255,255,.92) 70%,rgba(255,255,255,.84)),var(--nsv-garden) !important; background-size:cover !important; background-position:right center !important; }
-.nsv-card.nsv-card { background-color:#fff !important; background-image:linear-gradient(90deg,rgba(255,255,255,.98) 6%,rgba(255,255,255,.88) 45%,rgba(255,255,255,.56) 100%),var(--nsv-card-image) !important; background-size:cover !important; background-position:right center !important; border-color:#dbe7e4; box-shadow:0 5px 20px rgba(28,66,62,.045); }
-/* The former atlas decorations are replaced on refreshed cards to avoid layering. */
-.nsv-card > .nshContextVisual,.nsv-card > .nshNavCardVisual,.nsv-card > .nshPanelAtmosphereVisual { display:none !important; }
-.nsv-card.nshHasContextVisual,.nsv-card.nshHasNavCardVisual,.nsv-card.nshHasPanelAtmosphere { padding-right:24px !important; }
-@media (hover:hover) and (pointer:fine) { a.nsv-card:hover { border-color:#8ebdb1 !important; box-shadow:0 12px 30px rgba(28,66,62,.1); } }
-@media(max-width:639px) { .nsv-card.nsv-card { background-image:linear-gradient(90deg,rgba(255,255,255,.98),rgba(255,255,255,.88) 55%,rgba(255,255,255,.65)),var(--nsv-card-image) !important; } .nsv-section { background-image:linear-gradient(rgba(255,255,255,.91),rgba(255,255,255,.91)),var(--nsv-garden) !important; } }
-@media (prefers-reduced-motion:reduce) { .nsv-card { transition:none !important; transform:none !important; } }
-@media print { body.nsv-site,.nsv-card.nsv-card,.nsv-section { background-image:none !important; box-shadow:none; } }
-
-/* Full-color content media: an image area and a separate readable text area. */
-.nsv-content-card.nsv-content-card { background-image:none !important; overflow:hidden; border-color:#d9e6e1; box-shadow:0 8px 25px rgba(27,68,60,.065); }
-.nsv-content-card > .nshContextVisual,.nsv-content-card > .nshNavCardVisual,.nsv-content-card > .nshPanelAtmosphereVisual { display:none !important; }
-.nsv-content-card.nshHasContextVisual,.nsv-content-card.nshHasNavCardVisual,.nsv-content-card.nshHasPanelAtmosphere { padding-right:24px !important; }
-.nsv-media.nsv-media { display:block; position:relative; width:100%; min-width:0; flex-shrink:0; overflow:hidden; border-radius:14px; background:#edf4f0; isolation:isolate; }
-.nsv-media-card { height:150px; margin:0 0 20px; }
-.nsv-media-section { max-width:1160px; height:230px; margin:0 auto 32px; }
-.nsv-media-prose { max-width:760px; height:230px; margin:20px auto 26px; }
-.nsv-media > img { display:block !important; position:static !important; width:100% !important; height:100% !important; max-width:none !important; margin:0 !important; object-fit:cover; opacity:1 !important; transform:none !important; }
-.nsv-media-anatomy > img { object-fit:contain; background:#f1ece3; }
-.nsv-media > img[src$=".svg"] { object-fit:contain; background:linear-gradient(120deg,#e7f1ec,#f8f2e7); }
-/* Wide information panels use a compact editorial image alongside their copy. */
-@media(min-width:768px) {
-  .nsv-content-wide > .nsv-media-card.nsv-media-card { float:right; width:220px; height:150px; margin:0 0 16px 28px; }
-}
-@media(max-width:639px) {
-  .nsv-media-card { height:145px; margin-bottom:16px; }
-  .nsv-media-section { height:185px; width:calc(100% - 32px); margin-bottom:24px; }
-  .nsv-media-prose { height:185px; margin:16px auto 22px; }
-}
-@media print { .nsv-media { display:none !important; } }
-
-/* Outrank article-local auto-height rules so the full illustration is visible. */
-.nsv-media.nsv-media > img { width:100% !important; height:100% !important; object-fit:cover !important; }
-.nsv-media.nsv-media-anatomy > img,.nsv-media.nsv-media > img[src$=".svg"] { object-fit:contain !important; }
-
-/* Photography and anatomical illustrations retain their intended framing. */
-.nsv-upgraded-image {border-radius:16px; box-shadow:0 10px 30px rgba(29,72,61,.10);}
-img.nsv-upgraded-anatomy {object-fit:contain!important;background:#f2f5f0;}
-.nsv-media {background:#f2f5f0;}
-.nsv-media.nsv-media > img {width:100%!important;height:100%!important;object-fit:cover!important;}
-.nsv-media.nsv-media-anatomy > img {object-fit:contain!important;}
-.nsv-media:after {content:"설명용 이미지";position:absolute;right:9px;bottom:7px;padding:3px 7px;border-radius:6px;color:#34564b;background:rgba(255,255,255,.92);font-size:10px;line-height:1.3;letter-spacing:.02em;pointer-events:none;}
-.nsv-media:has(img[src$="/hospital.webp"]):after,.nsv-media:has(img[src$="/facility.webp"]):after {content:"새기준병원 실제 공간";}
+/* Reviewed media is part of the server-rendered card, never inferred from text. */
+.semantic-card { overflow: hidden; }
+.semantic-card > figure { max-width: 100%; }
+main { min-width: 0; }
+main section > div { min-width: 0; }
 
 /* Public page, condition and procedure search */
 .nss-host{background:#f4f8f6;border-top:1px solid #dbe7e0;border-bottom:1px solid #dbe7e0;color:#173c35;}

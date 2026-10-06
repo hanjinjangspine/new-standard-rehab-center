@@ -3,9 +3,9 @@ import SubtleImageCard from "@/components/SubtleImageCard";
 
 const flowImages = [
   "/images/content-images-v5/posture.webp",
-  "/images/content-images-v5/consult.webp",
-  "/images/rehab/manual-therapy-01.jpg",
-  "/images/content-images-v5/postoperative.webp"
+  "/images/hospital/doctor-jang-desk-2026.jpg",
+  "/images/rehab/rehab-room-02.jpg",
+  "/images/content-images-v5/recovery.webp"
 ];
 
 export default function TreatmentFlow() {

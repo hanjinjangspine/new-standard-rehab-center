@@ -5,36 +5,17 @@ import SEOJsonLd from "@/components/SEOJsonLd";
 import SubtleImageCard from "@/components/SubtleImageCard";
 import ManualVisitGuide from "@/components/ManualVisitGuide";
 import { ProgramSlug, programPages, safetyCopy } from "@/lib/data";
+import { programImage, relatedImage } from "@/lib/semantic-images";
 import { webPageJsonLd } from "@/lib/seo";
 
-const infoCardBackgrounds = [
-  "/images/content-images-v5/consult.webp",
-  "/images/content-images-v5/gait.webp",
-  "/images/content-images-v5/rehab.webp",
-];
-
-const detailBackgrounds: Partial<Record<ProgramSlug, string[]>> = {
-  "postoperative-recovery": [
-    "/images/content-images-v5/postoperative.webp",
-    "/images/content-images-v5/decision.webp",
-    "/images/content-images-v5/rehab.webp",
-    "/images/content-images-v5/lumbar.webp",
-    "/images/content-images-v5/knee.webp",
-    "/images/content-images-v5/shoulder.webp",
-  ],
-  "manual-exercise-rehab": [
-    "/images/content-images-v5/gait.webp",
-    "/images/content-images-v5/decision.webp",
-    "/images/content-images-v5/rehab.webp",
-  ],
+const detailImages: Record<string, string> = {
+  "척추 수술 후 확인": "/images/content-images-v5/recovery.webp",
+  "무릎 수술 후 확인": "/images/rehab/hero-rehab-center.jpg",
+  "어깨 수술 후 확인": "/images/rehab/manual-therapy-01.jpg",
+  "도수치료와 운동재활 구분": "/images/rehab/manual-therapy-01.jpg",
+  "정책·관리기준 안내": "/images/content-images-v5/decision.webp",
+  "체외충격파와 별도 안내": "/images/rehab/equipment-01.jpg",
 };
-
-const relatedBackgrounds = [
-  "/images/content-images-v5/lumbar.webp",
-  "/images/content-images-v5/knee.webp",
-  "/images/content-images-v5/rehab.webp",
-  "/images/content-images-v5/gait.webp",
-];
 
 export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
   const page = programPages[slug];
@@ -104,17 +85,17 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
           <InfoCard
             title="이런 증상이 있을 때"
             items={page.symptoms}
-            image={infoCardBackgrounds[0]}
+            image={programImage(page.path)}
           />
           <InfoCard
             title="진료에서 확인하는 것"
             items={page.checks}
-            image={infoCardBackgrounds[1]}
+            image="/images/hospital/doctor-jang-desk-2026.jpg"
           />
           <InfoCard
             title="회복관리 방향"
             items={page.care}
-            image={infoCardBackgrounds[2]}
+            image="/images/rehab/rehab-room-02.jpg"
           />
         </div>
       </section>
@@ -160,13 +141,10 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
       {page.detailSections ? (
         <section className="program-detail-section px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-3">
-            {page.detailSections.map((item, index) => (
+            {page.detailSections.map((item) => (
               <SubtleImageCard
                 key={item.title}
-                image={
-                  detailBackgrounds[slug]?.[index] ??
-                  infoCardBackgrounds[index % infoCardBackgrounds.length]
-                }
+                image={detailImages[item.title]}
                 intensity="present"
                 className="rounded-[28px] border border-line p-6 shadow-sm"
               >
@@ -248,10 +226,10 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
-            {page.related.map((item, index) => (
+            {page.related.map((item) => (
               <SubtleImageCard
                 key={item.href}
-                image={relatedBackgrounds[index % relatedBackgrounds.length]}
+                image={relatedImage(item.href)}
                 intensity="present"
                 className="rounded-2xl border border-line shadow-sm transition hover:-translate-y-1 hover:shadow-card"
               >
@@ -282,7 +260,6 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
       </section>
       <section id="safety" className="px-4 py-12 sm:px-6 lg:px-8">
         <SubtleImageCard
-          image="/images/content-images-v5/consult.webp"
           intensity="present"
           className="mx-auto max-w-5xl rounded-[28px] border border-accent-300 p-6 shadow-sm sm:p-8"
           sizes="(min-width: 1024px) 960px, calc(100vw - 2rem)"
@@ -330,7 +307,13 @@ export default function ProgramPage({ slug }: { slug: ProgramSlug }) {
             </a>
           </p>
           <p>
-            페이지 갱신일: <time dateTime="2026-09-29">2026년 9월 29일</time>
+            페이지 갱신일: <time dateTime="2026-10-06">2026년 10월 6일</time>
+          </p>
+          <p>
+            본원 척추 수술 운영 안내는 병원에서 확인한 내용입니다. 양방향 내시경 수술을 받은 경우에도 운동 시작 시점과 보조기·체중부하 지침은 수술기록과 현재 상태에 따라 개별적으로 정합니다.
+          </p>
+          <p>
+            <a href="https://www.orthoinfo.org/treatment/spinal-fusion/" className="underline" target="_blank" rel="noopener noreferrer">미국정형외과학회(AAOS): 척추 유합 수술과 회복 안내(영문)</a>
           </p>
           <p>
             <a

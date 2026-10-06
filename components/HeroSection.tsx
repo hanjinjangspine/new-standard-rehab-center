@@ -6,7 +6,7 @@ import { hospitalInfo, rehabPhotos } from "@/lib/data";
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden border-b border-[#D9E2E7] bg-[#F8FAFB] px-4 py-10 text-[#10283D] sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-      <div className="relative mx-auto grid max-w-[1180px] gap-7 md:gap-9 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-center lg:gap-12">
+      <div className="relative mx-auto grid max-w-[1200px] gap-7 md:gap-9 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-center lg:gap-12">
         <div className="order-1 min-w-0 ">
           <p className="inline-flex rounded-xl border border-[#D9E2E7] bg-white px-4 py-2 text-sm font-extrabold text-[#2B7366] shadow-sm md:px-5 md:py-2.5 md:text-base">
             {hospitalInfo.centerName}
@@ -31,7 +31,7 @@ export default function HeroSection() {
         <div className="order-2 ">
           <RehabPhoto
             src={rehabPhotos.hero}
-            alt="새기준병원 회복재활센터 내부"
+            alt="새기준병원 공개 홍보사진: 치료대에서 다리 움직임을 확인하는 모습"
             className="mx-auto aspect-[3/2] max-h-[520px] w-full max-w-[920px]"
             imageClassName="object-contain"
             sizes="(min-width: 1024px) 50vw, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
