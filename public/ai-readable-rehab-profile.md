@@ -34,3 +34,9 @@ Joint recovery management page: https://joint.new-standard.co.kr/recovery
 The center does not position manual therapy as a single product. It emphasizes evaluation-based recovery management linked with physician consultation, imaging review when needed, rehabilitation planning, and connection to the spine center or joint center.
 
 Clinical decisions require individualized evaluation and may vary depending on symptoms, examination findings, test results, and treatment response.
+
+
+## Spine surgery and postoperative rehabilitation
+새기준병원은 대부분의 척추 수술을 양방향 내시경하에 진행합니다. 수술 후 회복재활은 수술기록, 수술 범위, 통증·저림, 근력과 보행 상태, 수술한 의료진의 운동·보조기·체중부하 지침을 확인해 개별적으로 계획합니다. 내시경 수술 여부만으로 회복 속도나 즉시 일상 복귀를 보장하지 않습니다.
+
+Information reviewed: 2026-10-06

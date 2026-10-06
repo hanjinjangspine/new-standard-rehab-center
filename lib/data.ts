@@ -44,7 +44,7 @@ export const defaultKeywords = [
 ];
 
 export const aiSummary = {
-  ko: "새기준병원 회복재활센터는 경기도 용인시 처인구에 위치한 새기준병원의 회복재활 진료 안내 페이지입니다. 생활 통증, 급성 염좌, 산후·육아 통증, 직장인 통증, 고령자 보행·균형 문제, 척추·관절 수술 후 기능 회복관리를 다룹니다. 치료 방향은 통증 부위, 진찰 소견, 영상검사 결과, 치료 반응을 함께 확인한 뒤 물리치료·도수치료·운동재활 중에서 상담합니다.",
+  ko: "새기준병원 회복재활센터는 경기도 용인시 처인구에 위치한 새기준병원의 회복재활 진료 안내 페이지입니다. 생활 통증, 급성 염좌, 산후·육아 통증, 직장인 통증, 고령자 보행·균형 문제, 척추·관절 수술 후 기능 회복관리를 다룹니다. 치료 방향은 통증 부위, 진찰 소견, 영상검사 결과, 치료 반응을 함께 확인한 뒤 물리치료·도수치료·운동재활 중에서 상담합니다. 본원은 대부분의 척추 수술을 양방향 내시경하에 진행하며, 수술 범위와 의료진 지침에 맞춰 회복재활을 연결합니다.",
   en: "New Standard Hospital Recovery Rehabilitation Center is a hospital-based rehabilitation information site in Yongin, South Korea. It covers everyday pain, acute sprain, postpartum and parenting-related pain, office-worker musculoskeletal pain, gait and balance issues in older adults, and functional recovery after spine and joint surgery. Clinical decisions require individualized evaluation.",
 };
 
@@ -401,10 +401,10 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
       "용인 새기준병원은 척추·무릎 수술 후 통증·저림·부종·보행·관절가동범위·근력과 일상 복귀 단계를 함께 확인해 재활 계획을 상담합니다.",
     keywords: ["용인 수술후재활", "용인 척추수술후재활", "용인 무릎수술후재활"],
     heroLead:
-      "수술한 의료진의 운동·보조기·체중부하 지침을 우선합니다. 통증이나 저림, 보행 불안이 남아 있다면 수술 범위와 기존 자료, 현재 기능 상태를 함께 확인해 회복 방향을 상담합니다.",
-    heroImage: "/images/content-images-v5/postoperative.webp",
+      "새기준병원은 대부분의 척추 수술을 양방향 내시경하에 진행하며, 수술 진료와 회복재활을 연결합니다. 내시경 수술 여부만으로 회복 속도를 정하지 않고 수술 범위, 통증·저림, 근력·보행 상태와 수술 의료진의 지침에 맞춰 계획을 상담합니다.",
+    heroImage: "/images/content-images-v5/recovery.webp",
     heroImageAlt:
-      "수술 후 회복 상담 준비를 상징하는 보조기와 지팡이 연출 이미지",
+      "보행과 일상 복귀 준비를 상징하는 운동화·옷·물병 연출 이미지",
     symptoms: [
       "수술 후 저림이나 통증이 남아 걱정됨",
       "걷는 속도와 안정성이 떨어짐",
@@ -427,7 +427,7 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
       {
         title: "척추 수술 후 확인",
         description:
-          "허리디스크·척추관협착증 수술 후에는 통증과 저림의 위치, 근력 변화, 걷는 거리와 자세 변화, 수술 부위 의료진 지침을 함께 확인합니다.",
+          "새기준병원은 대부분의 척추 수술을 양방향 내시경하에 시행합니다. 수술 후에는 통증·저림과 근력 변화, 걷는 거리, 수술기록을 함께 확인합니다. 같은 내시경 수술이라도 감압·디스크 제거·유합 등 수술 범위에 따라 운동과 보조기 지침이 달라집니다.",
         items: [
           "다리 저림·근력 변화",
           "걷는 거리와 균형",
@@ -481,8 +481,8 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
     keywords: ["용인 도수치료", "용인 운동치료", "용인 운동재활"],
     heroLead:
       "도수치료와 운동재활은 단독 상품처럼 모든 환자에게 동일하게 적용되는 과정이 아닙니다. 진찰 소견, 기능 상태, 기존 치료 반응을 확인한 뒤 필요한 치료 단계를 상담합니다.",
-    heroImage: "/images/content-images-v5/gait.webp",
-    heroImageAlt: "회복재활 평가 공간을 표현한 연출 이미지",
+    heroImage: "/images/rehab/manual-therapy-01.jpg",
+    heroImageAlt: "새기준병원 공개 홍보사진: 누운 자세에서 어깨와 팔 움직임을 확인하는 모습",
     symptoms: [
       "통증이 반복되고 자세·움직임에 따라 악화됨",
       "운동을 시작하고 싶지만 어떤 동작이 안전한지 모름",
@@ -554,7 +554,7 @@ export const programPages: Record<ProgramSlug, ProgramPageData> = {
       "같은 통증이라도 단순 근육통, 관절 손상, 신경 증상에 따라 치료 방향이 달라질 수 있습니다.",
     heroImage: "/images/rehab/rehab-room-01.jpg",
     heroImageAlt:
-      "진료와 치료 전 상태를 확인하는 새기준병원 회복재활센터 치료 공간",
+      "새기준병원 도수치료실과 물리치료실 입구",
     symptoms: [
       "저림이나 근력 저하가 동반됨",
       "부종·열감이 지속됨",
@@ -669,7 +669,7 @@ export const connectedCareLinks = [
     image: "/images/hospital/doctor-lee-youngjin-20260901.png",
     imageAlt: "새기준병원 마취통증의학과 이영진 원장",
     imageClassName: "bg-[#DDEBE9] object-contain object-bottom",
-    overlayClassName: "from-[#071D2C]/98 via-[#071D2C]/84 to-[#071D2C]/72",
+    overlayClassName: "from-[#071D2C]/[0.98] via-[#071D2C]/[0.84] to-[#071D2C]/[0.72]",
   },
   {
     title: "관절 회복관리",

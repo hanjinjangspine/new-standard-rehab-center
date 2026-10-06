@@ -26,13 +26,12 @@ export default function ContactPage() {
         })}
       />
       <PageHero
-        compact
         path="/contact"
         eyebrow="문의·예약"
         title="진료시간·오시는 길"
         description="경기도 용인시 처인구 중부대로 1539 · 내원 전 031-328-0333으로 의료진 진료와 치료실 일정을 확인해 주세요."
-        imageSrc="/images/rehab/rehab-room-02.jpg"
-        imageAlt="새기준병원 회복재활센터 도수치료실과 물리치료실 입구"
+        imageSrc="/images/content-images-v5/exterior.webp"
+        imageAlt="새기준병원 실제 건물 외관"
       />
       <section
         aria-labelledby="visit-hours"
@@ -69,7 +68,7 @@ export default function ContactPage() {
               특정 치료의 시행을 확정하는 것은 아닙니다.
             </p>
             <p className="mt-3 leading-7 text-muted">
-              공휴일 진료는 날짜별 공식 공지를 확인해 주세요.
+              진료시간이 지나도 필요한 경우 접수할 수 있으니 방문 전 031-328-0333으로 문의해 주세요. 공휴일 진료는 날짜별 공식 공지를 확인해 주세요.
             </p>
             <a
               href="https://new-standard.co.kr/sub/r10/s1040.php"

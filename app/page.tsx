@@ -39,9 +39,9 @@ const centerPrinciples = [
   {
     title: "수술 후 기능 회복",
     description:
-      "척추·관절 수술 후 보행, 관절가동범위, 근력, 일상 복귀 단계를 의료진 안내와 함께 확인합니다.",
-    image: "/images/hospital/surgery-floor-2026.jpg",
-    imageAlt: "새기준병원 수술센터 복도와 수술실 입구",
+      "본원 척추 수술은 대부분 양방향 내시경하에 진행합니다. 수술 범위와 의료진 지침에 맞춰 보행·근력·일상 동작 회복을 확인합니다.",
+    image: "/images/rehab/hero-rehab-center.jpg",
+    imageAlt: "새기준병원 공개 홍보사진: 치료대에서 다리 움직임을 확인하는 모습",
   },
 ];
 
@@ -93,19 +93,19 @@ const visitPrepCards = [
     title: "기존 검사자료",
     description:
       "MRI·X-ray·CT 영상과 판독지, 수술기록지가 있다면 지참해 주세요. 현재 기능 상태와 함께 확인합니다.",
-    image: "/images/content-images-v5/consult.webp",
+    image: "/images/content-images-v5/decision.webp",
   },
   {
     title: "증상 변화 기록",
     description:
       "통증·저림 위치, 걷는 거리, 악화되는 동작, 최근 낙상 여부를 메모하면 상담에 도움이 됩니다.",
-    image: "/images/content-images-v5/gait.webp",
+    image: "/images/content-images-v5/consult.webp",
   },
   {
     title: "수술 후 주의사항",
     description:
       "수술 의료진에게 안내받은 운동 제한, 보조기 사용, 체중부하 지침과 복용약 정보를 함께 확인합니다.",
-    image: "/images/content-images-v5/postoperative.webp",
+    image: "/images/content-images-v5/recovery.webp",
   },
 ];
 
@@ -115,7 +115,7 @@ const policyGuideCards = [
     description:
       "2026년 7월 1일부터 도수치료는 관리급여(본인부담률 95%, 비용 대부분을 환자가 부담)로 바뀌었습니다. 질환·상태, 기본치료를 먼저 받았는지와 호전 여부, 연간 인정 횟수 등 기준을 모두 충족해야 하므로 진료·평가 후 적용 여부를 확인합니다.",
     sourceHref:
-      "https://www.hira.or.kr/rc/insu/insuadtcrtr/InsuAdtCrtrPopup.do?brdScnBltNo=4&isPopupYn=Y&mtgHmeDd=20260701&mtgMtrRegSno=1&sno=4",
+      "https://www.hira.or.kr/bbsDummy.do?brdBltNo=12133&brdScnBltNo=4&pageIndex=1&pgmid=HIRAA020002000100",
     sourceLabel: "건강보험심사평가원 급여기준 확인",
     image: "/images/rehab/manual-therapy-01.jpg",
   },
@@ -131,25 +131,8 @@ const policyGuideCards = [
     title: "수액치료(채움수액) 연계 상담",
     description:
       "물리치료·운동재활 중 전신 컨디션 저하가 함께 있는 경우, 진료 후 필요한 범위에서 수액치료(새기준 채움수액)를 상담할 수 있습니다. 채움수액은 의사 처방에 따라 선택적으로 고려하는 보조 관리이며 회복재활을 대신하지 않습니다.",
-    image: "/images/hospital/rehab-tour-04.jpg",
+    image: "/images/content-images-v5/infusion.webp",
   },
-];
-
-const profileBackgrounds = [
-  "/images/hospital/rehab-tour-01.jpg",
-  "/images/rehab/equipment-01.jpg",
-  "/images/rehab/exercise-rehab-01.jpg",
-  "/images/rehab/manual-therapy-01.jpg",
-];
-
-const safetyBackgrounds = [
-  "/images/content-images-v5/consult.webp",
-  "/images/rehab/manual-therapy-01.jpg",
-  "/images/content-images-v5/acute.webp",
-  "/images/content-images-v5/gait.webp",
-  "/images/content-images-v5/postoperative.webp",
-  "/images/rehab/equipment-01.jpg",
-  "/images/hospital/rehab-tour-04.jpg",
 ];
 
 export default function HomePage() {
@@ -184,15 +167,16 @@ export default function HomePage() {
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {centerPrinciples.map((item) => (
-              <div
+              <SubtleImageCard
                 key={item.title}
+                image={item.image}
                 className="rounded-2xl border border-line bg-white p-6"
               >
                 <h3 className="text-xl font-bold text-ink">{item.title}</h3>
                 <p className="mt-3 text-base leading-7 text-muted">
                   {item.description}
                 </p>
-              </div>
+              </SubtleImageCard>
             ))}
           </div>
         </div>
@@ -206,7 +190,7 @@ export default function HomePage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[#071D2C]/82" />
+        <div className="absolute inset-0 bg-[#071D2C]/[0.82]" />
         <div className="relative mx-auto max-w-7xl">
           <SectionTitle
             align="center"
@@ -229,7 +213,7 @@ export default function HomePage() {
                 <h3 className="mt-3 text-2xl font-black text-white">
                   {item.title}
                 </h3>
-                <p className="mt-4 text-base leading-8 text-white/82">
+                <p className="mt-4 text-base leading-8 text-white/[0.82]">
                   {item.description}
                 </p>
               </SubtleImageCard>
@@ -301,7 +285,7 @@ export default function HomePage() {
               <div className="relative aspect-[16/10]">
                 <Image
                   src="/images/rehab/gallery-01.jpg"
-                  alt="새기준병원 회복재활센터에서 치료 장비를 점검하는 재활치료실장"
+                  alt="새기준병원 공개 홍보사진: 치료 장비를 사용하는 재활치료실장"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 45vw, calc(100vw - 2rem)"
@@ -335,7 +319,6 @@ export default function HomePage() {
               </summary>
               <div className="grid gap-5 md:grid-cols-2">
                 <SubtleImageCard
-                  image={profileBackgrounds[0]}
                   className="rounded-[28px] border border-line p-6 shadow-sm"
                 >
                   <h3 className="text-2xl font-black text-ink">
@@ -348,7 +331,6 @@ export default function HomePage() {
                   </ul>
                 </SubtleImageCard>
                 <SubtleImageCard
-                  image={profileBackgrounds[1]}
                   className="rounded-[28px] border border-line p-6 shadow-sm"
                 >
                   <h3 className="text-2xl font-black text-ink">자격 및 이수</h3>
@@ -359,7 +341,6 @@ export default function HomePage() {
                   </ul>
                 </SubtleImageCard>
                 <SubtleImageCard
-                  image={profileBackgrounds[2]}
                   className="rounded-[28px] border border-line p-6 shadow-sm"
                 >
                   <h3 className="text-2xl font-black text-ink">
@@ -372,7 +353,6 @@ export default function HomePage() {
                   </ul>
                 </SubtleImageCard>
                 <SubtleImageCard
-                  image={profileBackgrounds[3]}
                   className="rounded-[28px] border border-line p-6 shadow-sm"
                 >
                   <h3 className="text-2xl font-black text-ink">담당 분야</h3>
@@ -395,10 +375,9 @@ export default function HomePage() {
             title="치료 전 알아두시면 좋은 점"
           />
           <div className="grid gap-3">
-            {safetyCopy.map((item, index) => (
+            {safetyCopy.map((item) => (
               <SubtleImageCard
                 key={item}
-                image={safetyBackgrounds[index]}
                 className="rounded-2xl border border-line p-5 shadow-sm"
                 sizes="(min-width: 1024px) 700px, calc(100vw - 2rem)"
               >
@@ -441,7 +420,7 @@ export default function HomePage() {
                       ? "noopener noreferrer"
                       : undefined
                   }
-                  className="group flex min-h-20 items-center justify-between rounded-2xl border border-white/12 bg-white/8 p-5 text-base font-extrabold text-white transition hover:bg-white/14"
+                  className="group flex min-h-20 items-center justify-between rounded-2xl border border-white/[0.12] bg-white/[0.08] p-5 text-base font-extrabold text-white transition hover:bg-white/[0.14]"
                 >
                   {item.label}
                   <ExternalLink
@@ -457,7 +436,7 @@ export default function HomePage() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex min-h-20 items-center justify-between rounded-2xl border border-white/12 bg-white/8 p-5 text-base font-extrabold text-white transition hover:bg-white/14"
+                  className="group flex min-h-20 items-center justify-between rounded-2xl border border-white/[0.12] bg-white/[0.08] p-5 text-base font-extrabold text-white transition hover:bg-white/[0.14]"
                 >
                   {item.label}
                   <ExternalLink
@@ -480,7 +459,7 @@ export default function HomePage() {
             description="새기준병원은 경기도 용인시 처인구 중부대로 1539에 위치합니다. 방문 전 대표전화로 진료 일정을 확인하시면 도움이 됩니다."
           />
           <SubtleImageCard
-            image="/images/hospital/main-lobby-2026.jpg"
+            image="/images/content-images-v5/exterior.webp"
             className="rounded-[28px] border border-line p-6 shadow-sm"
             sizes="(min-width: 1024px) 700px, calc(100vw - 2rem)"
           >

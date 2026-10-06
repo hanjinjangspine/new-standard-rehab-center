@@ -224,8 +224,7 @@ export function webPageJsonLd({
     name: title,
     description,
     inLanguage: "ko-KR",
-    dateModified:
-      path === "/manual-exercise-rehab" ? "2026-09-11" : "2026-09-29",
+    dateModified: "2026-10-06",
     ...(path === "/manual-exercise-rehab"
       ? {
           citation: [
@@ -238,6 +237,7 @@ export function webPageJsonLd({
       ? {
           citation: [
             "https://www.orthoinfo.org/recovery/total-knee-replacement-exercise-guide/",
+            "https://www.orthoinfo.org/treatment/spinal-fusion/",
           ],
         }
       : {}),

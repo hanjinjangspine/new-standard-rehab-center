@@ -68,7 +68,7 @@ export default function ManualVisitGuide() {
         </div>
         <aside aria-label="정보 제공 및 참고자료" className="mt-10 rounded-2xl bg-calm p-6 text-sm leading-7 text-muted">
           <h3 className="font-bold text-ink">정보 제공 및 참고자료</h3>
-          <p>정보 제공: 새기준병원 회복재활센터 · 페이지 갱신일: <time dateTime="2026-09-11">2026년 9월 11일</time></p>
+          <p>정보 제공: 새기준병원 회복재활센터 · 페이지 갱신일: <time dateTime="2026-10-06">2026년 10월 6일</time></p>
           <ul className="mt-3 list-disc space-y-2 pl-5">
             <li><a href="https://new-standard.co.kr/sub/r10/s1020.php" className="underline">새기준병원 진료 의료진 소개</a></li>
             <li><a href="https://www.hira.or.kr/bbsDummy.do?brdBltNo=12133&brdScnBltNo=4&pageIndex=1&pgmid=HIRAA020002000100" className="underline" target="_blank" rel="noopener noreferrer">건강보험심사평가원: 도수치료 관리급여 전환 관련 기준 안내</a></li>

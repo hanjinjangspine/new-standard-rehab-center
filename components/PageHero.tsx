@@ -30,7 +30,7 @@ export default function PageHero({
   return (
     <section className="overflow-hidden border-b border-line bg-gradient-to-br from-brand-50 via-white to-accent-100 px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
       <div
-        className={`mx-auto grid max-w-[1180px] gap-7 md:gap-9 ${compact ? "" : "lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-center lg:gap-12"}`}
+        className={`mx-auto grid max-w-[1200px] gap-7 md:gap-9 ${compact ? "" : "lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-center lg:gap-12"}`}
       >
         <div className="order-1 min-w-0 ">
           <Breadcrumb title={title} path={path} />
@@ -76,7 +76,7 @@ export default function PageHero({
             />
             {imageAlt.includes("연출 이미지") && (
               <p className="mt-2 text-right text-xs leading-5 text-muted">
-                이해를 돕기 위한 연출 이미지
+                AI 설명용 연출 이미지
               </p>
             )}
           </div>
