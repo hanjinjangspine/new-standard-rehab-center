@@ -1,3 +1,4 @@
+import CardImageEnhancements from "@/components/CardImageEnhancements";
 import type { Metadata, Viewport } from "next";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -79,6 +80,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="ko">
       <body className="pb-[calc(5rem+env(safe-area-inset-bottom))] md:pb-0">
         <SiteAnalytics />
+        <CardImageEnhancements />
         <SEOJsonLd data={siteJsonLd()} />
         <PhotoOwnershipNotice />
         <Header />
